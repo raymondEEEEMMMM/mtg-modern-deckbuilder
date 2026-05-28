@@ -1,0 +1,48 @@
+{
+  "effective_date": "2013-01-28",
+  "format": "Modern",
+  "description": "B&R update 2013-01-28",
+  "is_baseline": false,
+  "banned": [
+    "Ancestral Vision",
+    "Ancient Den",
+    "Bitterblossom",
+    "Blazing Shoal",
+    "Bloodbraid Elf",
+    "Chrome Mox",
+    "Cloudpost",
+    "Dark Depths",
+    "Dread Return",
+    "Glimpse of Nature",
+    "Golgari Grave-Troll",
+    "Great Furnace",
+    "Green Sun's Zenith",
+    "Hypergenesis",
+    "Jace, the Mind Sculptor",
+    "Mental Misstep",
+    "Ponder",
+    "Preordain",
+    "Punishing Fire",
+    "Rite of Flame",
+    "Seat of the Synod",
+    "Seething Song",
+    "Sensei's Divining Top",
+    "Skullclamp",
+    "Stoneforge Mystic",
+    "Sword of the Meek",
+    "Tree of Tales",
+    "Umezawa's Jitte",
+    "Vault of Whispers",
+    "Wild Nacatl"
+  ],
+  "restricted": [],
+  "deck_banned": [],
+  "total": 30,
+  "changes": {
+    "added": [
+      "Bloodbraid Elf",
+      "Seething Song"
+    ],
+    "removed": []
+  }
+}

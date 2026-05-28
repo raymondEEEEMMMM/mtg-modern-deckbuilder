@@ -1,0 +1,310 @@
+{
+  "format": "Modern",
+  "version": "2.0",
+  "generated_date": "2026-05-28",
+  "period_start": "2026-05-18",
+  "top_n": 15,
+  "ranking_criteria": "strength_score = 0.35*fused_share + 0.30*performance + 0.15*consistency + 0.10*power_density + 0.10*wins",
+  "decks": [
+    {
+      "rank": 1,
+      "name": "Boros Energy",
+      "tier": "Tier 1",
+      "category": "aggro",
+      "strength_score": 83.3,
+      "fused_metagame_share": 0.0671,
+      "decklist_count": 67,
+      "key_cards": [
+        "Galvanic Discharge",
+        "Ajani, Nacatl Pariah",
+        "Guide of Souls",
+        "Ocelot Pride",
+        "Ragavan, Nimble Pilferer"
+      ],
+      "deck_consistency": 0.846,
+      "card_power_density": 1.0,
+      "performance_score": 0.972,
+      "wins": 1
+    },
+    {
+      "rank": 2,
+      "name": "Affinity",
+      "tier": "Tier 1",
+      "category": "aggro",
+      "strength_score": 68.6,
+      "fused_metagame_share": 0.0686,
+      "decklist_count": 81,
+      "key_cards": [
+        "Urza's Saga",
+        "Mishra's Bauble",
+        "Mox Opal",
+        "Kappa Cannoneer",
+        "Pinnacle Emissary"
+      ],
+      "deck_consistency": 0.914,
+      "card_power_density": 1.0,
+      "performance_score": 0.48,
+      "wins": 1
+    },
+    {
+      "rank": 3,
+      "name": "Grixis Reanimator",
+      "tier": "Tier 1",
+      "category": "combo",
+      "strength_score": 54.5,
+      "fused_metagame_share": 0.0288,
+      "decklist_count": 34,
+      "key_cards": [
+        "Psychic Frog",
+        "Persist",
+        "Polluted Delta",
+        "Abhorrent Oculus",
+        "Archon of Cruelty"
+      ],
+      "deck_consistency": 0.964,
+      "card_power_density": 0.693,
+      "performance_score": 0.552,
+      "wins": 1
+    },
+    {
+      "rank": 4,
+      "name": "UR Prowess",
+      "tier": "Tier 2",
+      "category": "aggro",
+      "strength_score": 39.5,
+      "fused_metagame_share": 0.0508,
+      "decklist_count": 60,
+      "key_cards": [
+        "Lightning Bolt",
+        "Mishra's Bauble",
+        "Dragon's Rage Channeler",
+        "Monastery Swiftspear",
+        "Lava Dart"
+      ],
+      "deck_consistency": 0.933,
+      "card_power_density": 0.777,
+      "performance_score": 0.0,
+      "wins": 0
+    },
+    {
+      "rank": 5,
+      "name": "Blink",
+      "tier": "Tier 2",
+      "category": "midrange",
+      "strength_score": 39.4,
+      "fused_metagame_share": 0.0415,
+      "decklist_count": 49,
+      "key_cards": [
+        "Solitude",
+        "Phelia, Exuberant Shepherd",
+        "Quantum Riddler",
+        "Witch Enchanter",
+        "Ephemerate"
+      ],
+      "deck_consistency": 0.716,
+      "card_power_density": 1.0,
+      "performance_score": 0.12,
+      "wins": 0
+    },
+    {
+      "rank": 6,
+      "name": "Sultai Midrange",
+      "tier": "Tier 2",
+      "category": "control",
+      "strength_score": 38.7,
+      "fused_metagame_share": 0.0119,
+      "decklist_count": 14,
+      "key_cards": [
+        "Birthing Ritual",
+        "Abhorrent Oculus",
+        "Coiling Oracle",
+        "Ice-Fang Coatl",
+        "Shardless Agent"
+      ],
+      "deck_consistency": 0.932,
+      "card_power_density": 0.716,
+      "performance_score": 0.264,
+      "wins": 1
+    },
+    {
+      "rank": 7,
+      "name": "Goryo's Vengeance",
+      "tier": "Tier 2",
+      "category": "combo",
+      "strength_score": 36.8,
+      "fused_metagame_share": 0.0211,
+      "decklist_count": 25,
+      "key_cards": [
+        "Goryo's Vengeance",
+        "Psychic Frog",
+        "Atraxa, Grand Unifier",
+        "Polluted Delta",
+        "Solitude"
+      ],
+      "deck_consistency": 0.872,
+      "card_power_density": 0.737,
+      "performance_score": 0.264,
+      "wins": 0
+    },
+    {
+      "rank": 8,
+      "name": "Eldrazi Tron",
+      "tier": "Tier 2",
+      "category": "control",
+      "strength_score": 34.3,
+      "fused_metagame_share": 0.0271,
+      "decklist_count": 32,
+      "key_cards": [
+        "Ugin's Labyrinth",
+        "Kozilek's Command",
+        "Karn, the Great Creator",
+        "Expedition Map",
+        "Thought-Knot Seer"
+      ],
+      "deck_consistency": 0.872,
+      "card_power_density": 0.366,
+      "performance_score": 0.252,
+      "wins": 0
+    },
+    {
+      "rank": 9,
+      "name": "Living End",
+      "tier": "Tier 2",
+      "category": "combo",
+      "strength_score": 33.4,
+      "fused_metagame_share": 0.0313,
+      "decklist_count": 37,
+      "key_cards": [
+        "Misty Rainforest",
+        "Shardless Agent",
+        "Subtlety",
+        "Force of Negation",
+        "Endurance"
+      ],
+      "deck_consistency": 0.855,
+      "card_power_density": 0.673,
+      "performance_score": 0.096,
+      "wins": 0
+    },
+    {
+      "rank": 10,
+      "name": "Red Deck Wins",
+      "tier": "Tier 2",
+      "category": "aggro",
+      "strength_score": 31.5,
+      "fused_metagame_share": 0.0465,
+      "decklist_count": 55,
+      "key_cards": [
+        "Lightning Bolt",
+        "Monastery Swiftspear",
+        "Boltwave",
+        "Lava Spike",
+        "Skewer the Critics"
+      ],
+      "deck_consistency": 0.664,
+      "card_power_density": 0.531,
+      "performance_score": 0.0,
+      "wins": 0
+    },
+    {
+      "rank": 11,
+      "name": "Dimir Midrange",
+      "tier": "Tier 2",
+      "category": "control",
+      "strength_score": 31.2,
+      "fused_metagame_share": 0.0195,
+      "decklist_count": 23,
+      "key_cards": [
+        "Psychic Frog",
+        "Orcish Bowmasters",
+        "Fatal Push",
+        "Thoughtseize",
+        "Polluted Delta"
+      ],
+      "deck_consistency": 0.733,
+      "card_power_density": 1.0,
+      "performance_score": 0.096,
+      "wins": 0
+    },
+    {
+      "rank": 12,
+      "name": "Yawgmoth",
+      "tier": "Tier 2",
+      "category": "combo",
+      "strength_score": 29.4,
+      "fused_metagame_share": 0.0143,
+      "decklist_count": 17,
+      "key_cards": [
+        "Verdant Catacombs",
+        "Young Wolf",
+        "Delighted Halfling",
+        "Agatha's Soul Cauldron",
+        "Badgermole Cub"
+      ],
+      "deck_consistency": 0.873,
+      "card_power_density": 0.235,
+      "performance_score": 0.264,
+      "wins": 0
+    },
+    {
+      "rank": 13,
+      "name": "Landless",
+      "tier": "Tier 2",
+      "category": "combo",
+      "strength_score": 28.8,
+      "fused_metagame_share": 0.0247,
+      "decklist_count": 25,
+      "key_cards": [
+        "Goblin Charbelcher",
+        "Hydroelectric Specimen",
+        "Tameshi, Reality Architect",
+        "Disrupting Shoal",
+        "Sea Gate Restoration"
+      ],
+      "deck_consistency": 0.635,
+      "card_power_density": 0.248,
+      "performance_score": 0.24,
+      "wins": 0
+    },
+    {
+      "rank": 14,
+      "name": "UW Control",
+      "tier": "Tier 2",
+      "category": "control",
+      "strength_score": 27.3,
+      "fused_metagame_share": 0.0177,
+      "decklist_count": 21,
+      "key_cards": [
+        "Solitude",
+        "Teferi, Time Raveler",
+        "Guide of Souls",
+        "Ocelot Pride",
+        "Witch Enchanter"
+      ],
+      "deck_consistency": 0.739,
+      "card_power_density": 1.0,
+      "performance_score": 0.0,
+      "wins": 0
+    },
+    {
+      "rank": 15,
+      "name": "Crashing Footfalls",
+      "tier": "Tier 2",
+      "category": "combo",
+      "strength_score": 27.1,
+      "fused_metagame_share": 0.0186,
+      "decklist_count": 22,
+      "key_cards": [
+        "Shardless Agent",
+        "Crashing Footfalls",
+        "Force of Negation",
+        "Violent Outburst",
+        "Subtlety"
+      ],
+      "deck_consistency": 0.845,
+      "card_power_density": 0.794,
+      "performance_score": 0.0,
+      "wins": 0
+    }
+  ]
+}

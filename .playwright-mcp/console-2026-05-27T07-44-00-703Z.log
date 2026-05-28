@@ -1,0 +1,8 @@
+[    5187ms] [INFO] exp_bucket cookie is not set or has an invalid value. DTNR observability will not be initialized. @ https://mtg.fandom.com/__cb966628517967573/resources-ucp/mw143/dist/scripts/dtnr-observability.js:0
+[    5366ms] [WARNING] [GPT] PubAdsService.setTargeting is deprecated, use googletag.setConfig({targeting: ...}) instead.
+https://goo.gle/gpt-message#170 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202605130201/pubads_impl.js?cb=31098808:18
+[    5399ms] [WARNING] [GPT] Slot.clearTargeting is deprecated, use Slot.setConfig({targeting: ...}) instead.
+https://goo.gle/gpt-message#171 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202605130201/pubads_impl.js?cb=31098808:18
+[    5631ms] [WARNING] This page is using the deprecated ResourceLoader module "skin.fandomdesktop.styles".
+[1.43] The use of the `interface-message-box` feature with SkinModule is deprecated in favor of CodexModule. Please remove this feature.More information can be found at [[mw:Manual:ResourceLoaderSkinModule]].  @ https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline?__cf_chl_tk=WPCjueFkDkBZ7SU5yRErHhT8uePSIYmQw6vXd_kS0zw-1779863133-1.0.1.1-Vxpt_i8ZLagE7vyOWN6U8f5Z9tjGM2PyGQFUhfJRTvs:3108
+[    5734ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://services.fandom.com/galactus-user-profile/profiles/Tf6G79N7Cu:0

@@ -1,0 +1,11 @@
+---
+description: 
+alwaysApply: false
+enabled: true
+updatedAt: 2026-05-28T01:30:00.000Z
+provider: 
+---
+
+When the user asks to run, debug, optimize, or test the MTGTop8 scraper, load the top8-scraper skill from `.codebuddy/skills/top8-scraper/SKILL.md` for detailed workflow and troubleshooting guidance.
+
+IMPORTANT: The Top8 scraper must only collect tournament data within the current Meta period (defined by the latest B&R update effective_date in `mtg_modern_data/ban_list/meta.json`). Never scrape tournaments before the period start date. Out-of-period data must be filtered.

@@ -1,0 +1,383 @@
+{
+  "format": "Modern",
+  "last_updated": "2026-05-27T15:32:29.543904",
+  "data_range": {
+    "start": "2011-08-01",
+    "end": "2026-05-18"
+  },
+  "total_snapshots": 28,
+  "changes_history": [
+    {
+      "effective_date": "2011-08-01",
+      "description": "Modern format initial banlist",
+      "file": "2011-08-01.json",
+      "is_baseline": true
+    },
+    {
+      "effective_date": "2011-09-20",
+      "description": "B&R update 2011-09-20",
+      "file": "2011-09-20.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Blazing Shoal",
+          "Cloudpost",
+          "Green Sun's Zenith",
+          "Ponder",
+          "Preordain",
+          "Rite of Flame"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2011-12-20",
+      "description": "B&R update 2011-12-20",
+      "file": "2011-12-20.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Punishing Fire",
+          "Wild Nacatl"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2012-09-20",
+      "description": "B&R update 2012-09-20",
+      "file": "2012-09-20.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [],
+        "removed": [
+          "Valakut, the Molten Pinnacle"
+        ]
+      }
+    },
+    {
+      "effective_date": "2013-01-28",
+      "description": "B&R update 2013-01-28",
+      "file": "2013-01-28.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Bloodbraid Elf",
+          "Seething Song"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2013-05-16",
+      "description": "B&R update 2013-05-16",
+      "file": "2013-05-16.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Second Sunrise"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2014-02-03",
+      "description": "B&R update 2014-02-03",
+      "file": "2014-02-03.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Deathrite Shaman"
+        ],
+        "removed": [
+          "Bitterblossom",
+          "Wild Nacatl"
+        ]
+      }
+    },
+    {
+      "effective_date": "2015-01-19",
+      "description": "B&R update 2015-01-19",
+      "file": "2015-01-19.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Birthing Pod",
+          "Dig Through Time",
+          "Treasure Cruise"
+        ],
+        "removed": [
+          "Golgari Grave-Troll"
+        ]
+      }
+    },
+    {
+      "effective_date": "2016-01-18",
+      "description": "B&R update 2016-01-18",
+      "file": "2016-01-18.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Splinter Twin",
+          "Summer Bloom"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2016-04-04",
+      "description": "B&R update 2016-04-04",
+      "file": "2016-04-04.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Eye of Ugin"
+        ],
+        "removed": [
+          "Ancestral Vision",
+          "Sword of the Meek"
+        ]
+      }
+    },
+    {
+      "effective_date": "2017-01-09",
+      "description": "B&R update 2017-01-09",
+      "file": "2017-01-09.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Gitaxian Probe",
+          "Golgari Grave-Troll"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2018-02-19",
+      "description": "B&R update 2018-02-19",
+      "file": "2018-02-19.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [],
+        "removed": [
+          "Bloodbraid Elf",
+          "Jace, the Mind Sculptor"
+        ]
+      }
+    },
+    {
+      "effective_date": "2019-01-28",
+      "description": "B&R update 2019-01-28",
+      "file": "2019-01-28.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Krark-Clan Ironworks"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2019-07-08",
+      "description": "B&R update 2019-07-08",
+      "file": "2019-07-08.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Bridge from Below"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2019-08-26",
+      "description": "B&R update 2019-08-26",
+      "file": "2019-08-26.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Faithless Looting",
+          "Hogaak, Arisen Necropolis"
+        ],
+        "removed": [
+          "Stoneforge Mystic"
+        ]
+      }
+    },
+    {
+      "effective_date": "2020-01-13",
+      "description": "B&R update 2020-01-13",
+      "file": "2020-01-13.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Mox Opal",
+          "Mycosynth Lattice",
+          "Oko, Thief of Crowns"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2020-03-16",
+      "description": "B&R update 2020-03-16",
+      "file": "2020-03-16.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Once Upon a Time"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2020-07-06",
+      "description": "B&R update 2020-07-06",
+      "file": "2020-07-06.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Arcum's Astrolabe"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2021-02-15",
+      "description": "B&R update 2021-02-15",
+      "file": "2021-02-15.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Field of the Dead",
+          "Mystic Sanctuary",
+          "Simian Spirit Guide",
+          "Tibalt's Trickery",
+          "Uro, Titan of Nature's Wrath"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2022-03-07",
+      "description": "B&R update 2022-03-07",
+      "file": "2022-03-07.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Lurrus of the Dream-Den"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2022-10-10",
+      "description": "B&R update 2022-10-10",
+      "file": "2022-10-10.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Yorion, Sky Nomad"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2023-08-07",
+      "description": "B&R update 2023-08-07",
+      "file": "2023-08-07.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [],
+        "removed": [
+          "Preordain"
+        ]
+      }
+    },
+    {
+      "effective_date": "2023-12-04",
+      "description": "B&R update 2023-12-04",
+      "file": "2023-12-04.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Fury",
+          "Up the Beanstalk"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2024-03-11",
+      "description": "B&R update 2024-03-11",
+      "file": "2024-03-11.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Violent Outburst"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2024-08-26",
+      "description": "B&R update 2024-08-26",
+      "file": "2024-08-26.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Grief",
+          "Nadu, Winged Wisdom"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2024-12-09",
+      "description": "B&R update 2024-12-09",
+      "file": "2024-12-09.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Amped Raptor",
+          "Jegantha, the Wellspring",
+          "The One Ring"
+        ],
+        "removed": [
+          "Faithless Looting",
+          "Green Sun's Zenith",
+          "Mox Opal",
+          "Splinter Twin"
+        ]
+      }
+    },
+    {
+      "effective_date": "2025-03-10",
+      "description": "B&R update 2025-03-10",
+      "file": "2025-03-10.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Underworld Breach"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "effective_date": "2026-05-18",
+      "description": "B&R update 2026-05-18",
+      "file": "2026-05-18.json",
+      "is_baseline": false,
+      "changes": {
+        "added": [
+          "Lotus Field",
+          "Phlage, Titan of Fire's Fury"
+        ],
+        "removed": [
+          "Umezawa's Jitte",
+          "Violent Outburst"
+        ]
+      }
+    }
+  ]
+}

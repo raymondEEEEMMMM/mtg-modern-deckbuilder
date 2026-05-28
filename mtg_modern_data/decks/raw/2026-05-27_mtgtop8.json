@@ -1,0 +1,466 @@
+{
+  "format": "Modern",
+  "collected_date": "2026-05-27",
+  "source": "MTGTop8",
+  "source_url": "https://www.mtgtop8.com/format?f=MO&meta=221",
+  "period_start": "2026-05-18",
+  "data_timeframe": "14_days",
+  "total_decks": 778,
+  "tier_summary": {
+    "professional": 0,
+    "major": 2,
+    "competitive": 13,
+    "regular": 7
+  },
+  "category_composition": {
+    "aggro": 0.5,
+    "control": 0.17,
+    "combo": 0.33
+  },
+  "archetypes": [
+    {
+      "name": "Affinity",
+      "category": "aggro",
+      "metagame_share": 0.12,
+      "deck_count": 93
+    },
+    {
+      "name": "Boros Aggro",
+      "category": "aggro",
+      "metagame_share": 0.11,
+      "deck_count": 86
+    },
+    {
+      "name": "Blink",
+      "category": "aggro",
+      "metagame_share": 0.07,
+      "deck_count": 54
+    },
+    {
+      "name": "UR Aggro",
+      "category": "aggro",
+      "metagame_share": 0.05,
+      "deck_count": 39
+    },
+    {
+      "name": "4/5c Aggro",
+      "category": "aggro",
+      "metagame_share": 0.04,
+      "deck_count": 31
+    },
+    {
+      "name": "UrzaTron",
+      "category": "control",
+      "metagame_share": 0.04,
+      "deck_count": 31
+    },
+    {
+      "name": "Creatures Toolbox",
+      "category": "combo",
+      "metagame_share": 0.04,
+      "deck_count": 31
+    },
+    {
+      "name": "Landless",
+      "category": "combo",
+      "metagame_share": 0.04,
+      "deck_count": 31
+    },
+    {
+      "name": "Ruby Storm",
+      "category": "combo",
+      "metagame_share": 0.04,
+      "deck_count": 31
+    },
+    {
+      "name": "Living End",
+      "category": "combo",
+      "metagame_share": 0.04,
+      "deck_count": 31
+    },
+    {
+      "name": "Instant Reanimator",
+      "category": "combo",
+      "metagame_share": 0.04,
+      "deck_count": 31
+    },
+    {
+      "name": "Eldrazi Ramp",
+      "category": "control",
+      "metagame_share": 0.03,
+      "deck_count": 23
+    },
+    {
+      "name": "UW Control",
+      "category": "control",
+      "metagame_share": 0.03,
+      "deck_count": 23
+    },
+    {
+      "name": "Boros Ponza",
+      "category": "control",
+      "metagame_share": 0.03,
+      "deck_count": 23
+    },
+    {
+      "name": "Reanimator",
+      "category": "combo",
+      "metagame_share": 0.03,
+      "deck_count": 23
+    },
+    {
+      "name": "Amulet Titan",
+      "category": "combo",
+      "metagame_share": 0.03,
+      "deck_count": 23
+    },
+    {
+      "name": "Simic Birthing Ritual",
+      "category": "aggro",
+      "metagame_share": 0.02,
+      "deck_count": 16
+    },
+    {
+      "name": "Red Deck Wins",
+      "category": "aggro",
+      "metagame_share": 0.02,
+      "deck_count": 16
+    },
+    {
+      "name": "Cascade Crash",
+      "category": "aggro",
+      "metagame_share": 0.02,
+      "deck_count": 16
+    },
+    {
+      "name": "Dimir Control",
+      "category": "control",
+      "metagame_share": 0.02,
+      "deck_count": 16
+    },
+    {
+      "name": "Broodscale Bloodchief",
+      "category": "combo",
+      "metagame_share": 0.02,
+      "deck_count": 16
+    },
+    {
+      "name": "Allosaurus Combo",
+      "category": "combo",
+      "metagame_share": 0.02,
+      "deck_count": 16
+    },
+    {
+      "name": "Other Aggro",
+      "category": "aggro",
+      "metagame_share": 0.013,
+      "deck_count": 10
+    },
+    {
+      "name": "Mono Black Aggro",
+      "category": "aggro",
+      "metagame_share": 0.01,
+      "deck_count": 8
+    },
+    {
+      "name": "Jeskai Control",
+      "category": "control",
+      "metagame_share": 0.009,
+      "deck_count": 7
+    },
+    {
+      "name": "Other Control",
+      "category": "control",
+      "metagame_share": 0.008,
+      "deck_count": 6
+    },
+    {
+      "name": "UB Mill",
+      "category": "combo",
+      "metagame_share": 0.008,
+      "deck_count": 6
+    },
+    {
+      "name": "Death's Shadow",
+      "category": "aggro",
+      "metagame_share": 0.006,
+      "deck_count": 5
+    },
+    {
+      "name": "Dredge",
+      "category": "combo",
+      "metagame_share": 0.006,
+      "deck_count": 5
+    },
+    {
+      "name": "The Underworld Cookbook",
+      "category": "aggro",
+      "metagame_share": 0.005,
+      "deck_count": 4
+    },
+    {
+      "name": "Hammer Time",
+      "category": "combo",
+      "metagame_share": 0.005,
+      "deck_count": 4
+    },
+    {
+      "name": "Creativity",
+      "category": "combo",
+      "metagame_share": 0.005,
+      "deck_count": 4
+    },
+    {
+      "name": "Other Combo",
+      "category": "combo",
+      "metagame_share": 0.005,
+      "deck_count": 4
+    },
+    {
+      "name": "Mardu Aggro",
+      "category": "aggro",
+      "metagame_share": 0.004,
+      "deck_count": 3
+    },
+    {
+      "name": "Eldrazi Aggro",
+      "category": "aggro",
+      "metagame_share": 0.003,
+      "deck_count": 2
+    },
+    {
+      "name": "Hollow One",
+      "category": "aggro",
+      "metagame_share": 0.003,
+      "deck_count": 2
+    },
+    {
+      "name": "Jeskai Aggro",
+      "category": "aggro",
+      "metagame_share": 0.003,
+      "deck_count": 2
+    },
+    {
+      "name": "Selesnya Aggro",
+      "category": "aggro",
+      "metagame_share": 0.003,
+      "deck_count": 2
+    },
+    {
+      "name": "UR Control",
+      "category": "control",
+      "metagame_share": 0.003,
+      "deck_count": 2
+    },
+    {
+      "name": "Valakut",
+      "category": "combo",
+      "metagame_share": 0.003,
+      "deck_count": 2
+    }
+  ],
+  "events": [
+    {
+      "name": "MTGO League",
+      "date": "2026-05-26",
+      "tier": "regular",
+      "tier_weight": 0.3,
+      "confidence": "low"
+    },
+    {
+      "name": "MTGO League",
+      "date": "2026-05-26",
+      "tier": "regular",
+      "tier_weight": 0.3,
+      "confidence": "low"
+    },
+    {
+      "name": "MTGO Challenge 64",
+      "date": "2026-05-25",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "MTGO League",
+      "date": "2026-05-25",
+      "tier": "regular",
+      "tier_weight": 0.3,
+      "confidence": "low"
+    },
+    {
+      "name": "MTGO Challenge 32",
+      "date": "2026-05-25",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "RCQ @ Garton (San Severino Marche, Italy)",
+      "date": "2026-05-24",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "MTGO Challenge 32",
+      "date": "2026-05-24",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "Infinity Hobbies x Geek+Pop @ PICCS at SPACE (Makati City, Philippines)",
+      "date": "2026-05-24",
+      "tier": "regular",
+      "tier_weight": 0.3,
+      "confidence": "low"
+    },
+    {
+      "name": "RCQ @ Panas Fresh TCG (Oaxaca, Mexico)",
+      "date": "2026-05-24",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "RCQ @ Magic Maze (Prato, Italy)",
+      "date": "2026-05-24",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "MTGO League",
+      "date": "2026-05-24",
+      "tier": "regular",
+      "tier_weight": 0.3,
+      "confidence": "low"
+    },
+    {
+      "name": "MTGO Challenge 32",
+      "date": "2026-05-24",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "2-slot RCQ @ Dungeon's Gate (Ankeny, IA)",
+      "date": "2026-05-23",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "RCQ @ Gamers' Haunt (Asheville, NC)",
+      "date": "2026-05-23",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "Event @ PoPKai (Brazil)",
+      "date": "2026-05-23",
+      "tier": "regular",
+      "tier_weight": 0.3,
+      "confidence": "low"
+    },
+    {
+      "name": "Etapa #4 @ Trasgo Nerd Store (Brazil)",
+      "date": "2026-05-23",
+      "tier": "regular",
+      "tier_weight": 0.3,
+      "confidence": "low"
+    },
+    {
+      "name": "RCQ @ 4x-Trading (Pian di Mommio, Italy)",
+      "date": "2026-05-23",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "MTGO Challenge 32",
+      "date": "2026-05-23",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "RCQ 1K @ d20 (Eau Claire, WI)",
+      "date": "2026-05-23",
+      "tier": "major",
+      "tier_weight": 0.8,
+      "confidence": "high"
+    },
+    {
+      "name": "MTGO Challenge 64",
+      "date": "2026-05-23",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "RCQ - 10:00am @ SCG CON Cincinnati",
+      "date": "2026-05-17",
+      "tier": "major",
+      "tier_weight": 0.8,
+      "confidence": "high"
+    },
+    {
+      "name": "MTGO RC Super Qualifier",
+      "date": "2026-05-16",
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    }
+  ],
+  "weights": {
+    "professional": {
+      "weight": 1.0,
+      "confidence": "high",
+      "event_types": [
+        "Pro Tour",
+        "Regional Championship",
+        "World Championship",
+        "Mythic Championship"
+      ]
+    },
+    "major": {
+      "weight": 0.8,
+      "confidence": "high",
+      "event_types": [
+        "SCG CON",
+        "SCG Open",
+        "SCG Tour",
+        "MagicFest",
+        "Grand Prix",
+        "RCQ @ SCG",
+        "RCQ 1K",
+        "Regional Qualifier"
+      ]
+    },
+    "competitive": {
+      "weight": 0.6,
+      "confidence": "medium",
+      "event_types": [
+        "MTGO Challenge 64",
+        "MTGO Challenge 32",
+        "MTGO Preliminary",
+        "MTGO RC Super Qualifier",
+        "RCQ",
+        "2-slot RCQ"
+      ]
+    },
+    "regular": {
+      "weight": 0.3,
+      "confidence": "low",
+      "event_types": [
+        "MTGO League",
+        "Event",
+        "Etapa",
+        "Local"
+      ]
+    }
+  }
+}

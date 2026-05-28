@@ -1,0 +1,45 @@
+{
+  "effective_date": "2012-09-20",
+  "format": "Modern",
+  "description": "B&R update 2012-09-20",
+  "is_baseline": false,
+  "banned": [
+    "Ancestral Vision",
+    "Ancient Den",
+    "Bitterblossom",
+    "Blazing Shoal",
+    "Chrome Mox",
+    "Cloudpost",
+    "Dark Depths",
+    "Dread Return",
+    "Glimpse of Nature",
+    "Golgari Grave-Troll",
+    "Great Furnace",
+    "Green Sun's Zenith",
+    "Hypergenesis",
+    "Jace, the Mind Sculptor",
+    "Mental Misstep",
+    "Ponder",
+    "Preordain",
+    "Punishing Fire",
+    "Rite of Flame",
+    "Seat of the Synod",
+    "Sensei's Divining Top",
+    "Skullclamp",
+    "Stoneforge Mystic",
+    "Sword of the Meek",
+    "Tree of Tales",
+    "Umezawa's Jitte",
+    "Vault of Whispers",
+    "Wild Nacatl"
+  ],
+  "restricted": [],
+  "deck_banned": [],
+  "total": 28,
+  "changes": {
+    "added": [],
+    "removed": [
+      "Valakut, the Molten Pinnacle"
+    ]
+  }
+}

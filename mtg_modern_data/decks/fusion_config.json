@@ -1,0 +1,134 @@
+{
+  "description": "多数据源融合权重与置信度配置",
+  "updated": "2026-05-27",
+
+  "source_weights": {
+    "mtgtop8": {
+      "weight": 0.6,
+      "confidence": "medium_high",
+      "rationale": "全量archetype覆盖(40+), 有预分类(aggro/control/combo), 但聚合方式不够透明, League选择偏差存在",
+      "strengths": [
+        "完整archetype列表（含<1%小众套牌）",
+        "预分类标签（aggro/control/combo）",
+        "2周/4周/全时间维度可选",
+        "赛事级别标注明确"
+      ],
+      "weaknesses": [
+        "出场率包含League 5-0, 存在选择偏差",
+        "无名次数据（只有出场, 没有胜负）",
+        "archetype边界模糊（如Boros Aggro可能含多种变体）",
+        "聚合算法不透明"
+      ]
+    },
+    "goldfish": {
+      "weight": 0.4,
+      "confidence": "medium",
+      "rationale": "有名次数据和key_cards验证, 但只展示Top15(缺失~24%), League占总量60%+严重膨胀出场率",
+      "strengths": [
+        "具体名次数据(1st~8th), 可计算胜率指标",
+        "key_cards标注, 便于archetype交叉验证",
+        "Paper/MTGO分平台, 可识别线上偏差",
+        "名次数据可反推真实出场率"
+      ],
+      "weaknesses": [
+        "只展示Top15, 缺失低出场率archetype(~24%总量)",
+        "League 5-0占总deck量60%+, 严重膨胀metagame_share",
+        "无预分类, 需自行推断aggro/control/combo",
+        "archetype命名与Top8不一致, 需映射"
+      ]
+    }
+  },
+
+  "league_inflation_correction": {
+    "description": "MTGO League 5-0数据的选择偏差修正",
+    "problem": "League只展示5-0战绩, 导致: 1)胜率被虚高为100%; 2)出场率被膨胀(每天~79套 vs Challenge 32套)",
+    "solution": "对Goldfish的metagame_share做League修正",
+    "formula": "corrected_share = raw_share * (1 - league_inflation_factor)",
+    "league_inflation_factor": 0.35,
+    "rationale": "League约占总样本60%, 但置信度仅0.3; 修正系数 = 1 - (league_ratio * (1 - league_confidence)) ≈ 1 - 0.6*0.7 = 0.58, 取0.65即修正35%",
+    "example": {
+      "affinity_raw": 0.164,
+      "affinity_corrected": 0.107,
+      "vs_mtgtop8": 0.12,
+      "comment": "修正后Affinity 10.7%与Top8的12%接近, 验证了修正系数合理性"
+    }
+  },
+
+  "tier_weights": {
+    "description": "赛事级别权重（两个数据源共用）",
+    "professional": {
+      "weight": 1.0,
+      "confidence": "high",
+      "sample_bias": "none",
+      "note": "Pro Tour, Regional Championship — 最高竞技水平, 完整瑞士轮+淘汰赛"
+    },
+    "major": {
+      "weight": 0.8,
+      "confidence": "high",
+      "sample_bias": "minimal",
+      "note": "SCG CON, RCQ 1K — 大型赛事, 参赛者水平较高"
+    },
+    "competitive": {
+      "weight": 0.6,
+      "confidence": "medium",
+      "sample_bias": "moderate",
+      "note": "MTGO Challenge 32/64, RCQ — 中等赛事, 参赛者门槛有限"
+    },
+    "regular": {
+      "weight": 0.3,
+      "confidence": "low",
+      "sample_bias": "severe",
+      "note": "MTGO League — 仅展示5-0战绩, 选择偏差严重, 必须降权"
+    }
+  },
+
+  "goldfish_data_dimensions_confidence": {
+    "metagame_share": {
+      "confidence": "medium",
+      "bias": "League膨胀",
+      "correction": "apply_league_inflation_correction"
+    },
+    "placement_data": {
+      "confidence": "high",
+      "bias": "none",
+      "correction": "none",
+      "note": "客观比赛结果, 可直接用于计算胜率指标"
+    },
+    "key_cards": {
+      "confidence": "high",
+      "bias": "none",
+      "correction": "none",
+      "note": "从decklist自动提取, 可靠"
+    },
+    "platform_split": {
+      "confidence": "medium",
+      "bias": "MTGO与Paper可能有显著差异",
+      "correction": "单独分析, 不直接融合"
+    }
+  },
+
+  "fusion_strategy": {
+    "description": "多源数据融合策略",
+    "metagame_share": {
+      "method": "weighted_average_with_correction",
+      "formula": "fused_share = w_top8 * top8_share + w_gf * goldfish_corrected_share",
+      "weights": {"top8": 0.6, "goldfish": 0.4}
+    },
+    "win_rate": {
+      "method": "goldfish_placement_primary",
+      "rationale": "Top8无此数据, 以Goldfish名次数据为主, 结合tier加权计算",
+      "formula": "win_indicator = Σ(tier_weight * placement_score) / Σ(tier_weight)"
+    },
+    "archetype_mapping": {
+      "description": "两个数据源的archetype名称映射",
+      "mappings": [
+        {"goldfish": "Belcher", "top8": "Landless", "confidence": "high"},
+        {"goldfish": "Boros Energy", "top8": "Boros Aggro", "confidence": "medium", "note": "Energy是Boros Aggro的子集"},
+        {"goldfish": "Neobrand", "top8": "Allosaurus Combo", "confidence": "high"},
+        {"goldfish": "Esper GenericBlink", "top8": "Blink", "confidence": "medium", "note": "Goldfish细分到颜色, Top8合并"},
+        {"goldfish": "Gruul Basking Broodscale Combo", "top8": "Broodscale Bloodchief", "confidence": "medium", "note": "同一combo, 不同命名视角"},
+        {"goldfish": "Goryo's Vengeance", "top8": "Instant Reanimator", "confidence": "medium", "note": "可能不完全等同"}
+      ]
+    }
+  }
+}

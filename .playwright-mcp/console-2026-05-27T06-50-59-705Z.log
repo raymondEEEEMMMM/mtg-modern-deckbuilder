@@ -1,0 +1,3 @@
+[   13573ms] [INFO] exp_bucket cookie is not set or has an invalid value. DTNR observability will not be initialized. @ https://mtg.fandom.com/__cb966628517967573/resources-ucp/mw143/dist/scripts/dtnr-observability.js:0
+[   13582ms] [WARNING] This page is using the deprecated ResourceLoader module "skin.fandomdesktop.styles".
+[1.43] The use of the `interface-message-box` feature with SkinModule is deprecated in favor of CodexModule. Please remove this feature.More information can be found at [[mw:Manual:ResourceLoaderSkinModule]].  @ https://mtg.fandom.com/wiki/Banned_and_restricted_cards/Timeline:3108

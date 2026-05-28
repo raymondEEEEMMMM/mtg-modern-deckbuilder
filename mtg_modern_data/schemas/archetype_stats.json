@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Archetype Aggregate Statistics",
+  "description": "Unified schema for archetype-level aggregate data from MTGGoldfish and MTGTop8",
+  "type": "object",
+  "required": ["format", "collected_date", "source", "period_start", "data_timeframe", "total_decks", "archetypes"],
+  "properties": {
+    "format": {"type": "string", "enum": ["Modern"]},
+    "collected_date": {"type": "string", "format": "date", "description": "YYYY-MM-DD"},
+    "source": {"type": "string", "enum": ["MTGGoldfish", "MTGTop8"]},
+    "source_url": {"type": "string", "format": "uri"},
+    "period_start": {"type": "string", "format": "date", "description": "YYYY-MM-DD, start of the meta period"},
+    "data_timeframe": {"type": "string", "description": "e.g. 14_days"},
+    "total_decks": {"type": "integer", "minimum": 0},
+    "category_composition": {
+      "type": "object",
+      "properties": {
+        "aggro": {"type": "number", "minimum": 0, "maximum": 1},
+        "control": {"type": "number", "minimum": 0, "maximum": 1},
+        "combo": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "archetypes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "category", "metagame_share", "deck_count"],
+        "properties": {
+          "name": {"type": "string"},
+          "category": {"type": "string", "enum": ["aggro", "control", "combo", "midrange"]},
+          "metagame_share": {"type": "number", "minimum": 0, "maximum": 1},
+          "deck_count": {"type": "integer", "minimum": 0},
+          "key_cards": {"type": "array", "items": {"type": "string"}},
+          "performance": {"type": "object"}
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "date", "tier", "tier_weight", "confidence"],
+        "properties": {
+          "name": {"type": "string"},
+          "date": {"type": "string"},
+          "tier": {"type": "string", "enum": ["professional", "major", "competitive", "regular"]},
+          "tier_weight": {"type": "number"},
+          "confidence": {"type": "string", "enum": ["high", "medium", "low"]}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Metagame Report - 2026-05-27</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --card-hover: #334155;
+    --border: #334155;
+    --text: #e2e8f0;
+    --text-dim: #94a3b8;
+    --accent: #818cf8;
+    --accent2: #6366f1;
+    --tier1: #ef4444;
+    --tier2: #f59e0b;
+    --tier3: #3b82f6;
+    --tier4: #6b7280;
+    --aggro: #f97316;
+    --combo: #a855f7;
+    --control: #06b6d4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%);
+    padding: 48px 0 36px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #c7d2fe, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+  .hero .subtitle { color: var(--text-dim); font-size: 1.1rem; }
+  .hero .meta-row {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .hero .meta-item {
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+  .hero .meta-item .label { color: var(--text-dim); font-size: 0.8rem; }
+  .hero .meta-item .value { color: var(--accent); font-weight: 600; font-size: 1.1rem; }
+
+  /* Stats Row */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .stat-card .stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+  .stat-card .stat-label { color: var(--text-dim); font-size: 0.85rem; }
+
+  /* Section */
+  .section { margin: 40px 0; }
+  .section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent2);
+    display: inline-block;
+  }
+
+  /* Tier Table */
+  .tier-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .tier-table th {
+    background: rgba(99,102,241,0.15);
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+  }
+  .tier-table td {
+    padding: 12px 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  .tier-table tr:hover { background: var(--card-hover); }
+  .tier-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .cat-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .share-bar-bg {
+    background: rgba(255,255,255,0.08);
+    border-radius: 4px;
+    height: 20px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .share-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+  }
+  .share-bar-text {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  }
+  .key-cards { display: flex; gap: 4px; flex-wrap: wrap; }
+  .key-card-tag {
+    background: rgba(168,85,247,0.15);
+    border: 1px solid rgba(168,85,247,0.3);
+    color: #c084fc;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+  }
+  .source-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 2px;
+  }
+
+  /* Pie-like visual */
+  .dist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .dist-panel {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .dist-panel h3 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--accent);
+  }
+  .dist-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .dist-bar-label {
+    width: 100px;
+    font-size: 0.85rem;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .dist-bar-track {
+    flex: 1;
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px;
+    height: 24px;
+    overflow: hidden;
+    position: relative;
+  }
+  .dist-bar-val {
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .dist-bar-pct {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    width: 50px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* Source coverage */
+  .source-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .source-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .source-card .sc-value { font-size: 1.8rem; font-weight: 800; }
+  .source-card .sc-label { color: var(--text-dim); font-size: 0.85rem; margin-top: 4px; }
+
+  /* Fusion formula */
+  .formula-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+  }
+  .formula-box code {
+    display: block;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.95rem;
+    color: #a5f3fc;
+    margin: 8px 0;
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 6px;
+  }
+
+  /* Top 10 Hero Cards */
+  .top10-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .deck-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+  .deck-card:hover { border-color: var(--accent); }
+  .deck-card .rank {
+    position: absolute;
+    top: -8px;
+    right: 16px;
+    font-size: 2.4rem;
+    font-weight: 900;
+    opacity: 0.15;
+    color: var(--accent);
+  }
+  .deck-card .deck-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .deck-card .deck-score {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 4px 0;
+  }
+  .deck-card .deck-meta {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .deck-card .deck-share {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin-top: 4px;
+  }
+  .deck-card .mini-bar-bg {
+    background: rgba(255,255,255,0.06);
+    border-radius: 3px;
+    height: 6px;
+    margin-top: 6px;
+    overflow: hidden;
+  }
+  .deck-card .mini-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 0;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+  }
+
+  @media (max-width: 768px) {
+    .dist-grid { grid-template-columns: 1fr; }
+    .source-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container">
+    <h1>Modern Metagame Report</h1>
+    <div class="subtitle">MTG Modern 赛制环境强度评估报告</div>
+    <div class="meta-row">
+      <div class="meta-item">
+        <div class="label">数据日期</div>
+        <div class="value">2026-05-27</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">统计周期</div>
+        <div class="value">2026-05-18 ~ 2026-05-27</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">总 Archetype</div>
+        <div class="value">47</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">数据源</div>
+        <div class="value">MTGTop8 + MTGGoldfish</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- Summary Stats -->
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-value" style="color: var(--tier1)">2</div>
+    <div class="stat-label">Tier 1 套牌</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value" style="color: var(--tier2)">19</div>
+    <div class="stat-label">Tier 2 套牌</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value" style="color: var(--tier3)">13</div>
+    <div class="stat-label">Tier 3 套牌</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value" style="color: var(--tier4)">13</div>
+    <div class="stat-label">Tier 4 套牌</div>
+  </div>
+</div>
+
+<!-- Formula -->
+<div class="section">
+  <div class="section-title">评估模型</div>
+  <div class="formula-box">
+    <div style="color: var(--text-dim); font-size:0.85rem;">强度评分公式：</div>
+    <code>strength = 0.40 × 融合出场率 + 0.35 × 名次表现 + 0.15 × 样本置信度 + 0.10 × 冠军指标</code>
+    <div style="color: var(--text-dim); font-size:0.85rem; margin-top:8px;">融合出场率：</div>
+    <code>fused_share = 0.6 × Top8_share + 0.4 × Goldfish_corrected_share</code>
+    <div style="color: var(--text-dim); font-size:0.85rem; margin-top:8px;">League膨胀修正：</div>
+    <code>corrected_share = raw_share × (1 - 0.35) &nbsp;&nbsp;<!-- League占60%样本但置信度仅0.3 --></code>
+  </div>
+</div>
+
+<!-- Top 10 Cards -->
+<div class="section">
+  <div class="section-title">Top 10 强势套牌</div>
+  <div class="top10-grid">
+
+    <div class="deck-card">
+      <div class="rank">1</div>
+      <div class="deck-name">Boros Aggro</div>
+      <div class="deck-meta">
+        <span class="tier-badge" style="background:#ef4444">Tier 1</span>
+        <span class="cat-badge" style="background:var(--aggro); color:#fff">&#9876; Aggro</span>
+      </div>
+      <div class="deck-score" style="color:#ef4444">84.3</div>
+      <div class="deck-share">出场率 7.2% &nbsp;|&nbsp; 名次分 0.972</div>
+      <div class="mini-bar-bg">
+        <div class="mini-bar-fill" style="width:63.00174520069809%; background:#ef4444;"></div>
+      </div>
+      <div class="key-cards" style="margin-top:10px"><span class="key-card-tag">Ragavan, Nimble Pilferer</span><span class="key-card-tag">Ocelot Pride</span></div>
+    </div>
+    <div class="deck-card">
+      <div class="rank">2</div>
+      <div class="deck-name">Affinity</div>
+      <div class="deck-meta">
+        <span class="tier-badge" style="background:#ef4444">Tier 1</span>
+        <span class="cat-badge" style="background:var(--aggro); color:#fff">&#9876; Aggro</span>
+      </div>
+      <div class="deck-score" style="color:#ef4444">84.1</div>
+      <div class="deck-share">出场率 11.5% &nbsp;|&nbsp; 名次分 0.480</div>
+      <div class="mini-bar-bg">
+        <div class="mini-bar-fill" style="width:100%; background:#ef4444;"></div>
+      </div>
+      <div class="key-cards" style="margin-top:10px"><span class="key-card-tag">Mox Opal</span><span class="key-card-tag">Engineered Explosives</span><span class="key-card-tag">Weapons Manufacturing</span></div>
+    </div>
+    <div class="deck-card">
+      <div class="rank">3</div>
+      <div class="deck-name">Grixis Reanimator</div>
+      <div class="deck-meta">
+        <span class="tier-badge" style="background:#f59e0b">Tier 2</span>
+        <span class="cat-badge" style="background:var(--combo); color:#fff">&#9889; Combo</span>
+      </div>
+      <div class="deck-score" style="color:#f59e0b">47.1</div>
+      <div class="deck-share">出场率 2.3% &nbsp;|&nbsp; 名次分 0.552</div>
+      <div class="mini-bar-bg">
+        <div class="mini-bar-fill" style="width:20.41884816753927%; background:#f59e0b;"></div>
+      </div>
+      <div class="key-cards" style="margin-top:10px"><span class="key-card-tag">Abhorrent Oculus</span><span class="key-card-tag">Archon of Cruelty</span><span class="key-card-tag">Thoughtseize</span></div>
+    </div>
+    <div class="deck-card">
+      <div class="rank">4</div>
+      <div class="deck-name">Goryo's Vengeance</div>
+      <div class="deck-meta">
+        <span class="tier-badge" style="background:#f59e0b">Tier 2</span>
+        <span class="cat-badge" style="background:var(--combo); color:#fff">&#9889; Combo</span>
+      </div>
+      <div class="deck-score" style="color:#f59e0b">41.0</div>
+      <div class="deck-share">出场率 4.4% &nbsp;|&nbsp; 名次分 0.264</div>
+      <div class="mini-bar-bg">
+        <div class="mini-bar-fill" style="width:38.568935427574175%; background:#f59e0b;"></div>
+      </div>
+      <div class="key-cards" style="margin-top:10px"><span class="key-card-tag">Goryo's Vengeance</span><span class="key-card-tag">Quantum Riddler</span><span class="key-card-tag">Atraxa, Grand Unifier</span></div>
+    </div>
+    <div class="deck-card">
+      <div class="rank">5</div>
+      <div class="deck-name">Landless</div>
+      <div class="deck-meta">
+        <span class="tier-badge" style="background:#f59e0b">Tier 2</span>
+        <span class="cat-badge" style="background:var(--combo); color:#fff">&#9889; Combo</span>
+      </div>
+      <div class="deck-score" style="color:#f59e0b">40.1</div>
+      <div class="deck-share">出场率 4.3% &nbsp;|&nbsp; 名次分 0.240</div>
+      <div class="mini-bar-bg">
+        <div class="mini-bar-fill" style="width:37.26003490401396%; background:#f59e0b;"></div>
+      </div>
+      <div class="key-cards" style="margin-top:10px"><span class="key-card-tag">Goblin Charbelcher</span><span class="key-card-tag">Sea Gate Restoration</span><span class="key-card-tag">Disrupting Shoal</span></div>
+    </div>
+    <div class="deck-card">
+      <div class="rank">6</div>
+      <div class="deck-name">Blink</div>
+      <div class="deck-meta">
+        <span class="tier-badge" style="background:#f59e0b">Tier 2</span>
+        <span class="cat-badge" style="background:var(--aggro); color:#fff">&#9876; Aggro</span>
+      </div>
+      <div class="deck-score" style="color:#f59e0b">37.2</div>
+      <div class="deck-share">出场率 4.9% &nbsp;|&nbsp; 名次分 0.120</div>
+      <div class="mini-bar-bg">
+        <div class="mini-bar-fill" style="width:42.75741710296684%; background:#f59e0b;"></div>
+      </div>
+      <div class="key-cards" style="margin-top:10px"><span class="key-card-tag">Quantum Riddler</span><span class="key-card-tag">Solitude</span><span class="key-card-tag">Overlord of the Balemurk</span></div>
+    </div>
+    <div class="deck-card">
+      <div class="rank">7</div>
+      <div class="deck-name">Eldrazi Tron</div>
+      <div class="deck-meta">
+        <span class="tier-badge" style="background:#f59e0b">Tier 2</span>
+        <span class="cat-badge" style="background:var(--control); color:#fff">&#128737; Control</span>
+      </div>
+      <div class="deck-score" style="color:#f59e0b">36.0</div>
+      <div class="deck-share">出场率 3.5% &nbsp;|&nbsp; 名次分 0.252</div>
+      <div class="mini-bar-bg">
+        <div class="mini-bar-fill" style="width:30.628272251308903%; background:#f59e0b;"></div>
+      </div>
+      <div class="key-cards" style="margin-top:10px"><span class="key-card-tag">Thought-Knot Seer</span><span class="key-card-tag">Kozilek's Command</span><span class="key-card-tag">Karn, the Great Creator</span></div>
+    </div>
+    <div class="deck-card">
+      <div class="rank">8</div>
+      <div class="deck-name">Living End</div>
+      <div class="deck-meta">
+        <span class="tier-badge" style="background:#f59e0b">Tier 2</span>
+        <span class="cat-badge" style="background:var(--combo); color:#fff">&#9889; Combo</span>
+      </div>
+      <div class="deck-score" style="color:#f59e0b">32.4</div>
+      <div class="deck-share">出场率 3.9% &nbsp;|&nbsp; 名次分 0.096</div>
+      <div class="mini-bar-bg">
+        <div class="mini-bar-fill" style="width:34.29319371727749%; background:#f59e0b;"></div>
+      </div>
+      <div class="key-cards" style="margin-top:10px"><span class="key-card-tag">Living End</span><span class="key-card-tag">Force of Negation</span><span class="key-card-tag">Subtlety</span></div>
+    </div>
+    <div class="deck-card">
+      <div class="rank">9</div>
+      <div class="deck-name">Sultai Midrange</div>
+      <div class="deck-meta">
+        <span class="tier-badge" style="background:#f59e0b">Tier 2</span>
+        <span class="cat-badge" style="background:var(--control); color:#fff">&#128737; Control</span>
+      </div>
+      <div class="deck-score" style="color:#f59e0b">31.8</div>
+      <div class="deck-share">出场率 1.5% &nbsp;|&nbsp; 名次分 0.264</div>
+      <div class="mini-bar-bg">
+        <div class="mini-bar-fill" style="width:13.001745200698082%; background:#f59e0b;"></div>
+      </div>
+      <div class="key-cards" style="margin-top:10px"><span class="key-card-tag">Force of Negation</span><span class="key-card-tag">Abhorrent Oculus</span><span class="key-card-tag">Subtlety</span></div>
+    </div>
+    <div class="deck-card">
+      <div class="rank">10</div>
+      <div class="deck-name">Ruby Storm</div>
+      <div class="deck-meta">
+        <span class="tier-badge" style="background:#f59e0b">Tier 2</span>
+        <span class="cat-badge" style="background:var(--combo); color:#fff">&#9889; Combo</span>
+      </div>
+      <div class="deck-score" style="color:#f59e0b">31.5</div>
+      <div class="deck-share">出场率 4.4% &nbsp;|&nbsp; 名次分 0.000</div>
+      <div class="mini-bar-bg">
+        <div class="mini-bar-fill" style="width:38.65619546247819%; background:#f59e0b;"></div>
+      </div>
+      <div class="key-cards" style="margin-top:10px"><span class="key-card-tag">Ruby Medallion</span><span class="key-card-tag">Pyretic Ritual</span><span class="key-card-tag">Ral, Monsoon Mage</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Full Table -->
+<div class="section">
+  <div class="section-title">全量 Archetype 排名</div>
+  <table class="tier-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>套牌</th>
+        <th>Tier</th>
+        <th>分类</th>
+        <th>强度评分</th>
+        <th>融合出场率</th>
+        <th>出场率分布</th>
+        <th>名次分</th>
+        <th>核心卡牌</th>
+        <th>数据源</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">1</td>
+        <td style="font-weight:600">Boros Aggro</td>
+        <td><span class="tier-badge" style="background:#ef4444">Tier 1</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#ef4444">84.3</td>
+        <td>7.22%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:63.00174520069809%; background:#ef4444"></div>
+            <span class="share-bar-text">7.2%</span>
+          </div>
+        </td>
+        <td>0.972</td>
+        <td><div class="key-cards"><span class="key-card-tag">Ragavan, Nimble Pilferer</span><span class="key-card-tag">Ocelot Pride</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">2</td>
+        <td style="font-weight:600">Affinity</td>
+        <td><span class="tier-badge" style="background:#ef4444">Tier 1</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#ef4444">84.1</td>
+        <td>11.46%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:100%; background:#ef4444"></div>
+            <span class="share-bar-text">11.5%</span>
+          </div>
+        </td>
+        <td>0.480</td>
+        <td><div class="key-cards"><span class="key-card-tag">Mox Opal</span><span class="key-card-tag">Engineered Explosives</span><span class="key-card-tag">Weapons Manufacturing</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">3</td>
+        <td style="font-weight:600">Grixis Reanimator</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#f59e0b">47.1</td>
+        <td>2.34%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:20.41884816753927%; background:#f59e0b"></div>
+            <span class="share-bar-text">2.3%</span>
+          </div>
+        </td>
+        <td>0.552</td>
+        <td><div class="key-cards"><span class="key-card-tag">Abhorrent Oculus</span><span class="key-card-tag">Archon of Cruelty</span><span class="key-card-tag">Thoughtseize</span></div></td>
+        <td><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">4</td>
+        <td style="font-weight:600">Goryo's Vengeance</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#f59e0b">41.0</td>
+        <td>4.42%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:38.568935427574175%; background:#f59e0b"></div>
+            <span class="share-bar-text">4.4%</span>
+          </div>
+        </td>
+        <td>0.264</td>
+        <td><div class="key-cards"><span class="key-card-tag">Goryo's Vengeance</span><span class="key-card-tag">Quantum Riddler</span><span class="key-card-tag">Atraxa, Grand Unifier</span></div></td>
+        <td><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">5</td>
+        <td style="font-weight:600">Landless</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#f59e0b">40.1</td>
+        <td>4.27%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:37.26003490401396%; background:#f59e0b"></div>
+            <span class="share-bar-text">4.3%</span>
+          </div>
+        </td>
+        <td>0.240</td>
+        <td><div class="key-cards"><span class="key-card-tag">Goblin Charbelcher</span><span class="key-card-tag">Sea Gate Restoration</span><span class="key-card-tag">Disrupting Shoal</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">6</td>
+        <td style="font-weight:600">Blink</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#f59e0b">37.2</td>
+        <td>4.90%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:42.75741710296684%; background:#f59e0b"></div>
+            <span class="share-bar-text">4.9%</span>
+          </div>
+        </td>
+        <td>0.120</td>
+        <td><div class="key-cards"><span class="key-card-tag">Quantum Riddler</span><span class="key-card-tag">Solitude</span><span class="key-card-tag">Overlord of the Balemurk</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">7</td>
+        <td style="font-weight:600">Eldrazi Tron</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#f59e0b">36.0</td>
+        <td>3.51%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:30.628272251308903%; background:#f59e0b"></div>
+            <span class="share-bar-text">3.5%</span>
+          </div>
+        </td>
+        <td>0.252</td>
+        <td><div class="key-cards"><span class="key-card-tag">Thought-Knot Seer</span><span class="key-card-tag">Kozilek's Command</span><span class="key-card-tag">Karn, the Great Creator</span></div></td>
+        <td><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">8</td>
+        <td style="font-weight:600">Living End</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#f59e0b">32.4</td>
+        <td>3.93%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:34.29319371727749%; background:#f59e0b"></div>
+            <span class="share-bar-text">3.9%</span>
+          </div>
+        </td>
+        <td>0.096</td>
+        <td><div class="key-cards"><span class="key-card-tag">Living End</span><span class="key-card-tag">Force of Negation</span><span class="key-card-tag">Subtlety</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">9</td>
+        <td style="font-weight:600">Sultai Midrange</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#f59e0b">31.8</td>
+        <td>1.49%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:13.001745200698082%; background:#f59e0b"></div>
+            <span class="share-bar-text">1.5%</span>
+          </div>
+        </td>
+        <td>0.264</td>
+        <td><div class="key-cards"><span class="key-card-tag">Force of Negation</span><span class="key-card-tag">Abhorrent Oculus</span><span class="key-card-tag">Subtlety</span></div></td>
+        <td><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">10</td>
+        <td style="font-weight:600">Ruby Storm</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#f59e0b">31.5</td>
+        <td>4.43%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:38.65619546247819%; background:#f59e0b"></div>
+            <span class="share-bar-text">4.4%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span class="key-card-tag">Ruby Medallion</span><span class="key-card-tag">Pyretic Ritual</span><span class="key-card-tag">Ral, Monsoon Mage</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">11</td>
+        <td style="font-weight:600">UR Aggro</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#f59e0b">31.2</td>
+        <td>5.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:43.63001745200699%; background:#f59e0b"></div>
+            <span class="share-bar-text">5.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">12</td>
+        <td style="font-weight:600">Yawgmoth</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#f59e0b">28.9</td>
+        <td>1.82%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:15.881326352530541%; background:#f59e0b"></div>
+            <span class="share-bar-text">1.8%</span>
+          </div>
+        </td>
+        <td>0.264</td>
+        <td><div class="key-cards"><span class="key-card-tag">Yawgmoth, Thran Physician</span><span class="key-card-tag">Birching Ritual</span><span class="key-card-tag">Cauldron Familiar</span></div></td>
+        <td><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">13</td>
+        <td style="font-weight:600">Creatures Toolbox</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#f59e0b">26.8</td>
+        <td>4.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:34.90401396160559%; background:#f59e0b"></div>
+            <span class="share-bar-text">4.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">14</td>
+        <td style="font-weight:600">4/5c Aggro</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#f59e0b">26.8</td>
+        <td>4.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:34.90401396160559%; background:#f59e0b"></div>
+            <span class="share-bar-text">4.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">15</td>
+        <td style="font-weight:600">UrzaTron</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#f59e0b">26.8</td>
+        <td>4.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:34.90401396160559%; background:#f59e0b"></div>
+            <span class="share-bar-text">4.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">16</td>
+        <td style="font-weight:600">Instant Reanimator</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#f59e0b">26.8</td>
+        <td>4.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:34.90401396160559%; background:#f59e0b"></div>
+            <span class="share-bar-text">4.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">17</td>
+        <td style="font-weight:600">Dimir Midrange</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#f59e0b">26.1</td>
+        <td>2.54%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:22.164048865619545%; background:#f59e0b"></div>
+            <span class="share-bar-text">2.5%</span>
+          </div>
+        </td>
+        <td>0.096</td>
+        <td><div class="key-cards"><span class="key-card-tag">Thoughtseize</span><span class="key-card-tag">Psychic Frog</span><span class="key-card-tag">Fatal Push</span></div></td>
+        <td><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">18</td>
+        <td style="font-weight:600">Eldrazi Ramp</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#3b82f6">23.2</td>
+        <td>2.68%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:23.385689354275744%; background:#3b82f6"></div>
+            <span class="share-bar-text">2.7%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span class="key-card-tag">Eldrazi Temple</span><span class="key-card-tag">Kozilek's Command</span><span class="key-card-tag">Sowing Mycospawn</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">19</td>
+        <td style="font-weight:600">Boros Ponza</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#f59e0b">22.3</td>
+        <td>3.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:26.17801047120419%; background:#f59e0b"></div>
+            <span class="share-bar-text">3.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">20</td>
+        <td style="font-weight:600">UW Control</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#f59e0b">22.3</td>
+        <td>3.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:26.17801047120419%; background:#f59e0b"></div>
+            <span class="share-bar-text">3.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">21</td>
+        <td style="font-weight:600">Reanimator</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#f59e0b">22.3</td>
+        <td>3.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:26.17801047120419%; background:#f59e0b"></div>
+            <span class="share-bar-text">3.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">22</td>
+        <td style="font-weight:600">Amulet Titan</td>
+        <td><span class="tier-badge" style="background:#f59e0b">Tier 2</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#f59e0b">22.3</td>
+        <td>3.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:26.17801047120419%; background:#f59e0b"></div>
+            <span class="share-bar-text">3.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">23</td>
+        <td style="font-weight:600">Allosaurus Combo</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#3b82f6">20.3</td>
+        <td>2.03%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:17.713787085514834%; background:#3b82f6"></div>
+            <span class="share-bar-text">2.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span class="key-card-tag">Griselbrand</span><span class="key-card-tag">Summoner's Pact</span><span class="key-card-tag">Allosaurus Rider</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">24</td>
+        <td style="font-weight:600">Broodscale Bloodchief</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#3b82f6">17.6</td>
+        <td>2.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:17.452006980802796%; background:#3b82f6"></div>
+            <span class="share-bar-text">2.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">25</td>
+        <td style="font-weight:600">Dimir Control</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#3b82f6">17.6</td>
+        <td>2.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:17.452006980802796%; background:#3b82f6"></div>
+            <span class="share-bar-text">2.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">26</td>
+        <td style="font-weight:600">Cascade Crash</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#3b82f6">17.6</td>
+        <td>2.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:17.452006980802796%; background:#3b82f6"></div>
+            <span class="share-bar-text">2.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">27</td>
+        <td style="font-weight:600">Simic Birthing Ritual</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#3b82f6">17.6</td>
+        <td>2.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:17.452006980802796%; background:#3b82f6"></div>
+            <span class="share-bar-text">2.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">28</td>
+        <td style="font-weight:600">Red Deck Wins</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#3b82f6">17.6</td>
+        <td>2.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:17.452006980802796%; background:#3b82f6"></div>
+            <span class="share-bar-text">2.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">29</td>
+        <td style="font-weight:600">Mono-Black Midrange</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#3b82f6">16.5</td>
+        <td>1.23%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:10.732984293193718%; background:#3b82f6"></div>
+            <span class="share-bar-text">1.2%</span>
+          </div>
+        </td>
+        <td>0.024</td>
+        <td><div class="key-cards"><span class="key-card-tag">Orcish Bowmasters</span><span class="key-card-tag">Soul Spike</span><span class="key-card-tag">Force of Despair</span></div></td>
+        <td><span class="source-dot" style="background:#a855f7" title="Goldfish"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">30</td>
+        <td style="font-weight:600">Other Aggro</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#3b82f6">13.9</td>
+        <td>1.30%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:11.343804537521814%; background:#3b82f6"></div>
+            <span class="share-bar-text">1.3%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">31</td>
+        <td style="font-weight:600">Mono Black Aggro</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#3b82f6">12.3</td>
+        <td>1.00%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:8.726003490401398%; background:#3b82f6"></div>
+            <span class="share-bar-text">1.0%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">32</td>
+        <td style="font-weight:600">Jeskai Control</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#3b82f6">11.7</td>
+        <td>0.90%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:7.853403141361256%; background:#3b82f6"></div>
+            <span class="share-bar-text">0.9%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">33</td>
+        <td style="font-weight:600">Other Control</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#3b82f6">11.0</td>
+        <td>0.80%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:6.980802792321117%; background:#3b82f6"></div>
+            <span class="share-bar-text">0.8%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">34</td>
+        <td style="font-weight:600">UB Mill</td>
+        <td><span class="tier-badge" style="background:#3b82f6">Tier 3</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#3b82f6">11.0</td>
+        <td>0.80%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:6.980802792321117%; background:#3b82f6"></div>
+            <span class="share-bar-text">0.8%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">35</td>
+        <td style="font-weight:600">Death's Shadow</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#6b7280">9.9</td>
+        <td>0.60%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:5.235602094240838%; background:#6b7280"></div>
+            <span class="share-bar-text">0.6%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">36</td>
+        <td style="font-weight:600">Dredge</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#6b7280">9.9</td>
+        <td>0.60%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:5.235602094240838%; background:#6b7280"></div>
+            <span class="share-bar-text">0.6%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">37</td>
+        <td style="font-weight:600">Creativity</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#6b7280">9.1</td>
+        <td>0.50%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:4.363001745200699%; background:#6b7280"></div>
+            <span class="share-bar-text">0.5%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">38</td>
+        <td style="font-weight:600">Other Combo</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#6b7280">9.1</td>
+        <td>0.50%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:4.363001745200699%; background:#6b7280"></div>
+            <span class="share-bar-text">0.5%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">39</td>
+        <td style="font-weight:600">The Underworld Cookbook</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#6b7280">9.1</td>
+        <td>0.50%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:4.363001745200699%; background:#6b7280"></div>
+            <span class="share-bar-text">0.5%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">40</td>
+        <td style="font-weight:600">Hammer Time</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#6b7280">9.1</td>
+        <td>0.50%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:4.363001745200699%; background:#6b7280"></div>
+            <span class="share-bar-text">0.5%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">41</td>
+        <td style="font-weight:600">Mardu Aggro</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#6b7280">8.1</td>
+        <td>0.40%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:3.4904013961605584%; background:#6b7280"></div>
+            <span class="share-bar-text">0.4%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">42</td>
+        <td style="font-weight:600">UR Control</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--control); color:#fff; font-size:0.7rem">&#128737; Control</span></td>
+        <td style="font-weight:700; color:#6b7280">7.0</td>
+        <td>0.30%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:2.617801047120419%; background:#6b7280"></div>
+            <span class="share-bar-text">0.3%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">43</td>
+        <td style="font-weight:600">Valakut</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--combo); color:#fff; font-size:0.7rem">&#9889; Combo</span></td>
+        <td style="font-weight:700; color:#6b7280">7.0</td>
+        <td>0.30%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:2.617801047120419%; background:#6b7280"></div>
+            <span class="share-bar-text">0.3%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">44</td>
+        <td style="font-weight:600">Hollow One</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#6b7280">7.0</td>
+        <td>0.30%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:2.617801047120419%; background:#6b7280"></div>
+            <span class="share-bar-text">0.3%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">45</td>
+        <td style="font-weight:600">Selesnya Aggro</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#6b7280">7.0</td>
+        <td>0.30%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:2.617801047120419%; background:#6b7280"></div>
+            <span class="share-bar-text">0.3%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">46</td>
+        <td style="font-weight:600">Jeskai Aggro</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#6b7280">7.0</td>
+        <td>0.30%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:2.617801047120419%; background:#6b7280"></div>
+            <span class="share-bar-text">0.3%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:var(--text-dim)">47</td>
+        <td style="font-weight:600">Eldrazi Aggro</td>
+        <td><span class="tier-badge" style="background:#6b7280">Tier 4</span></td>
+        <td><span class="cat-badge" style="background:var(--aggro); color:#fff; font-size:0.7rem">&#9876; Aggro</span></td>
+        <td style="font-weight:700; color:#6b7280">7.0</td>
+        <td>0.30%</td>
+        <td style="min-width:120px">
+          <div class="share-bar-bg">
+            <div class="share-bar-fill" style="width:2.617801047120419%; background:#6b7280"></div>
+            <span class="share-bar-text">0.3%</span>
+          </div>
+        </td>
+        <td>0.000</td>
+        <td><div class="key-cards"><span style="color:var(--text-dim);font-size:0.75rem">-</span></div></td>
+        <td><span class="source-dot" style="background:#22d3ee" title="MTGTop8"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Distribution -->
+<div class="section">
+  <div class="section-title">环境分布</div>
+  <div class="dist-grid">
+    <div class="dist-panel">
+      <h3>Tier 分布</h3>
+
+      <div class="dist-bar-item">
+        <div class="dist-bar-label" style="color:#ef4444">Tier 1</div>
+        <div class="dist-bar-track">
+          <div class="dist-bar-val" style="width:4.25531914893617%; background:#ef4444">2</div>
+        </div>
+        <div class="dist-bar-pct">4%</div>
+      </div>
+      <div class="dist-bar-item">
+        <div class="dist-bar-label" style="color:#f59e0b">Tier 2</div>
+        <div class="dist-bar-track">
+          <div class="dist-bar-val" style="width:40.42553191489361%; background:#f59e0b">19</div>
+        </div>
+        <div class="dist-bar-pct">40%</div>
+      </div>
+      <div class="dist-bar-item">
+        <div class="dist-bar-label" style="color:#3b82f6">Tier 3</div>
+        <div class="dist-bar-track">
+          <div class="dist-bar-val" style="width:27.659574468085108%; background:#3b82f6">13</div>
+        </div>
+        <div class="dist-bar-pct">28%</div>
+      </div>
+      <div class="dist-bar-item">
+        <div class="dist-bar-label" style="color:#6b7280">Tier 4</div>
+        <div class="dist-bar-track">
+          <div class="dist-bar-val" style="width:27.659574468085108%; background:#6b7280">13</div>
+        </div>
+        <div class="dist-bar-pct">28%</div>
+      </div>
+    </div>
+    <div class="dist-panel">
+      <h3>分类分布</h3>
+
+      <div class="dist-bar-item">
+        <div class="dist-bar-label" style="color:#f97316">&#9876; Aggro</div>
+        <div class="dist-bar-track">
+          <div class="dist-bar-val" style="width:36.17021276595745%; background:#f97316">17</div>
+        </div>
+        <div class="dist-bar-pct">36%</div>
+      </div>
+      <div class="dist-bar-item">
+        <div class="dist-bar-label" style="color:#a855f7">&#9889; Combo</div>
+        <div class="dist-bar-track">
+          <div class="dist-bar-val" style="width:38.297872340425535%; background:#a855f7">18</div>
+        </div>
+        <div class="dist-bar-pct">38%</div>
+      </div>
+      <div class="dist-bar-item">
+        <div class="dist-bar-label" style="color:#06b6d4">&#128737; Control</div>
+        <div class="dist-bar-track">
+          <div class="dist-bar-val" style="width:25.53191489361702%; background:#06b6d4">12</div>
+        </div>
+        <div class="dist-bar-pct">26%</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Source Coverage -->
+<div class="section">
+  <div class="section-title">数据源覆盖</div>
+  <div class="source-grid">
+    <div class="source-card">
+      <div class="sc-value" style="color:#22d3ee">8</div>
+      <div class="sc-label">双源覆盖</div>
+      <div style="margin-top:8px">
+        <span class="source-dot" style="background:#22d3ee"></span>
+        <span class="source-dot" style="background:#a855f7"></span>
+      </div>
+    </div>
+    <div class="source-card">
+      <div class="sc-value" style="color:#22d3ee">32</div>
+      <div class="sc-label">仅 MTGTop8</div>
+      <div style="margin-top:8px">
+        <span class="source-dot" style="background:#22d3ee"></span>
+      </div>
+    </div>
+    <div class="source-card">
+      <div class="sc-value" style="color:#a855f7">7</div>
+      <div class="sc-label">仅 Goldfish</div>
+      <div style="margin-top:8px">
+        <span class="source-dot" style="background:#a855f7"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Top 3 Category Leaders -->
+<div class="section">
+  <div class="section-title">各分类领军套牌</div>
+  <table class="tier-table">
+    <thead>
+      <tr><th>分类</th><th>领军套牌</th><th>强度</th><th>出场率</th><th>名次分</th><th>核心卡牌</th></tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td><span class="cat-badge" style="background:#f97316; color:#fff">&#9876; Aggro</span></td>
+        <td style="font-weight:700">Boros Aggro</td>
+        <td style="font-weight:700; color:#ef4444">84.3</td>
+        <td>7.22%</td>
+        <td>0.972</td>
+        <td><div class="key-cards"><span class="key-card-tag">Ragavan, Nimble Pilferer</span><span class="key-card-tag">Ocelot Pride</span></div></td>
+      </tr>
+      <tr>
+        <td><span class="cat-badge" style="background:#a855f7; color:#fff">&#9889; Combo</span></td>
+        <td style="font-weight:700">Grixis Reanimator</td>
+        <td style="font-weight:700; color:#f59e0b">47.1</td>
+        <td>2.34%</td>
+        <td>0.552</td>
+        <td><div class="key-cards"><span class="key-card-tag">Abhorrent Oculus</span><span class="key-card-tag">Archon of Cruelty</span><span class="key-card-tag">Thoughtseize</span></div></td>
+      </tr>
+      <tr>
+        <td><span class="cat-badge" style="background:#06b6d4; color:#fff">&#128737; Control</span></td>
+        <td style="font-weight:700">Eldrazi Tron</td>
+        <td style="font-weight:700; color:#f59e0b">36.0</td>
+        <td>3.51%</td>
+        <td>0.252</td>
+        <td><div class="key-cards"><span class="key-card-tag">Thought-Knot Seer</span><span class="key-card-tag">Kozilek's Command</span><span class="key-card-tag">Karn, the Great Creator</span></div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Fusion Config Notes -->
+<div class="section">
+  <div class="section-title">方法论备注</div>
+  <div class="formula-box" style="font-size:0.9rem;">
+    <div style="margin-bottom:12px;"><strong style="color:var(--accent)">数据源权重</strong></div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+      <div>
+        <span style="color:#22d3ee; font-weight:600;">MTGTop8 (0.6)</span>
+        <div style="color:var(--text-dim); font-size:0.8rem;">完整archetype覆盖 | 预分类标签 | 聚合不透明</div>
+      </div>
+      <div>
+        <span style="color:#a855f7; font-weight:600;">MTGGoldfish (0.4)</span>
+        <div style="color:var(--text-dim); font-size:0.8rem;">名次数据 | 核心卡牌验证 | League膨胀 | 只Top15</div>
+      </div>
+    </div>
+    <div style="margin-bottom:12px;"><strong style="color:var(--accent)">League膨胀修正</strong></div>
+    <div style="color:var(--text-dim); font-size:0.85rem;">
+      Goldfish的metagame_share中League 5-0占总样本约60%，但只展示全胜战绩，存在严重选择偏差。<br>
+      修正系数0.35：Affinity修正后10.7% ≈ Top8的12%，验证修正合理。
+    </div>
+    <div style="margin-top:12px; margin-bottom:12px;"><strong style="color:var(--accent)">Tier分级标准</strong></div>
+    <div style="color:var(--text-dim); font-size:0.85rem;">
+      Tier 1: score ≥ 50 或 share ≥ 8% &nbsp;|&nbsp;
+      Tier 2: score ≥ 25 或 share ≥ 3% &nbsp;|&nbsp;
+      Tier 3: score ≥ 10 或 share ≥ 1% &nbsp;|&nbsp;
+      Tier 4: 其余
+    </div>
+    <div style="margin-top:12px;"><strong style="color:var(--accent)">命名映射</strong>（Goldfish → Top8）</div>
+    <div style="color:var(--text-dim); font-size:0.85rem; margin-top:4px;">
+      Belcher → Landless &nbsp;|&nbsp;
+      Boros Energy → Boros Aggro &nbsp;|&nbsp;
+      Neobrand → Allosaurus Combo &nbsp;|&nbsp;
+      Esper GenericBlink → Blink
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <div class="container">
+    MTG Modern Metagame Report &middot; Generated 2026-05-27 19:10 &middot; Data: MTGTop8 + MTGGoldfish
+  </div>
+</footer>
+
+</body>
+</html>

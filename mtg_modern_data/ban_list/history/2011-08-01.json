@@ -1,0 +1,32 @@
+{
+  "effective_date": "2011-08-01",
+  "format": "Modern",
+  "description": "Modern format initial banlist",
+  "is_baseline": true,
+  "banned": [
+    "Ancestral Vision",
+    "Ancient Den",
+    "Bitterblossom",
+    "Chrome Mox",
+    "Dark Depths",
+    "Dread Return",
+    "Glimpse of Nature",
+    "Golgari Grave-Troll",
+    "Great Furnace",
+    "Hypergenesis",
+    "Jace, the Mind Sculptor",
+    "Mental Misstep",
+    "Seat of the Synod",
+    "Sensei's Divining Top",
+    "Skullclamp",
+    "Stoneforge Mystic",
+    "Sword of the Meek",
+    "Tree of Tales",
+    "Umezawa's Jitte",
+    "Valakut, the Molten Pinnacle",
+    "Vault of Whispers"
+  ],
+  "restricted": [],
+  "deck_banned": [],
+  "total": 21
+}

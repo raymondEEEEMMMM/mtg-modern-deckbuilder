@@ -1,0 +1,1459 @@
+{
+  "generated_date": "2026-05-28T03:21:08Z",
+  "based_on_ban_list_date": "2026-05-18",
+  "data_period": {
+    "start": "2026-05-18",
+    "end": "2026-05-28"
+  },
+  "total_decks_analyzed": 980,
+  "total_archetypes": 156,
+  "tier_distribution": {
+    "Tier 1": 3,
+    "Tier 2": 27,
+    "Tier 3": 122,
+    "Tier 4": 4
+  },
+  "top_decks": [
+    {
+      "rank": 1,
+      "name": "Boros Energy",
+      "category": "aggro",
+      "tier": "Tier 1",
+      "strength_score": 83.3,
+      "metagame_share": 0.0671,
+      "key_cards": [
+        "Galvanic Discharge",
+        "Ajani, Nacatl Pariah",
+        "Guide of Souls",
+        "Ocelot Pride",
+        "Ragavan, Nimble Pilferer"
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "Affinity",
+      "category": "aggro",
+      "tier": "Tier 1",
+      "strength_score": 68.6,
+      "metagame_share": 0.0686,
+      "key_cards": [
+        "Urza's Saga",
+        "Mishra's Bauble",
+        "Mox Opal",
+        "Kappa Cannoneer",
+        "Pinnacle Emissary"
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Grixis Reanimator",
+      "category": "combo",
+      "tier": "Tier 1",
+      "strength_score": 54.5,
+      "metagame_share": 0.0288,
+      "key_cards": [
+        "Psychic Frog",
+        "Persist",
+        "Polluted Delta",
+        "Abhorrent Oculus",
+        "Archon of Cruelty"
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "UR Prowess",
+      "category": "aggro",
+      "tier": "Tier 2",
+      "strength_score": 39.5,
+      "metagame_share": 0.0508,
+      "key_cards": [
+        "Lightning Bolt",
+        "Mishra's Bauble",
+        "Dragon's Rage Channeler",
+        "Monastery Swiftspear",
+        "Lava Dart"
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "Blink",
+      "category": "midrange",
+      "tier": "Tier 2",
+      "strength_score": 39.4,
+      "metagame_share": 0.0415,
+      "key_cards": [
+        "Solitude",
+        "Phelia, Exuberant Shepherd",
+        "Quantum Riddler",
+        "Witch Enchanter",
+        "Ephemerate"
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "Sultai Midrange",
+      "category": "control",
+      "tier": "Tier 2",
+      "strength_score": 38.7,
+      "metagame_share": 0.0119,
+      "key_cards": [
+        "Birthing Ritual",
+        "Abhorrent Oculus",
+        "Coiling Oracle",
+        "Ice-Fang Coatl",
+        "Shardless Agent"
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "Goryo's Vengeance",
+      "category": "combo",
+      "tier": "Tier 2",
+      "strength_score": 36.8,
+      "metagame_share": 0.0211,
+      "key_cards": [
+        "Goryo's Vengeance",
+        "Psychic Frog",
+        "Atraxa, Grand Unifier",
+        "Polluted Delta",
+        "Solitude"
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "Eldrazi Tron",
+      "category": "control",
+      "tier": "Tier 2",
+      "strength_score": 34.3,
+      "metagame_share": 0.0271,
+      "key_cards": [
+        "Ugin's Labyrinth",
+        "Kozilek's Command",
+        "Karn, the Great Creator",
+        "Expedition Map",
+        "Thought-Knot Seer"
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "Living End",
+      "category": "combo",
+      "tier": "Tier 2",
+      "strength_score": 33.4,
+      "metagame_share": 0.0313,
+      "key_cards": [
+        "Misty Rainforest",
+        "Shardless Agent",
+        "Subtlety",
+        "Force of Negation",
+        "Endurance"
+      ]
+    },
+    {
+      "rank": 10,
+      "name": "Red Deck Wins",
+      "category": "aggro",
+      "tier": "Tier 2",
+      "strength_score": 31.5,
+      "metagame_share": 0.0465,
+      "key_cards": [
+        "Lightning Bolt",
+        "Monastery Swiftspear",
+        "Boltwave",
+        "Lava Spike",
+        "Skewer the Critics"
+      ]
+    },
+    {
+      "rank": 11,
+      "name": "Dimir Midrange",
+      "category": "control",
+      "tier": "Tier 2",
+      "strength_score": 31.2,
+      "metagame_share": 0.0195,
+      "key_cards": [
+        "Psychic Frog",
+        "Orcish Bowmasters",
+        "Fatal Push",
+        "Thoughtseize",
+        "Polluted Delta"
+      ]
+    },
+    {
+      "rank": 12,
+      "name": "Yawgmoth",
+      "category": "combo",
+      "tier": "Tier 2",
+      "strength_score": 29.4,
+      "metagame_share": 0.0143,
+      "key_cards": [
+        "Verdant Catacombs",
+        "Young Wolf",
+        "Delighted Halfling",
+        "Agatha's Soul Cauldron",
+        "Badgermole Cub"
+      ]
+    },
+    {
+      "rank": 13,
+      "name": "Landless",
+      "category": "combo",
+      "tier": "Tier 2",
+      "strength_score": 28.8,
+      "metagame_share": 0.0247,
+      "key_cards": [
+        "Goblin Charbelcher",
+        "Hydroelectric Specimen",
+        "Tameshi, Reality Architect",
+        "Disrupting Shoal",
+        "Sea Gate Restoration"
+      ]
+    },
+    {
+      "rank": 14,
+      "name": "UW Control",
+      "category": "control",
+      "tier": "Tier 2",
+      "strength_score": 27.3,
+      "metagame_share": 0.0177,
+      "key_cards": [
+        "Solitude",
+        "Teferi, Time Raveler",
+        "Guide of Souls",
+        "Ocelot Pride",
+        "Witch Enchanter"
+      ]
+    },
+    {
+      "rank": 15,
+      "name": "Crashing Footfalls",
+      "category": "combo",
+      "tier": "Tier 2",
+      "strength_score": 27.1,
+      "metagame_share": 0.0186,
+      "key_cards": [
+        "Shardless Agent",
+        "Crashing Footfalls",
+        "Force of Negation",
+        "Violent Outburst",
+        "Subtlety"
+      ]
+    }
+  ],
+  "meta_composition": {
+    "aggro": 0.3779,
+    "control": 0.1975,
+    "midrange": 0.1004,
+    "combo": 0.3242
+  },
+  "coverage_rate": {
+    "top_10": 0.428,
+    "top_15": 0.5349
+  },
+  "category_insights": {
+    "aggro": {
+      "share": 0.3779,
+      "deck_count": 40,
+      "top_representatives": [
+        {
+          "name": "Affinity",
+          "share": 0.0686,
+          "tier": "Tier 1",
+          "key_cards": [
+            "Urza's Saga",
+            "Mishra's Bauble",
+            "Mox Opal"
+          ]
+        },
+        {
+          "name": "Boros Energy",
+          "share": 0.0671,
+          "tier": "Tier 1",
+          "key_cards": [
+            "Galvanic Discharge",
+            "Ajani, Nacatl Pariah",
+            "Guide of Souls"
+          ]
+        },
+        {
+          "name": "UR Prowess",
+          "share": 0.0508,
+          "tier": "Tier 2",
+          "key_cards": [
+            "Lightning Bolt",
+            "Mishra's Bauble",
+            "Dragon's Rage Channeler"
+          ]
+        }
+      ],
+      "avg_consistency": 0.873,
+      "avg_power_density": 0.598
+    },
+    "control": {
+      "share": 0.1975,
+      "deck_count": 29,
+      "top_representatives": [
+        {
+          "name": "Eldrazi Tron",
+          "share": 0.0271,
+          "tier": "Tier 2",
+          "key_cards": [
+            "Ugin's Labyrinth",
+            "Kozilek's Command",
+            "Karn, the Great Creator"
+          ]
+        },
+        {
+          "name": "Eldrazi Ramp",
+          "share": 0.0245,
+          "tier": "Tier 3",
+          "key_cards": [
+            "Kozilek's Command",
+            "Ugin's Labyrinth",
+            "Malevolent Rumble"
+          ]
+        },
+        {
+          "name": "Dimir Midrange",
+          "share": 0.0195,
+          "tier": "Tier 2",
+          "key_cards": [
+            "Psychic Frog",
+            "Orcish Bowmasters",
+            "Fatal Push"
+          ]
+        }
+      ],
+      "avg_consistency": 0.789,
+      "avg_power_density": 0.528
+    },
+    "midrange": {
+      "share": 0.1004,
+      "deck_count": 32,
+      "top_representatives": [
+        {
+          "name": "Blink",
+          "share": 0.0415,
+          "tier": "Tier 2",
+          "key_cards": [
+            "Solitude",
+            "Phelia, Exuberant Shepherd",
+            "Quantum Riddler"
+          ]
+        },
+        {
+          "name": "Dimir",
+          "share": 0.0059,
+          "tier": "Tier 3",
+          "key_cards": [
+            "Orcish Bowmasters",
+            "Fatal Push",
+            "Polluted Delta"
+          ]
+        },
+        {
+          "name": "The Rock",
+          "share": 0.0051,
+          "tier": "Tier 3",
+          "key_cards": [
+            "Thoughtseize",
+            "Orcish Bowmasters",
+            "Boggart Trawler"
+          ]
+        }
+      ],
+      "avg_consistency": 0.896,
+      "avg_power_density": 0.614
+    },
+    "combo": {
+      "share": 0.3242,
+      "deck_count": 55,
+      "top_representatives": [
+        {
+          "name": "Living End",
+          "share": 0.0313,
+          "tier": "Tier 2",
+          "key_cards": [
+            "Misty Rainforest",
+            "Shardless Agent",
+            "Subtlety"
+          ]
+        },
+        {
+          "name": "Grixis Reanimator",
+          "share": 0.0288,
+          "tier": "Tier 1",
+          "key_cards": [
+            "Psychic Frog",
+            "Persist",
+            "Polluted Delta"
+          ]
+        },
+        {
+          "name": "Landless",
+          "share": 0.0247,
+          "tier": "Tier 2",
+          "key_cards": [
+            "Goblin Charbelcher",
+            "Hydroelectric Specimen",
+            "Tameshi, Reality Architect"
+          ]
+        }
+      ],
+      "avg_consistency": 0.866,
+      "avg_power_density": 0.433
+    }
+  },
+  "meta_roles": {
+    "dominant": [
+      "Boros Energy",
+      "Affinity",
+      "Grixis Reanimator"
+    ],
+    "established": [
+      "UR Prowess",
+      "Blink",
+      "Sultai Midrange",
+      "Goryo's Vengeance",
+      "Eldrazi Tron",
+      "Living End",
+      "Red Deck Wins",
+      "Dimir Midrange",
+      "Yawgmoth",
+      "Landless",
+      "UW Control",
+      "Crashing Footfalls",
+      "4/5c Aggro",
+      "Grixis Midrange",
+      "Instant Reanimator",
+      "Izzet Steel-Cutter",
+      "Grixis Death's Shadow",
+      "Izzet Metalcraft",
+      "R",
+      "Orzhov GenericBlink",
+      "Dimir Aggro",
+      "Izzet Wizards",
+      "Esper Midrange",
+      "The Underworld Cookbook",
+      "Mardu Aggro",
+      "Broodscale Bloodchief",
+      "UR Aggro"
+    ],
+    "niche": [
+      "Ruby Storm",
+      "WUB",
+      "Asmo Food",
+      "Grixis Control",
+      "W-U-B-R-G",
+      "Dimir Shadow",
+      "Mono-Black Midrange",
+      "Bant GenericBlink",
+      "WRG",
+      "Mono-White Control",
+      "W-U-B-G",
+      "Orzhov Midrange",
+      "Birthing Ritual",
+      "Azorius Control",
+      "W-U-B-G Dredge",
+      "Frog Combo",
+      "Esper Reanimator",
+      "Selesnya GenericBlink",
+      "Necrodominance",
+      "Allosaurus Combo"
+    ],
+    "meta_calls": [
+      "Sultai Midrange",
+      "Eldrazi Tron",
+      "Dimir Midrange",
+      "UW Control",
+      "Grixis Control",
+      "Mono-Black Midrange",
+      "Mono-White Control",
+      "Azorius Control",
+      "Mono-Blue Tron",
+      "Lantern"
+    ],
+    "dominant_category": "aggro"
+  },
+  "matchup_matrix": {
+    "Boros Energy": {
+      "Boros Energy": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Affinity": {
+        "advantage": 0.37,
+        "confidence": "high"
+      },
+      "Grixis Reanimator": {
+        "advantage": 1.72,
+        "confidence": "high"
+      },
+      "UR Prowess": {
+        "advantage": 1.0,
+        "confidence": "high"
+      },
+      "Blink": {
+        "advantage": 2.0,
+        "confidence": "high"
+      },
+      "Sultai Midrange": {
+        "advantage": 0.0,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": 2.0,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": 0.0,
+        "confidence": "high"
+      },
+      "Living End": {
+        "advantage": 2.0,
+        "confidence": "high"
+      },
+      "Red Deck Wins": {
+        "advantage": 1.0,
+        "confidence": "high"
+      },
+      "Dimir Midrange": {
+        "advantage": 0.0,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": 2.0,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": 2.0,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 0.0,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": 2.0,
+        "confidence": "medium"
+      }
+    },
+    "Affinity": {
+      "Boros Energy": {
+        "advantage": -0.37,
+        "confidence": "high"
+      },
+      "Affinity": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Grixis Reanimator": {
+        "advantage": 1.35,
+        "confidence": "high"
+      },
+      "UR Prowess": {
+        "advantage": 0.73,
+        "confidence": "high"
+      },
+      "Blink": {
+        "advantage": 1.73,
+        "confidence": "high"
+      },
+      "Sultai Midrange": {
+        "advantage": -0.25,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": 1.79,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": -0.14,
+        "confidence": "high"
+      },
+      "Living End": {
+        "advantage": 1.88,
+        "confidence": "high"
+      },
+      "Red Deck Wins": {
+        "advantage": 0.93,
+        "confidence": "high"
+      },
+      "Dimir Midrange": {
+        "advantage": -0.07,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": 1.98,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": 1.99,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 0.0,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": 2.0,
+        "confidence": "medium"
+      }
+    },
+    "Grixis Reanimator": {
+      "Boros Energy": {
+        "advantage": -1.72,
+        "confidence": "high"
+      },
+      "Affinity": {
+        "advantage": -1.35,
+        "confidence": "high"
+      },
+      "Grixis Reanimator": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "UR Prowess": {
+        "advantage": -0.62,
+        "confidence": "high"
+      },
+      "Blink": {
+        "advantage": 0.38,
+        "confidence": "high"
+      },
+      "Sultai Midrange": {
+        "advantage": 1.4,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": 0.44,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": 1.51,
+        "confidence": "high"
+      },
+      "Living End": {
+        "advantage": 0.53,
+        "confidence": "high"
+      },
+      "Red Deck Wins": {
+        "advantage": -0.43,
+        "confidence": "high"
+      },
+      "Dimir Midrange": {
+        "advantage": 1.58,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": 0.63,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": 0.64,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 1.68,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": 0.68,
+        "confidence": "medium"
+      }
+    },
+    "UR Prowess": {
+      "Boros Energy": {
+        "advantage": -1.0,
+        "confidence": "high"
+      },
+      "Affinity": {
+        "advantage": -0.73,
+        "confidence": "high"
+      },
+      "Grixis Reanimator": {
+        "advantage": 0.62,
+        "confidence": "high"
+      },
+      "UR Prowess": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Blink": {
+        "advantage": 1.0,
+        "confidence": "high"
+      },
+      "Sultai Midrange": {
+        "advantage": -0.98,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": 1.07,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": -0.87,
+        "confidence": "high"
+      },
+      "Living End": {
+        "advantage": 1.15,
+        "confidence": "high"
+      },
+      "Red Deck Wins": {
+        "advantage": 0.2,
+        "confidence": "high"
+      },
+      "Dimir Midrange": {
+        "advantage": -0.79,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": 1.25,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": 1.27,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": -0.7,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": 1.31,
+        "confidence": "medium"
+      }
+    },
+    "Blink": {
+      "Boros Energy": {
+        "advantage": -2.0,
+        "confidence": "high"
+      },
+      "Affinity": {
+        "advantage": -1.73,
+        "confidence": "high"
+      },
+      "Grixis Reanimator": {
+        "advantage": -0.38,
+        "confidence": "high"
+      },
+      "UR Prowess": {
+        "advantage": -1.0,
+        "confidence": "high"
+      },
+      "Blink": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Sultai Midrange": {
+        "advantage": 1.02,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": 0.07,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": 1.13,
+        "confidence": "high"
+      },
+      "Living End": {
+        "advantage": 0.15,
+        "confidence": "high"
+      },
+      "Red Deck Wins": {
+        "advantage": -0.8,
+        "confidence": "high"
+      },
+      "Dimir Midrange": {
+        "advantage": 1.21,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": 0.25,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": 0.26,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 1.3,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": 0.31,
+        "confidence": "medium"
+      }
+    },
+    "Sultai Midrange": {
+      "Boros Energy": {
+        "advantage": 0.0,
+        "confidence": "medium"
+      },
+      "Affinity": {
+        "advantage": 0.25,
+        "confidence": "medium"
+      },
+      "Grixis Reanimator": {
+        "advantage": -1.4,
+        "confidence": "medium"
+      },
+      "UR Prowess": {
+        "advantage": 0.98,
+        "confidence": "medium"
+      },
+      "Blink": {
+        "advantage": -1.02,
+        "confidence": "medium"
+      },
+      "Sultai Midrange": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Goryo's Vengeance": {
+        "advantage": -0.95,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": 0.11,
+        "confidence": "medium"
+      },
+      "Living End": {
+        "advantage": -0.87,
+        "confidence": "medium"
+      },
+      "Red Deck Wins": {
+        "advantage": 1.18,
+        "confidence": "medium"
+      },
+      "Dimir Midrange": {
+        "advantage": 0.19,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": -0.77,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": -0.75,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 0.29,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": -0.71,
+        "confidence": "medium"
+      }
+    },
+    "Goryo's Vengeance": {
+      "Boros Energy": {
+        "advantage": -2.0,
+        "confidence": "medium"
+      },
+      "Affinity": {
+        "advantage": -1.79,
+        "confidence": "medium"
+      },
+      "Grixis Reanimator": {
+        "advantage": -0.44,
+        "confidence": "medium"
+      },
+      "UR Prowess": {
+        "advantage": -1.07,
+        "confidence": "medium"
+      },
+      "Blink": {
+        "advantage": -0.07,
+        "confidence": "medium"
+      },
+      "Sultai Midrange": {
+        "advantage": 0.95,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Eldrazi Tron": {
+        "advantage": 1.06,
+        "confidence": "medium"
+      },
+      "Living End": {
+        "advantage": 0.08,
+        "confidence": "medium"
+      },
+      "Red Deck Wins": {
+        "advantage": -0.87,
+        "confidence": "medium"
+      },
+      "Dimir Midrange": {
+        "advantage": 1.14,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": 0.18,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": 0.2,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 1.24,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": 0.24,
+        "confidence": "medium"
+      }
+    },
+    "Eldrazi Tron": {
+      "Boros Energy": {
+        "advantage": 0.0,
+        "confidence": "high"
+      },
+      "Affinity": {
+        "advantage": 0.14,
+        "confidence": "high"
+      },
+      "Grixis Reanimator": {
+        "advantage": -1.51,
+        "confidence": "high"
+      },
+      "UR Prowess": {
+        "advantage": 0.87,
+        "confidence": "high"
+      },
+      "Blink": {
+        "advantage": -1.13,
+        "confidence": "high"
+      },
+      "Sultai Midrange": {
+        "advantage": -0.11,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": -1.06,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Living End": {
+        "advantage": -0.98,
+        "confidence": "high"
+      },
+      "Red Deck Wins": {
+        "advantage": 1.07,
+        "confidence": "high"
+      },
+      "Dimir Midrange": {
+        "advantage": 0.08,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": -0.88,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": -0.86,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 0.17,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": -0.82,
+        "confidence": "medium"
+      }
+    },
+    "Living End": {
+      "Boros Energy": {
+        "advantage": -2.0,
+        "confidence": "high"
+      },
+      "Affinity": {
+        "advantage": -1.88,
+        "confidence": "high"
+      },
+      "Grixis Reanimator": {
+        "advantage": -0.53,
+        "confidence": "high"
+      },
+      "UR Prowess": {
+        "advantage": -1.15,
+        "confidence": "high"
+      },
+      "Blink": {
+        "advantage": -0.15,
+        "confidence": "high"
+      },
+      "Sultai Midrange": {
+        "advantage": 0.87,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": -0.08,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": 0.98,
+        "confidence": "high"
+      },
+      "Living End": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Red Deck Wins": {
+        "advantage": -0.95,
+        "confidence": "high"
+      },
+      "Dimir Midrange": {
+        "advantage": 1.05,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": 0.1,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": 0.11,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 1.15,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": 0.16,
+        "confidence": "medium"
+      }
+    },
+    "Red Deck Wins": {
+      "Boros Energy": {
+        "advantage": -1.0,
+        "confidence": "high"
+      },
+      "Affinity": {
+        "advantage": -0.93,
+        "confidence": "high"
+      },
+      "Grixis Reanimator": {
+        "advantage": 0.43,
+        "confidence": "high"
+      },
+      "UR Prowess": {
+        "advantage": -0.2,
+        "confidence": "high"
+      },
+      "Blink": {
+        "advantage": 0.8,
+        "confidence": "high"
+      },
+      "Sultai Midrange": {
+        "advantage": -1.18,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": 0.87,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": -1.07,
+        "confidence": "high"
+      },
+      "Living End": {
+        "advantage": 0.95,
+        "confidence": "high"
+      },
+      "Red Deck Wins": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Dimir Midrange": {
+        "advantage": -0.99,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": 1.05,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": 1.07,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": -0.9,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": 1.11,
+        "confidence": "medium"
+      }
+    },
+    "Dimir Midrange": {
+      "Boros Energy": {
+        "advantage": 0.0,
+        "confidence": "medium"
+      },
+      "Affinity": {
+        "advantage": 0.07,
+        "confidence": "medium"
+      },
+      "Grixis Reanimator": {
+        "advantage": -1.58,
+        "confidence": "medium"
+      },
+      "UR Prowess": {
+        "advantage": 0.79,
+        "confidence": "medium"
+      },
+      "Blink": {
+        "advantage": -1.21,
+        "confidence": "medium"
+      },
+      "Sultai Midrange": {
+        "advantage": -0.19,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": -1.14,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": -0.08,
+        "confidence": "medium"
+      },
+      "Living End": {
+        "advantage": -1.05,
+        "confidence": "medium"
+      },
+      "Red Deck Wins": {
+        "advantage": 0.99,
+        "confidence": "medium"
+      },
+      "Dimir Midrange": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Yawgmoth": {
+        "advantage": -0.95,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": -0.94,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 0.1,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": -0.9,
+        "confidence": "medium"
+      }
+    },
+    "Yawgmoth": {
+      "Boros Energy": {
+        "advantage": -2.0,
+        "confidence": "medium"
+      },
+      "Affinity": {
+        "advantage": -1.98,
+        "confidence": "medium"
+      },
+      "Grixis Reanimator": {
+        "advantage": -0.63,
+        "confidence": "medium"
+      },
+      "UR Prowess": {
+        "advantage": -1.25,
+        "confidence": "medium"
+      },
+      "Blink": {
+        "advantage": -0.25,
+        "confidence": "medium"
+      },
+      "Sultai Midrange": {
+        "advantage": 0.77,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": -0.18,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": 0.88,
+        "confidence": "medium"
+      },
+      "Living End": {
+        "advantage": -0.1,
+        "confidence": "medium"
+      },
+      "Red Deck Wins": {
+        "advantage": -1.05,
+        "confidence": "medium"
+      },
+      "Dimir Midrange": {
+        "advantage": 0.95,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Landless": {
+        "advantage": 0.01,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 1.05,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": 0.06,
+        "confidence": "medium"
+      }
+    },
+    "Landless": {
+      "Boros Energy": {
+        "advantage": -2.0,
+        "confidence": "medium"
+      },
+      "Affinity": {
+        "advantage": -1.99,
+        "confidence": "medium"
+      },
+      "Grixis Reanimator": {
+        "advantage": -0.64,
+        "confidence": "medium"
+      },
+      "UR Prowess": {
+        "advantage": -1.27,
+        "confidence": "medium"
+      },
+      "Blink": {
+        "advantage": -0.26,
+        "confidence": "medium"
+      },
+      "Sultai Midrange": {
+        "advantage": 0.75,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": -0.2,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": 0.86,
+        "confidence": "medium"
+      },
+      "Living End": {
+        "advantage": -0.11,
+        "confidence": "medium"
+      },
+      "Red Deck Wins": {
+        "advantage": -1.07,
+        "confidence": "medium"
+      },
+      "Dimir Midrange": {
+        "advantage": 0.94,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": -0.01,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "UW Control": {
+        "advantage": 1.04,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": 0.04,
+        "confidence": "medium"
+      }
+    },
+    "UW Control": {
+      "Boros Energy": {
+        "advantage": 0.0,
+        "confidence": "medium"
+      },
+      "Affinity": {
+        "advantage": 0.0,
+        "confidence": "medium"
+      },
+      "Grixis Reanimator": {
+        "advantage": -1.68,
+        "confidence": "medium"
+      },
+      "UR Prowess": {
+        "advantage": 0.7,
+        "confidence": "medium"
+      },
+      "Blink": {
+        "advantage": -1.3,
+        "confidence": "medium"
+      },
+      "Sultai Midrange": {
+        "advantage": -0.29,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": -1.24,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": -0.17,
+        "confidence": "medium"
+      },
+      "Living End": {
+        "advantage": -1.15,
+        "confidence": "medium"
+      },
+      "Red Deck Wins": {
+        "advantage": 0.9,
+        "confidence": "medium"
+      },
+      "Dimir Midrange": {
+        "advantage": -0.1,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": -1.05,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": -1.04,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 0,
+        "confidence": "mirror"
+      },
+      "Crashing Footfalls": {
+        "advantage": -0.99,
+        "confidence": "medium"
+      }
+    },
+    "Crashing Footfalls": {
+      "Boros Energy": {
+        "advantage": -2.0,
+        "confidence": "medium"
+      },
+      "Affinity": {
+        "advantage": -2.0,
+        "confidence": "medium"
+      },
+      "Grixis Reanimator": {
+        "advantage": -0.68,
+        "confidence": "medium"
+      },
+      "UR Prowess": {
+        "advantage": -1.31,
+        "confidence": "medium"
+      },
+      "Blink": {
+        "advantage": -0.31,
+        "confidence": "medium"
+      },
+      "Sultai Midrange": {
+        "advantage": 0.71,
+        "confidence": "medium"
+      },
+      "Goryo's Vengeance": {
+        "advantage": -0.24,
+        "confidence": "medium"
+      },
+      "Eldrazi Tron": {
+        "advantage": 0.82,
+        "confidence": "medium"
+      },
+      "Living End": {
+        "advantage": -0.16,
+        "confidence": "medium"
+      },
+      "Red Deck Wins": {
+        "advantage": -1.11,
+        "confidence": "medium"
+      },
+      "Dimir Midrange": {
+        "advantage": 0.9,
+        "confidence": "medium"
+      },
+      "Yawgmoth": {
+        "advantage": -0.06,
+        "confidence": "medium"
+      },
+      "Landless": {
+        "advantage": -0.04,
+        "confidence": "medium"
+      },
+      "UW Control": {
+        "advantage": 0.99,
+        "confidence": "medium"
+      },
+      "Crashing Footfalls": {
+        "advantage": 0,
+        "confidence": "mirror"
+      }
+    }
+  },
+  "banlist_impact": {
+    "period_changes": {
+      "added_banned": [
+        "Lotus Field",
+        "Phlage, Titan of Fire's Fury"
+      ],
+      "removed_banned": [
+        "Umezawa's Jitte",
+        "Violent Outburst"
+      ]
+    },
+    "impacted_decks": [
+      {
+        "card": "Lotus Field",
+        "action": "banned",
+        "likely_impacted": [
+          "Lotus Field Combo",
+          "Amulet Titan"
+        ],
+        "severity": "high"
+      },
+      {
+        "card": "Phlage, Titan of Fire's Fury",
+        "action": "banned",
+        "likely_impacted": [
+          "Boros Energy",
+          "Red Deck Wins"
+        ],
+        "severity": "high"
+      },
+      {
+        "card": "Umezawa's Jitte",
+        "action": "unbanned",
+        "likely_impacted": [
+          "Various creature decks"
+        ],
+        "severity": "medium"
+      },
+      {
+        "card": "Violent Outburst",
+        "action": "unbanned",
+        "likely_impacted": [
+          "Crashing Footfalls",
+          "Living End"
+        ],
+        "severity": "medium"
+      }
+    ]
+  }
+}

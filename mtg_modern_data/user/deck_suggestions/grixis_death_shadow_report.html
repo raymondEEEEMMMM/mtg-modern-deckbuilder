@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grixis Death's Shadow — 组牌方案报告</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --card-hover: #334155;
+    --border: #334155;
+    --text: #e2e8f0;
+    --text-dim: #94a3b8;
+    --accent: #818cf8;
+    --accent2: #6366f1;
+    --tier2: #f59e0b;
+    --aggro: #f97316;
+    --grixis: #c026d3;
+    --shadow: #7c3aed;
+    --positive: #22c55e;
+    --negative: #ef4444;
+    --even: #f59e0b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #2e1065 0%, #4c1d95 40%, #7c3aed 100%);
+    padding: 48px 0 36px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(124,58,237,0.3) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ddd6fe, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+  .hero .subtitle { color: #c4b5fd; font-size: 1rem; }
+  .hero .meta-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .hero .meta-item {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+  .hero .meta-item .label { color: #c4b5fd; font-size: 0.8rem; }
+  .hero .meta-item .value { color: #fff; font-weight: 700; font-size: 1.1rem; }
+
+  /* Stats Row */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .stat-card .stat-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+  .stat-card .stat-label { color: var(--text-dim); font-size: 0.8rem; }
+
+  /* Section */
+  .section { margin: 40px 0; }
+  .section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent2);
+    display: inline-block;
+  }
+
+  /* Decklist */
+  .decklist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .decklist-panel {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .decklist-panel h3 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 0.9rem;
+  }
+  .card-entry .qty {
+    font-weight: 700;
+    color: var(--accent);
+    width: 24px;
+  }
+  .card-entry .name { flex: 1; }
+  .card-entry .function {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.04);
+  }
+  .section-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin: -12px 0 16px 0;
+  }
+  .mana-cost {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-left: 6px;
+  }
+
+  /* Sideboard Table */
+  .sb-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  .sb-table th {
+    background: rgba(99,102,241,0.15);
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+  }
+  .sb-table td {
+    padding: 12px 16px;
+    border-top: 1px solid var(--border);
+  }
+  .sb-table tr:hover { background: var(--card-hover); }
+  .sb-in { color: var(--positive); font-weight: 600; }
+  .sb-out { color: var(--negative); font-weight: 600; }
+
+  /* Matchup Overview */
+  .matchup-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .matchup-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .matchup-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .matchup-card .fav { color: var(--positive); }
+  .matchup-card .unfav { color: var(--negative); }
+  .matchup-card .even { color: var(--even); }
+  .matchup-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .matchup-item .reason {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+  }
+
+  /* Weakness */
+  .weakness-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+  .weakness-card h4 {
+    color: var(--negative);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+  .weakness-card .mitigation {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-top: 8px;
+    padding-left: 12px;
+    border-left: 2px solid var(--positive);
+  }
+
+  /* Meta Context */
+  .context-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .context-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .context-card .label { color: var(--text-dim); font-size: 0.8rem; margin-bottom: 4px; }
+  .context-card .value { font-size: 1.4rem; font-weight: 700; }
+
+  /* Tier badge */
+  .tier-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--tier2);
+  }
+  .cat-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--aggro);
+    color: #fff;
+  }
+
+  /* Summary */
+  .summary-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .summary-box strong { color: var(--accent); }
+
+  footer {
+    text-align: center;
+    padding: 32px 0;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+  }
+
+  @media (max-width: 768px) {
+    .decklist-grid { grid-template-columns: 1fr; }
+    .matchup-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container">
+    <h1>Grixis Death's Shadow</h1>
+    <div class="subtitle">组牌方案报告 · 基于 2026-05-18 ~ 2026-05-28 周期数据</div>
+    <div class="meta-row">
+      <div class="meta-item">
+        <div class="label">Tier</div>
+        <div class="value">Tier 2</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Category</div>
+        <div class="value">Aggro</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">强度评分</div>
+        <div class="value">25.4</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">环境占比</div>
+        <div class="value">0.26%</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Meta角色</div>
+        <div class="value">Established</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">构筑一致性</div>
+        <div class="value">0.965</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- Meta Context -->
+<div class="section">
+  <div class="section-title">Meta 环境定位</div>
+  <div class="context-grid">
+    <div class="context-card">
+      <div class="label">当前周期</div>
+      <div class="value" style="color: var(--accent);">2026-05-18</div>
+      <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 4px;">禁牌表生效日</div>
+    </div>
+    <div class="context-card">
+      <div class="label">样本量</div>
+      <div class="value" style="color: var(--accent);">4套</div>
+      <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 4px;">3套 MTGTop8 + 1套 Goldfish</div>
+    </div>
+    <div class="context-card">
+      <div class="label">Top 8 次数</div>
+      <div class="value" style="color: var(--negative);">0</div>
+      <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 4px;">本周期未进Top 8</div>
+    </div>
+    <div class="context-card">
+      <div class="label">最佳名次</div>
+      <div class="value" style="color: var(--even);">10th</div>
+      <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 4px;">SoulStrong, Challenge 64</div>
+    </div>
+  </div>
+</div>
+
+<!-- Decklist -->
+<div class="section">
+  <div class="section-title">推荐主牌（60张）</div>
+  <div class="section-subtitle">基于4套真实decklist聚合 + 当前Meta针对调整</div>
+  <div class="decklist-grid">
+    <div class="decklist-panel">
+      <h3>&#9876; 威胁（20张 / 33%）</h3>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Death's Shadow</span></span><span class="function">核心制胜件</span></div>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Psychic Frog</span></span><span class="function">抓牌+自残引擎</span></div>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Ragavan, Nimble Pilferer</span></span><span class="function">1费节奏核心</span></div>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Moonshadow</span></span><span class="function">闪现威胁+自残联动</span></div>
+      <div class="card-entry"><span><span class="qty">3</span><span class="name">Murktide Regent</span></span><span class="function">备用大威胁</span></div>
+      <div class="card-entry"><span><span class="qty">1</span><span class="name">Kroxa, Titan of Death's Hunger</span></span><span class="function">消耗战plan B</span></div>
+    </div>
+    <div class="decklist-panel">
+      <h3>&#128737; 交互（15张 / 25%）</h3>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Thoughtseize</span></span><span class="function">核心手牌破坏</span></div>
+      <div class="card-entry"><span><span class="qty">3</span><span class="name">Stubborn Denial</span></span><span class="function">1费反击</span></div>
+      <div class="card-entry"><span><span class="qty">3</span><span class="name">Fatal Push</span></span><span class="function">高效去除</span></div>
+      <div class="card-entry"><span><span class="qty">2</span><span class="name">Unholy Heat</span></span><span class="function">灵活去除</span></div>
+      <div class="card-entry"><span><span class="qty">2</span><span class="name">Surgical Extraction</span></span><span class="function">墓场针对</span></div>
+      <div class="card-entry"><span><span class="qty">1</span><span class="name">Dismember</span></span><span class="function">补充去除</span></div>
+    </div>
+    <div class="decklist-panel">
+      <h3>&#9889; 滤抽/引擎（12张 / 20%）</h3>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Mishra's Bauble</span></span><span class="function">0费滤抽+delirium</span></div>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Street Wraith</span></span><span class="function">0费循环+自残</span></div>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Expressive Iteration</span></span><span class="function">滤抽+资源</span></div>
+    </div>
+    <div class="decklist-panel">
+      <h3>&#127919; 地牌（18张 / 30%）</h3>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Bloodstained Mire</span></span><span class="function">BR找地</span></div>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Polluted Delta</span></span><span class="function">UB找地</span></div>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Scalding Tarn</span></span><span class="function">UR找地</span></div>
+      <div class="card-entry"><span><span class="qty">2</span><span class="name">Blood Crypt</span></span><span class="function">BR双色</span></div>
+      <div class="card-entry"><span><span class="qty">2</span><span class="name">Watery Grave</span></span><span class="function">UB双色</span></div>
+      <div class="card-entry"><span><span class="qty">1</span><span class="name">Steam Vents</span></span><span class="function">UR双色</span></div>
+      <div class="card-entry"><span><span class="qty">1</span><span class="name">Swamp</span></span><span class="function">基础地</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Sideboard -->
+<div class="section">
+  <div class="section-title">推荐备牌（15张）</div>
+  <div class="decklist-grid">
+    <div class="decklist-panel">
+      <h3>&#128230; 备牌清单</h3>
+      <div class="card-entry"><span><span class="qty">4</span><span class="name">Consign to Memory</span></span><span class="function">神器针对</span></div>
+      <div class="card-entry"><span><span class="qty">2</span><span class="name">Flusterstorm</span></span><span class="function">反combo</span></div>
+      <div class="card-entry"><span><span class="qty">2</span><span class="name">Meltdown</span></span><span class="function">神器清场</span></div>
+      <div class="card-entry"><span><span class="qty">2</span><span class="name">Vexing Bauble</span></span><span class="function">封锁免费法术</span></div>
+      <div class="card-entry"><span><span class="qty">2</span><span class="name">Pyroclasm</span></span><span class="function">清小生物</span></div>
+      <div class="card-entry"><span><span class="qty">2</span><span class="name">Dress Down</span></span><span class="function">压触发+去除</span></div>
+      <div class="card-entry"><span><span class="qty">1</span><span class="name">Nihil Spellbomb</span></span><span class="function">墓场 hate</span></div>
+    </div>
+    <div class="decklist-panel">
+      <h3>&#128161; 备牌思路</h3>
+      <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 12px;">
+        当前Meta中 Affinity 和 Boros Energy 占主导（合计13.6%），备牌以<strong style="color: var(--accent);">神器针对</strong>为核心。
+        Consign to Memory 和 Meltdown 形成双重封锁，同时 Pyroclasm 应对 aggro 铺场。
+        Flusterstorm + Vexing Bauble 覆盖 combo 系（Grixis Reanimator / Living End / Crashing Footfalls）。
+      </p>
+      <p style="font-size: 0.9rem; color: var(--text-dim);">
+        Dress Down 是多面手：压 ETB 触发（对 Blink / Reanimator）、去除（对大型生物）、
+        甚至可以在自己回合保护 Shadow 不被 Solitude 放逐。
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Sideboard Strategy -->
+<div class="section">
+  <div class="section-title">备牌换法指南</div>
+  <table class="sb-table">
+    <thead>
+      <tr>
+        <th>对手</th>
+        <th>入备</th>
+        <th>出备</th>
+        <th>理由</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Affinity</strong> <span style="color: var(--tier2); font-size: 0.75rem;">Tier 1</span></td>
+        <td class="sb-in">Consign to Memory ×4, Meltdown ×2</td>
+        <td class="sb-out">Thoughtseize ×2, Stubborn Denial ×2, Unholy Heat ×2</td>
+        <td>封锁神器地+Urza's Saga，Mox Opal和Bauble被Consign锁死</td>
+      </tr>
+      <tr>
+        <td><strong>Boros Energy</strong> <span style="color: var(--tier2); font-size: 0.75rem;">Tier 1</span></td>
+        <td class="sb-in">Pyroclasm ×2, Fatal Push +1</td>
+        <td class="sb-out">Expressive Iteration ×2, Dismember ×1</td>
+        <td>清场应对早期铺场，Push处理Guide of Souls和Ocelot Pride</td>
+      </tr>
+      <tr>
+        <td><strong>Grixis Reanimator</strong> <span style="color: var(--tier2); font-size: 0.75rem;">Tier 1</span></td>
+        <td class="sb-in">Nihil Spellbomb ×1, Flusterstorm ×2, Dress Down ×2</td>
+        <td class="sb-out">Fatal Push ×2, Unholy Heat ×2, Dismember ×1</td>
+        <td>打断Persist+Archon链路，Dress Down压Archon ETB</td>
+      </tr>
+      <tr>
+        <td><strong>Living End</strong> <span style="color: var(--tier2); font-size: 0.75rem;">Tier 2</span></td>
+        <td class="sb-in">Flusterstorm ×2, Vexing Bauble ×2, Nihil Spellbomb ×1</td>
+        <td class="sb-out">Fatal Push ×2, Unholy Heat ×2, Dismember ×1</td>
+        <td>反击cascade+封锁免费法术，Spellbomb清墓</td>
+      </tr>
+      <tr>
+        <td><strong>Dimir Midrange</strong> <span style="color: var(--tier2); font-size: 0.75rem;">Tier 2</span></td>
+        <td class="sb-in">Flusterstorm ×2, Dress Down ×2</td>
+        <td class="sb-out">Fatal Push ×2, Unholy Heat ×2</td>
+        <td>反击去除和Bowmasters，Dress Down压Frog/Solitude</td>
+      </tr>
+      <tr>
+        <td><strong>UR Prowess</strong> <span style="color: var(--tier2); font-size: 0.75rem;">Tier 2</span></td>
+        <td class="sb-in">Pyroclasm ×2, Consign to Memory ×2</td>
+        <td class="sb-out">Thoughtseize ×2, Expressive Iteration ×2</td>
+        <td>清场+封锁Bauble和Channeler，减少手牌破坏（对手手牌已空）</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Matchup Overview -->
+<div class="section">
+  <div class="section-title">Meta 对阵概览</div>
+  <div class="matchup-grid">
+    <div class="matchup-card">
+      <h4 class="fav">&#9650; 有利对局</h4>
+      <div class="matchup-item">
+        <span>Living End</span>
+        <span class="reason">Thoughtseize+Stubborn打断combo</span>
+      </div>
+      <div class="matchup-item">
+        <span>Crashing Footfalls</span>
+        <span class="reason">Vexing Bauble封锁cascade</span>
+      </div>
+      <div class="matchup-item">
+        <span>Belcher / Landless</span>
+        <span class="reason">手牌破坏+反击双重保险</span>
+      </div>
+      <div class="matchup-item">
+        <span>Amulet Titan</span>
+        <span class="reason">Thoughtseize扒Prime Time</span>
+      </div>
+    </div>
+    <div class="matchup-card">
+      <h4 class="unfav">&#9660; 不利对局</h4>
+      <div class="matchup-item">
+        <span>Affinity</span>
+        <span class="reason">大生物+神器地，Shadow被Kappa超越</span>
+      </div>
+      <div class="matchup-item">
+        <span>Boros Energy</span>
+        <span class="reason">快攻抢血突破自残容错</span>
+      </div>
+      <div class="matchup-item">
+        <span>UW Control</span>
+        <span class="reason">Solitude高效解Shadow</span>
+      </div>
+      <div class="matchup-item">
+        <span>Eldrazi Tron</span>
+        <span class="reason">Thought-Knot Seer直接放逐</span>
+      </div>
+    </div>
+    <div class="matchup-card">
+      <h4 class="even">&#9679; 均势对局</h4>
+      <div class="matchup-item">
+        <span>Dimir Midrange</span>
+        <span class="reason">互相干扰，拼资源</span>
+      </div>
+      <div class="matchup-item">
+        <span>UR Prowess</span>
+        <span class="reason">谁先站住谁赢</span>
+      </div>
+      <div class="matchup-item">
+        <span>Red Deck Wins</span>
+        <span class="reason">竞速局，看起手</span>
+      </div>
+      <div class="matchup-item">
+        <span>Goryo's Vengeance</span>
+        <span class="reason">拼速度+干扰时机</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Weaknesses -->
+<div class="section">
+  <div class="section-title">弱点分析</div>
+  <div class="weakness-card">
+    <h4>1. 生命值管理风险</h4>
+    <p style="font-size: 0.9rem;">核心机制依赖自残（Thoughtseize、Street Wraith、地牌扣血），面对 Boros Energy / RDW 等快攻时容易被抢死。Shadow 需要血量 ≤10 才能发挥最大威力，但快攻可以在你降到安全线前终结比赛。</p>
+    <div class="mitigation"><strong>缓解：</strong>备牌 Pyroclasm 清场；Murktide Regent 提供不依赖自残的备用制胜路线</div>
+  </div>
+  <div class="weakness-card">
+    <h4>2. 大型威胁压制</h4>
+    <p style="font-size: 0.9rem;">面对 Eldrazi Tron 的 Thought-Knot Seer / Karn、Affinity 的 Kappa Cannoneer 时，Shadow 的 13/13 身材优势被超越。Karn 还可以直接放逐 Shadow。</p>
+    <div class="mitigation"><strong>缓解：</strong>Stubborn Denial 反击 Karn；Dismember 处理 Kappa；备牌 Meltdown 清神器</div>
+  </div>
+  <div class="weakness-card">
+    <h4>3. 高效去除泛滥</h4>
+    <p style="font-size: 0.9rem;">当前 Meta 中 Solitude（Blink / UW Control / Dimir Midrange）、Prismatic Ending 大量存在，Shadow 作为单一大威胁容易被一换一。</p>
+    <div class="mitigation"><strong>缓解：</strong>Dress Down 压 Solitude ETB；保持多威胁并行（Frog + Ragavan + Shadow）</div>
+  </div>
+  <div class="weakness-card">
+    <h4>4. 样本量不足，竞技数据有限</h4>
+    <p style="font-size: 0.9rem;">本周期仅 4 套 decklist，0 次 Top 8，最佳名次 10th。构筑一致性虽高（0.965），但缺乏大规模赛事验证。</p>
+    <div class="mitigation"><strong>缓解：</strong>参考历史 Shadow 变体（Grixis / Jund / Rakdos）的备牌思路；关注后续 Challenge 成绩</div>
+  </div>
+</div>
+
+<!-- Summary -->
+<div class="section">
+  <div class="section-title">总结</div>
+  <div class="summary-box">
+    <strong>Grixis Death's Shadow</strong> 是当前 Meta 的 <strong>established</strong> 选择，构筑一致性极高（0.965）但出场率偏低（0.26%）。
+    核心优势是 <strong>Thoughtseize + Stubborn Denial</strong> 的"8 弃 + 4 反"干扰体系，在 combo / midrange 多的环境中是很好的 meta call。
+    <br><br>
+    主要风险是面对当前 Meta 主导的 <strong>aggro 系</strong>（Boros Energy + Affinity 占 13.6%），自残机制会被快攻惩罚。
+    备牌以 <strong>Consign to Memory</strong> 为核心针对 Affinity，<strong>Pyroclasm</strong> 应对 aggro 铺场，<strong>Flusterstorm + Vexing Bauble</strong> 覆盖 combo。
+    <br><br>
+    如果你所在的本地环境 combo / control 较多、aggro 较少，Grixis Shadow 是一个被低估的竞技选择。
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <div class="container">
+    Grixis Death's Shadow Deck Guide &middot; Generated 2026-05-28 &middot; Data: MTGTop8 + MTGGoldfish &middot; Period: 2026-05-18
+  </div>
+</footer>
+
+</body>
+</html>

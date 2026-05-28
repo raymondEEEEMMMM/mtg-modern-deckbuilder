@@ -1,0 +1,737 @@
+{
+  "format": "Modern",
+  "collected_date": "2026-05-27",
+  "source": "MTGGoldfish",
+  "source_url": "https://www.mtggoldfish.com/metagame/modern#paper",
+  "period_start": "2026-05-18",
+  "data_timeframe": "14_days",
+  "total_decks": 1170,
+  "platforms": [
+    "paper",
+    "mtgo"
+  ],
+  "league_inflation_correction": {
+    "factor": 0.35,
+    "description": "League 5-0占总样本~60%但存在严重选择偏差, 修正系数0.35",
+    "formula": "corrected_share = raw_share * (1 - factor)"
+  },
+  "tier_summary": {
+    "professional": 0,
+    "major": 1,
+    "competitive": 5,
+    "regular": 4
+  },
+  "category_composition": {
+    "aggro": 0.122,
+    "control": 0.127,
+    "combo": 0.242
+  },
+  "archetypes": [
+    {
+      "name": "Affinity",
+      "category": "aggro",
+      "metagame_share": 0.164,
+      "metagame_share_corrected": 0.1066,
+      "deck_count": 254,
+      "key_cards": [
+        "Mox Opal",
+        "Engineered Explosives",
+        "Weapons Manufacturing"
+      ],
+      "performance": {
+        "total_weighted_score": 1.2,
+        "top8_count": 3,
+        "league_5_0_count": 2,
+        "wins": 1
+      }
+    },
+    {
+      "name": "Ruby Storm",
+      "category": "combo",
+      "metagame_share": 0.078,
+      "metagame_share_corrected": 0.0507,
+      "deck_count": 121,
+      "key_cards": [
+        "Ruby Medallion",
+        "Pyretic Ritual",
+        "Ral, Monsoon Mage"
+      ],
+      "performance": {
+        "total_weighted_score": 0,
+        "top8_count": 0,
+        "league_5_0_count": 0,
+        "wins": 0
+      }
+    },
+    {
+      "name": "Belcher",
+      "category": "combo",
+      "metagame_share": 0.072,
+      "metagame_share_corrected": 0.0468,
+      "deck_count": 111,
+      "key_cards": [
+        "Goblin Charbelcher",
+        "Sea Gate Restoration",
+        "Disrupting Shoal"
+      ],
+      "performance": {
+        "total_weighted_score": 0.6,
+        "top8_count": 2,
+        "league_5_0_count": 0,
+        "wins": 0
+      }
+    },
+    {
+      "name": "Goryo's Vengeance",
+      "category": "combo",
+      "metagame_share": 0.068,
+      "metagame_share_corrected": 0.0442,
+      "deck_count": 105,
+      "key_cards": [
+        "Goryo's Vengeance",
+        "Quantum Riddler",
+        "Atraxa, Grand Unifier"
+      ],
+      "performance": {
+        "total_weighted_score": 0.66,
+        "top8_count": 2,
+        "league_5_0_count": 1,
+        "wins": 0
+      }
+    },
+    {
+      "name": "Living End",
+      "category": "combo",
+      "metagame_share": 0.059,
+      "metagame_share_corrected": 0.0384,
+      "deck_count": 91,
+      "key_cards": [
+        "Living End",
+        "Force of Negation",
+        "Subtlety"
+      ],
+      "performance": {
+        "total_weighted_score": 0.24,
+        "top8_count": 0,
+        "league_5_0_count": 4,
+        "wins": 0
+      }
+    },
+    {
+      "name": "Eldrazi Tron",
+      "category": "control",
+      "metagame_share": 0.054,
+      "metagame_share_corrected": 0.0351,
+      "deck_count": 83,
+      "key_cards": [
+        "Thought-Knot Seer",
+        "Kozilek's Command",
+        "Karn, the Great Creator"
+      ],
+      "performance": {
+        "total_weighted_score": 0.63,
+        "top8_count": 1,
+        "league_5_0_count": 2,
+        "wins": 0
+      }
+    },
+    {
+      "name": "Dimir Midrange",
+      "category": "control",
+      "metagame_share": 0.039,
+      "metagame_share_corrected": 0.0254,
+      "deck_count": 60,
+      "key_cards": [
+        "Thoughtseize",
+        "Psychic Frog",
+        "Fatal Push"
+      ],
+      "performance": {
+        "total_weighted_score": 0.24,
+        "top8_count": 1,
+        "league_5_0_count": 0,
+        "wins": 0
+      }
+    },
+    {
+      "name": "Grixis Reanimator",
+      "category": "combo",
+      "metagame_share": 0.036,
+      "metagame_share_corrected": 0.0234,
+      "deck_count": 55,
+      "key_cards": [
+        "Abhorrent Oculus",
+        "Archon of Cruelty",
+        "Thoughtseize"
+      ],
+      "performance": {
+        "total_weighted_score": 1.38,
+        "top8_count": 3,
+        "league_5_0_count": 0,
+        "wins": 1
+      }
+    },
+    {
+      "name": "Eldrazi Ramp",
+      "category": "control",
+      "metagame_share": 0.034,
+      "metagame_share_corrected": 0.0221,
+      "deck_count": 53,
+      "key_cards": [
+        "Eldrazi Temple",
+        "Kozilek's Command",
+        "Sowing Mycospawn"
+      ],
+      "performance": {
+        "total_weighted_score": 0,
+        "top8_count": 0,
+        "league_5_0_count": 0,
+        "wins": 0
+      }
+    },
+    {
+      "name": "Neobrand",
+      "category": "combo",
+      "metagame_share": 0.032,
+      "metagame_share_corrected": 0.0208,
+      "deck_count": 50,
+      "key_cards": [
+        "Griselbrand",
+        "Summoner's Pact",
+        "Allosaurus Rider"
+      ],
+      "performance": {
+        "total_weighted_score": 0,
+        "top8_count": 0,
+        "league_5_0_count": 0,
+        "wins": 0
+      }
+    },
+    {
+      "name": "Yawgmoth",
+      "category": "combo",
+      "metagame_share": 0.028,
+      "metagame_share_corrected": 0.0182,
+      "deck_count": 43,
+      "key_cards": [
+        "Yawgmoth, Thran Physician",
+        "Birching Ritual",
+        "Cauldron Familiar"
+      ],
+      "performance": {
+        "total_weighted_score": 0.66,
+        "top8_count": 2,
+        "league_5_0_count": 0,
+        "wins": 0
+      }
+    },
+    {
+      "name": "Esper GenericBlink",
+      "category": "control",
+      "metagame_share": 0.027,
+      "metagame_share_corrected": 0.0175,
+      "deck_count": 42,
+      "key_cards": [
+        "Quantum Riddler",
+        "Solitude",
+        "Overlord of the Balemurk"
+      ],
+      "performance": {
+        "total_weighted_score": 0.3,
+        "top8_count": 1,
+        "league_5_0_count": 1,
+        "wins": 0
+      }
+    },
+    {
+      "name": "Boros Energy",
+      "category": "aggro",
+      "metagame_share": 0.024,
+      "metagame_share_corrected": 0.0156,
+      "deck_count": 37,
+      "key_cards": [
+        "Phlage, Titan of Fire's Fury",
+        "Ragavan, Nimble Pilferer",
+        "Ocelot Pride"
+      ],
+      "performance": {
+        "total_weighted_score": 2.43,
+        "top8_count": 6,
+        "league_5_0_count": 4,
+        "wins": 1
+      }
+    },
+    {
+      "name": "Sultai Midrange",
+      "category": "control",
+      "metagame_share": 0.023,
+      "metagame_share_corrected": 0.0149,
+      "deck_count": 36,
+      "key_cards": [
+        "Force of Negation",
+        "Abhorrent Oculus",
+        "Subtlety"
+      ],
+      "performance": {
+        "total_weighted_score": 0.66,
+        "top8_count": 1,
+        "league_5_0_count": 1,
+        "wins": 1
+      }
+    },
+    {
+      "name": "Mono-Black Midrange",
+      "category": "control",
+      "metagame_share": 0.019,
+      "metagame_share_corrected": 0.0123,
+      "deck_count": 29,
+      "key_cards": [
+        "Orcish Bowmasters",
+        "Soul Spike",
+        "Force of Despair"
+      ],
+      "performance": {
+        "total_weighted_score": 0.06,
+        "top8_count": 0,
+        "league_5_0_count": 1,
+        "wins": 0
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "Modern League 2026-05-27",
+      "date": "2026-05-27",
+      "deck_count": 26,
+      "top_decks": [
+        {
+          "placement": "5-0",
+          "archetype": "Sultai Midrange"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Domain Zoo"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Mardu Energy"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Merfolk"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Eldrazi Tron"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Izzet"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Affinity"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Amulet Titan"
+        }
+      ],
+      "tier": "regular",
+      "tier_weight": 0.3,
+      "confidence": "low"
+    },
+    {
+      "name": "Modern League 2026-05-26",
+      "date": "2026-05-26",
+      "deck_count": 79,
+      "top_decks": [
+        {
+          "placement": "5-0",
+          "archetype": "Living End"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Eldrazi Tron"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Mono-Black Midrange"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Azorius GenericBlink"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Eldrazi"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Living End"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Affinity"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Living End"
+        }
+      ],
+      "tier": "regular",
+      "tier_weight": 0.3,
+      "confidence": "low"
+    },
+    {
+      "name": "Modern Challenge 64 2026-05-26",
+      "date": "2026-05-26",
+      "deck_count": 32,
+      "top_decks": [
+        {
+          "placement": "1st",
+          "archetype": "Grixis Reanimator"
+        },
+        {
+          "placement": "2nd",
+          "archetype": "Gruul Basking Broodscale Combo"
+        },
+        {
+          "placement": "3rd",
+          "archetype": "Grixis Reanimator"
+        },
+        {
+          "placement": "4th",
+          "archetype": "Boros Energy"
+        },
+        {
+          "placement": "5th",
+          "archetype": "4c Energy"
+        },
+        {
+          "placement": "6th",
+          "archetype": "Goryo's Vengeance"
+        },
+        {
+          "placement": "7th",
+          "archetype": "Boros Energy"
+        },
+        {
+          "placement": "8th",
+          "archetype": "Yawgmoth"
+        }
+      ],
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "Modern League 2026-05-25",
+      "date": "2026-05-25",
+      "deck_count": 79,
+      "top_decks": [
+        {
+          "placement": "5-0",
+          "archetype": "Living End"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Esper Murktide"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Esper GenericBlink"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Domain Zoo"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Eldrazi"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Boros Energy"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Izzet Prowess"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "WR"
+        }
+      ],
+      "tier": "regular",
+      "tier_weight": 0.3,
+      "confidence": "low"
+    },
+    {
+      "name": "Modern Challenge 32 2026-05-25",
+      "date": "2026-05-25",
+      "deck_count": 32,
+      "top_decks": [
+        {
+          "placement": "1st",
+          "archetype": "Gruul Basking Broodscale Combo"
+        },
+        {
+          "placement": "2nd",
+          "archetype": "WU"
+        },
+        {
+          "placement": "3rd",
+          "archetype": "Yawgmoth"
+        },
+        {
+          "placement": "4th",
+          "archetype": "Boros Burn"
+        },
+        {
+          "placement": "5th",
+          "archetype": "Izzet Prowess"
+        },
+        {
+          "placement": "6th",
+          "archetype": "Belcher"
+        },
+        {
+          "placement": "7th",
+          "archetype": "Mono-Green Basking Broodscale Combo"
+        },
+        {
+          "placement": "8th",
+          "archetype": "Crashing Footfalls"
+        }
+      ],
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "Modern Challenge 64 2026-05-25",
+      "date": "2026-05-25",
+      "deck_count": 32,
+      "top_decks": [
+        {
+          "placement": "1st",
+          "archetype": "Sultai Midrange"
+        },
+        {
+          "placement": "2nd",
+          "archetype": "Boros Energy"
+        },
+        {
+          "placement": "3rd",
+          "archetype": "WU"
+        },
+        {
+          "placement": "4th",
+          "archetype": "Goryo's Vengeance"
+        },
+        {
+          "placement": "5th",
+          "archetype": "G"
+        },
+        {
+          "placement": "6th",
+          "archetype": "G"
+        },
+        {
+          "placement": "7th",
+          "archetype": "Crashing Footfalls"
+        },
+        {
+          "placement": "8th",
+          "archetype": "Boros Energy"
+        }
+      ],
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "MTG SEA Championships Malaysia Open 2026",
+      "date": "2026-05-24",
+      "deck_count": 26,
+      "top_decks": [
+        {
+          "placement": "3rd",
+          "archetype": "Izzet Affinity"
+        },
+        {
+          "placement": "5th",
+          "archetype": "Izzet Affinity"
+        },
+        {
+          "placement": "6th",
+          "archetype": "Temur"
+        }
+      ],
+      "tier": "major",
+      "tier_weight": 0.8,
+      "confidence": "high"
+    },
+    {
+      "name": "Modern League 2026-05-24",
+      "date": "2026-05-24",
+      "deck_count": 69,
+      "top_decks": [
+        {
+          "placement": "5-0",
+          "archetype": "Goryo's Vengeance"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Crashing Footfalls"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Boros Energy"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Temur Midrange"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Boros Energy"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Boros Energy"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "Izzet Prowess"
+        },
+        {
+          "placement": "5-0",
+          "archetype": "WU"
+        }
+      ],
+      "tier": "regular",
+      "tier_weight": 0.3,
+      "confidence": "low"
+    },
+    {
+      "name": "Modern Challenge 32 2026-05-24",
+      "date": "2026-05-24",
+      "deck_count": 32,
+      "top_decks": [
+        {
+          "placement": "1st",
+          "archetype": "Affinity"
+        },
+        {
+          "placement": "2nd",
+          "archetype": "Domain Zoo"
+        },
+        {
+          "placement": "3rd",
+          "archetype": "Boros Burn"
+        },
+        {
+          "placement": "4th",
+          "archetype": "Belcher"
+        },
+        {
+          "placement": "5th",
+          "archetype": "Esper GenericBlink"
+        },
+        {
+          "placement": "6th",
+          "archetype": "Affinity"
+        },
+        {
+          "placement": "7th",
+          "archetype": "Affinity"
+        },
+        {
+          "placement": "8th",
+          "archetype": "WU"
+        }
+      ],
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    },
+    {
+      "name": "Modern Challenge 32 2026-05-24 (1)",
+      "date": "2026-05-24",
+      "deck_count": 32,
+      "top_decks": [
+        {
+          "placement": "1st",
+          "archetype": "Boros Energy"
+        },
+        {
+          "placement": "2nd",
+          "archetype": "Eldrazi Tron"
+        },
+        {
+          "placement": "3rd",
+          "archetype": "WU"
+        },
+        {
+          "placement": "4th",
+          "archetype": "Grixis Reanimator"
+        },
+        {
+          "placement": "5th",
+          "archetype": "Boros Energy"
+        },
+        {
+          "placement": "6th",
+          "archetype": "Dimir Midrange"
+        },
+        {
+          "placement": "7th",
+          "archetype": "BR"
+        },
+        {
+          "placement": "8th",
+          "archetype": "Domain Zoo"
+        }
+      ],
+      "tier": "competitive",
+      "tier_weight": 0.6,
+      "confidence": "medium"
+    }
+  ],
+  "goldfish_specific": {
+    "description": "Data dimensions unique to MTGGoldfish vs MTGTop8",
+    "extra_fields": [
+      "key_cards - top 3 most played cards per archetype",
+      "performance.total_weighted_score - tier-weighted placement score",
+      "performance.top8_count - number of Top 8 finishes in competitive+ events",
+      "performance.league_5_0_count - number of 5-0 League finishes",
+      "performance.wins - number of 1st place finishes",
+      "platforms - paper vs MTGO data availability"
+    ],
+    "vs_mtgtop8": {
+      "goldfish_only": [
+        "key_cards",
+        "placement_data",
+        "platform_split"
+      ],
+      "top8_only": [
+        "predefined_category_labels",
+        "event_archetype_count",
+        "global_archetype_list"
+      ],
+      "both": [
+        "metagame_share",
+        "deck_count",
+        "event_listing"
+      ],
+      "naming_differences": {
+        "goldfish_belcher_vs_top8_landless": "Same deck, different names",
+        "goldfish_boros_energy_vs_top8_boros_aggro": "Same archetype, Goldfish emphasizes Energy package",
+        "goldfish_neobrand_vs_top8_allosaurus_combo": "Same deck, different names",
+        "goldfish_genericblink_vs_top8_blink": "Same archetype, Goldfish uses 'GenericBlink'"
+      }
+    }
+  }
+}

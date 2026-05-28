@@ -1,0 +1,48 @@
+{
+  "professional": {
+    "weight": 1.0,
+    "confidence": "high",
+    "event_types": [
+      "Pro Tour",
+      "Regional Championship",
+      "World Championship",
+      "Mythic Championship"
+    ]
+  },
+  "major": {
+    "weight": 0.8,
+    "confidence": "high",
+    "event_types": [
+      "SCG CON",
+      "SCG Open",
+      "SCG Tour",
+      "MagicFest",
+      "Grand Prix",
+      "RCQ @ SCG",
+      "RCQ 1K",
+      "Regional Qualifier"
+    ]
+  },
+  "competitive": {
+    "weight": 0.6,
+    "confidence": "medium",
+    "event_types": [
+      "MTGO Challenge 64",
+      "MTGO Challenge 32",
+      "MTGO Preliminary",
+      "MTGO RC Super Qualifier",
+      "RCQ",
+      "2-slot RCQ"
+    ]
+  },
+  "regular": {
+    "weight": 0.3,
+    "confidence": "low",
+    "event_types": [
+      "MTGO League",
+      "Event",
+      "Etapa",
+      "Local"
+    ]
+  }
+}
