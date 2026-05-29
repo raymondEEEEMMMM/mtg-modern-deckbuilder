@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-05-29T09:02:23.433624+00:00",
+  "source": "MTGO official decklists",
+  "period_start": "2026-05-18",
+  "summary": {
+    "event_count": 3,
+    "current_period_events": 3,
+    "decklist_count": 82,
+    "legal_decklists": 82,
+    "maindeck_60_count": 79,
+    "sideboard_15_count": 82,
+    "duplicate_rows": 0
+  },
+  "events": [
+    {
+      "source": "mtgo",
+      "url": "https://www.mtgo.com/decklist/modern-league-2026-05-2910628",
+      "event_id": "modern-league-2026-05-2910628",
+      "event_name": "MODERN LEAGUE",
+      "event_date": "2026-05-28",
+      "in_current_period": true,
+      "text_length": 19275,
+      "html_length": 2540171,
+      "failed_blocks": 0
+    },
+    {
+      "source": "mtgo",
+      "url": "https://www.mtgo.com/decklist/modern-challenge-64-2026-05-2812843376",
+      "event_id": "modern-challenge-64-2026-05-2812843376",
+      "event_name": "MODERN CHALLENGE 64",
+      "event_date": "2026-05-27",
+      "in_current_period": true,
+      "text_length": 27526,
+      "html_length": 3377838,
+      "failed_blocks": 0
+    },
+    {
+      "source": "mtgo",
+      "url": "https://www.mtgo.com/decklist/modern-league-2026-05-2810628",
+      "event_id": "modern-league-2026-05-2810628",
+      "event_name": "MODERN LEAGUE",
+      "event_date": "2026-05-27",
+      "in_current_period": true,
+      "text_length": 20604,
+      "html_length": 3018454,
+      "failed_blocks": 0
+    }
+  ]
+}

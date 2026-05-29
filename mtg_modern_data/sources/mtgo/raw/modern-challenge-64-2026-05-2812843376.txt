@@ -1,0 +1,1839 @@
+Server Status:
+
+GAME RESOURCES
+COMMUNITY
+DECKLISTS
+SUPPORT
+MODERN CHALLENGE 64
+
+Posted on May 28, 2026
+
+82 PLAYERS
+Bracket
+Decklists
+Standings
+BRACKET
+Quarterfinals
+Souze6 2-0
+Pleyboy
+KelMasterP 2-1
+SanPop
+magicgatheringbigfan 2-0
+NuBlkAu
+hugofreitas1 2-1
+VampireDiaries
+Semifinals
+Souze6 2-1
+KelMasterP
+magicgatheringbigfan 2-0
+hugofreitas1
+Final
+Souze6 2-0
+magicgatheringbigfan
+DECKLISTS
+#
+
+SOUZE6 (1ST PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (23)
+3 Claws of Gix
+4 Engineered Explosives
+4 Mishra's Bauble
+4 Mox Opal
+1 Pithing Needle
+1 Skateboard
+3 Tormod's Crypt
+1 Vexing Bauble
+2 Welding Jar
+Creature (13)
+1 Arcbound Ravager
+3 Emry, Lurker of the Loch
+4 Kappa Cannoneer
+4 Pinnacle Emissary
+1 Ravenous Robots
+Enchantment (4)
+4 Weapons Manufacturing
+Instant (4)
+3 Metallic Rebuke
+1 Sink into Stupor
+Land (16)
+4 Fiery Islet
+2 Island
+1 Shivan Reef
+4 Spirebluff Canal
+1 Steam Vents
+4 Urza's Saga
+
+60 Cards
+
+Sideboard (15)
+1 Blood Moon
+3 Consign to Memory
+2 Damping Sphere
+2 Galvanic Blast
+1 Mystical Dispute
+2 Shattering Spree
+3 Vexing Bauble
+1 Welding Jar
+#
+
+MAGICGATHERINGBIGFAN (2ND PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (8)
+4 Goblin Charbelcher
+4 Lotus Bloom
+Creature (8)
+4 Hydroelectric Specimen
+4 Tameshi, Reality Architect
+Instant (32)
+3 Counterspell
+4 Disrupting Shoal
+3 Force of Negation
+3 Into the Flood Maw
+4 Jwari Disruption
+4 Sink into Stupor
+2 Spell Snare
+2 Stern Scolding
+3 Waterlogged Teachings
+4 Whir of Invention
+Sorcery (12)
+4 Preordain
+4 Sea Gate Restoration
+4 Suppression Ray
+
+60 Cards
+
+Sideboard (15)
+2 Commandeer
+3 Consign to Memory
+2 Engineered Explosives
+2 Flusterstorm
+2 Harbinger of the Seas
+2 Mystical Dispute
+1 Tezzeret the Seeker
+1 Tormod's Crypt
+#
+
+HUGOFREITAS1 (3RD PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (4)
+4 Ruby Medallion
+Creature (4)
+4 Ral, Monsoon Mage
+Enchantment (2)
+2 Artist's Talent
+Instant (16)
+4 Desperate Ritual
+2 Flashback
+4 Manamorphose
+4 Pyretic Ritual
+2 Valakut Awakening
+Land (18)
+3 Arid Mesa
+2 Bloodstained Mire
+1 Commercial District
+1 Elegant Parlor
+1 Gemstone Caverns
+4 Mountain
+1 Sacred Foundry
+2 Scalding Tarn
+1 Sunbaked Canyon
+2 Wooded Foothills
+Sorcery (16)
+2 Glimpse the Impossible
+1 Grapeshot
+3 Past in Flames
+4 Reckless Impulse
+2 Wish
+4 Wrenn's Resolve
+
+60 Cards
+
+Sideboard (15)
+1 Empty the Warrens
+1 Grapeshot
+4 Orim's Chant
+1 Past in Flames
+4 Prismatic Ending
+2 Vexing Bauble
+2 Wear/Tear
+#
+
+KELMASTERP (4TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (8)
+4 Blade of the Bloodchief
+1 Springleaf Drum
+3 Vexing Bauble
+Creature (16)
+4 Basking Broodscale
+2 Emrakul, the Promised End
+4 Glaring Fleshraker
+1 Haywire Mite
+2 Walking Ballista
+3 Writhing Chrysalis
+Instant (6)
+4 Kozilek's Command
+2 Unholy Heat
+Land (23)
+2 Boseiju, Who Endures
+2 Cavern of Souls
+1 Commercial District
+4 Eldrazi Temple
+2 Forest
+4 Grove of the Burnwillows
+1 Misty Rainforest
+2 Stomping Ground
+4 Urza's Saga
+1 Wooded Foothills
+Sorcery (7)
+3 Ancient Stirrings
+4 Malevolent Rumble
+
+60 Cards
+
+Sideboard (15)
+3 Nature's Claim
+1 Pithing Needle
+2 Pyroclasm
+1 Soul-Guide Lantern
+2 Soulless Jailer
+2 Thief of Existence
+1 Unholy Heat
+2 Veil of Summer
+1 Vexing Bauble
+#
+
+NUBLKAU (5TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (20)
+4 Atraxa, Grand Unifier
+4 Fallaji Archaeologist
+2 Griselbrand
+1 Kavaero, Mind-Bitten
+1 Kiora, the Rising Tide
+4 Psychic Frog
+4 Solitude
+Instant (13)
+4 Ephemerate
+1 Faithful Mending
+3 Force of Negation
+4 Goryo's Vengeance
+1 Otherworldly Gaze
+Land (20)
+2 Flooded Strand
+1 Godless Shrine
+1 Hallowed Fountain
+1 Island
+4 Marsh Flats
+1 Meticulous Archive
+1 Overgrown Tomb
+1 Plains
+4 Polluted Delta
+1 Shadowy Backstreet
+1 Swamp
+1 Undercity Sewers
+1 Watery Grave
+Sorcery (7)
+2 Preordain
+2 Prismatic Ending
+3 Thoughtseize
+
+60 Cards
+
+Sideboard (15)
+1 Celestial Purge
+3 Consign to Memory
+1 March of Otherworldly Light
+3 Mystical Dispute
+3 Quantum Riddler
+1 Teferi, Time Raveler
+1 Tormod's Crypt
+2 Wrath of the Skies
+#
+
+PLEYBOY (6TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (19)
+3 Phelia, Exuberant Shepherd
+4 Quantum Riddler
+4 Ragavan, Nimble Pilferer
+4 Scion of Draco
+4 Territorial Kavu
+Enchantment (8)
+4 Leyline Binding
+4 Leyline of the Guildpact
+Instant (10)
+4 Consign to Memory
+4 Lightning Bolt
+2 Stubborn Denial
+Land (22)
+1 Arena of Glory
+4 Arid Mesa
+1 Blood Crypt
+4 Flooded Strand
+1 Indatha Triome
+1 Lush Portico
+1 Mountain
+1 Plains
+2 Steam Vents
+1 Temple Garden
+1 Thundering Falls
+4 Wooded Foothills
+Planeswalker (1)
+1 Teferi, Time Raveler
+
+60 Cards
+
+Sideboard (15)
+1 Drannith Magistrate
+1 High Noon
+3 Mystical Dispute
+1 Nihil Spellbomb
+3 Obsidian Charmaw
+1 Surgical Extraction
+1 Vexing Bauble
+1 Wear/Tear
+3 Wrath of the Skies
+#
+
+SANPOP (7TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (9)
+4 Blade of the Bloodchief
+1 Soul-Guide Lantern
+1 Springleaf Drum
+3 Vexing Bauble
+Creature (15)
+4 Basking Broodscale
+2 Emrakul, the Promised End
+4 Glaring Fleshraker
+1 Haywire Mite
+2 Walking Ballista
+2 Writhing Chrysalis
+Instant (6)
+4 Kozilek's Command
+2 Unholy Heat
+Land (23)
+2 Boseiju, Who Endures
+2 Cavern of Souls
+1 Commercial District
+4 Eldrazi Temple
+2 Forest
+4 Grove of the Burnwillows
+1 Stomping Ground
+4 Urza's Saga
+1 Verdant Catacombs
+1 Windswept Heath
+1 Wooded Foothills
+Sorcery (7)
+3 Ancient Stirrings
+4 Malevolent Rumble
+
+60 Cards
+
+Sideboard (15)
+1 Emrakul, the Promised End
+1 Grafdigger's Cage
+3 Nature's Claim
+1 Pithing Needle
+2 Pyroclasm
+1 Sire of Seven Deaths
+1 Soulless Jailer
+2 Unholy Heat
+1 Vexing Bauble
+2 Writhing Chrysalis
+#
+
+VAMPIREDIARIES (8TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (32)
+2 Badgermole Cub
+2 Brightglass Gearhulk
+2 Eternal Witness
+4 Guide of Souls
+4 Ocelot Pride
+4 Ranger-Captain of Eos
+2 Skyclave Apparition
+4 Solitude
+2 Starfield Shepherd
+3 White Orchid Phantom
+3 Witch Enchanter
+Enchantment (4)
+4 Birthing Ritual
+Instant (4)
+4 Ephemerate
+Land (20)
+2 Arid Mesa
+4 Flagstones of Trokair
+1 Forest
+2 Lush Portico
+3 Plains
+3 Temple Garden
+4 Windswept Heath
+1 Wooded Bastion
+
+60 Cards
+
+Sideboard (15)
+2 Boromir, Warden of the Tower
+2 Drannith Magistrate
+2 Endurance
+1 Gaddock Teeg
+2 Kataki, War's Wage
+1 Raise the Past
+2 Sanctifier en-Vec
+1 Surgical Extraction
+2 Wrath of the Skies
+#
+
+BAWER (9TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (31)
+4 Detective's Phoenix
+4 Fear of Missing Out
+4 Hollow One
+3 Kroxa, Titan of Death's Hunger
+4 Marauding Mako
+4 Moonshadow
+4 Nethergoyf
+4 Street Wraith
+Instant (2)
+2 Tarfire
+Land (19)
+3 Arena of Glory
+3 Blood Crypt
+4 Bloodstained Mire
+2 Mountain
+2 Raucous Theater
+1 Swamp
+4 Wooded Foothills
+Sorcery (8)
+4 Burning Inquiry
+4 Faithless Looting
+
+60 Cards
+
+Sideboard (15)
+4 Meltdown
+2 Obsidian Charmaw
+2 Pyroclasm
+3 Surgical Extraction
+4 Thoughtseize
+#
+
+KRITIK (10TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (9)
+1 Beza, the Bounding Spring
+4 Solitude
+4 White Orchid Phantom
+Instant (13)
+4 Erode
+1 Flashback
+4 Galvanic Discharge
+4 Path to Exile
+Land (24)
+3 Cori Mountain Monastery
+4 Demolition Field
+4 Field of Ruin
+1 Mountain
+5 Plains
+4 Sacred Foundry
+3 Sunken Citadel
+Planeswalker (2)
+2 The Wandering Emperor
+Sorcery (12)
+4 Cleansing Wildfire
+4 Price of Freedom
+4 Wrath of the Skies
+
+60 Cards
+
+Sideboard (15)
+2 High Noon
+1 Kataki, War's Wage
+2 Kor Firewalker
+1 Kozilek, Butcher of Truth
+2 Orim's Chant
+2 Rest in Peace
+3 Vexing Bauble
+2 Wear/Tear
+#
+
+MACISAAC (11TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (1)
+1 Agatha's Soul Cauldron
+Creature (30)
+4 Badgermole Cub
+1 Blood Artist
+4 Delighted Halfling
+1 Endurance
+1 Geralf's Messenger
+1 Hapatra, Vizier of Poisons
+2 Ignoble Hierarch
+4 Marionette Apprentice
+2 Orcish Bowmasters
+1 Prosperous Innkeeper
+1 Sephiroth, Fabled SOLDIER
+4 Yawgmoth, Thran Physician
+4 Young Wolf
+Enchantment (4)
+4 Birthing Ritual
+Instant (4)
+4 Chord of Calling
+Land (20)
+3 Blooming Marsh
+1 Boseiju, Who Endures
+2 Forest
+1 Overgrown Tomb
+1 Pendelhaven
+1 Swamp
+1 Takenuma, Abandoned Mire
+2 Twilight Mire
+2 Underground Mortuary
+1 Urborg, Tomb of Yawgmoth
+4 Verdant Catacombs
+1 Yavimaya, Cradle of Growth
+Planeswalker (1)
+1 Grist, the Hunger Tide
+
+60 Cards
+
+Sideboard (15)
+1 Collector Ouphe
+2 Endurance
+1 Fade from History
+1 Force of Vigor
+1 Haywire Mite
+1 Mai, Scornful Striker
+1 Orcish Bowmasters
+1 Spore Frog
+2 Surgical Extraction
+2 Thoughtseize
+2 Vexing Bauble
+#
+
+TAKAYAMA (12TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (30)
+1 Aang, Swift Savior
+1 Aven Interrupter
+4 Guide of Souls
+1 Mockingbird
+4 Ocelot Pride
+4 Phelia, Exuberant Shepherd
+4 Quantum Riddler
+1 Skycoach Conductor
+4 Solitude
+2 Starfield Shepherd
+4 Witch Enchanter
+Instant (10)
+2 Consign to Memory
+3 Ephemerate
+1 No More Lies
+1 Sink into Stupor
+1 Spell Pierce
+2 Spell Snare
+Land (18)
+4 Arid Mesa
+4 Flooded Strand
+3 Hallowed Fountain
+1 Island
+1 Marsh Flats
+2 Meticulous Archive
+3 Plains
+Planeswalker (2)
+2 Teferi, Time Raveler
+
+60 Cards
+
+Sideboard (15)
+2 Consign to Memory
+1 Erode
+1 Force of Negation
+3 Mystical Dispute
+1 Prismatic Ending
+1 Surgical Extraction
+1 Teferi, Time Raveler
+2 White Orchid Phantom
+3 Wrath of the Skies
+#
+
+DRPP (13TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (16)
+4 Allosaurus Rider
+1 Atraxa, Grand Unifier
+2 Disciple of Freyalise
+1 Endurance
+2 Generous Ent
+2 Ghalta, Stampede Tyrant
+1 Griselbrand
+1 Hooting Mandrills
+1 Ureni, the Song Unending
+1 Xenagos, God of Revels
+Instant (19)
+3 Consign to Memory
+2 Nourishing Shoal
+3 Pact of Negation
+4 Planar Genesis
+4 Summoner's Pact
+3 Veil of Summer
+Land (15)
+1 Boseiju, Who Endures
+1 Breeding Pool
+1 Flooded Strand
+3 Hedge Maze
+4 Misty Rainforest
+1 Polluted Delta
+1 Scalding Tarn
+1 Snow-Covered Forest
+1 Snow-Covered Island
+1 Wooded Foothills
+Sorcery (9)
+1 Bridgeworks Battle
+4 Eldritch Evolution
+4 Neoform
+Other (1)
+1 Repudiate/Replicate
+
+60 Cards
+
+Sideboard (15)
+1 Abhorrent Oculus
+1 Elesh Norn, Grand Cenobite
+1 Hooting Mandrills
+4 Ice-Fang Coatl
+1 Into the Flood Maw
+3 Mystical Dispute
+3 Nature's Claim
+1 Snow-Covered Forest
+#
+
+XENOWAN (14TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (4)
+4 Solitude
+Enchantment (2)
+2 The Legend of Roku
+Instant (17)
+4 Erode
+4 Galvanic Discharge
+3 Mana Tithe
+2 March of Otherworldly Light
+4 Path to Exile
+Land (25)
+4 Cori Mountain Monastery
+4 Demolition Field
+4 Field of Ruin
+1 Mountain
+5 Plains
+4 Sacred Foundry
+3 Sunken Citadel
+Sorcery (12)
+4 Cleansing Wildfire
+4 Price of Freedom
+4 Wrath of the Skies
+
+60 Cards
+
+Sideboard (15)
+2 Celestial Purge
+2 Drannith Magistrate
+3 High Noon
+1 Kaheera, the Orphanguard
+2 Orim's Chant
+3 Rest in Peace
+2 Wear/Tear
+#
+
+LS149950 (15TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (24)
+4 Devourer of Destiny
+4 Disciple of Freyalise
+4 Emrakul, the Promised End
+4 Fanatic of Rhonas
+4 Slumbering Trudge
+4 Sowing Mycospawn
+Enchantment (4)
+4 Fight Rigging
+Instant (4)
+4 Kozilek's Command
+Land (16)
+1 Dryad Arbor
+4 Eldrazi Temple
+5 Forest
+1 Ghost Quarter
+1 Mosswort Bridge
+4 Ugin's Labyrinth
+Sorcery (12)
+4 Green Sun's Zenith
+4 Malevolent Rumble
+4 Turntimber Symbiosis
+
+60 Cards
+
+Sideboard (15)
+1 Chomping Changeling
+1 Collector Ouphe
+3 Endurance
+2 Fade from History
+1 Icetill Explorer
+4 Thought-Knot Seer
+3 Trinisphere
+#
+
+NICOPANICO (16TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (18)
+1 Aether Spellbomb
+4 Cori-Steel Cutter
+4 Mishra's Bauble
+3 Mox Amber
+4 Mox Opal
+1 Skateboard
+1 Soul-Guide Lantern
+Creature (10)
+4 Emry, Lurker of the Loch
+4 Tamiyo, Inquisitive Student
+2 Vivi Ornitier
+Instant (8)
+1 Flame of Anor
+2 Galvanic Blast
+2 Lightning Bolt
+3 Repeal
+Land (19)
+2 Flooded Strand
+1 Island
+2 Mountain
+1 Otawara, Soaring City
+4 Scalding Tarn
+2 Spirebluff Canal
+2 Steam Vents
+1 Thundering Falls
+4 Urza's Saga
+Sorcery (5)
+4 Expressive Iteration
+1 Preordain
+
+60 Cards
+
+Sideboard (15)
+3 Consign to Memory
+2 Fire Magic
+1 Flame of Anor
+2 Force of Negation
+1 Grafdigger's Cage
+1 Mystical Dispute
+1 Pithing Needle
+1 Strix Serenade
+2 Tormod's Crypt
+1 Vexing Bauble
+#
+
+NONE_MTG (17TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (30)
+4 Guide of Souls
+4 Ocelot Pride
+4 Phelia, Exuberant Shepherd
+4 Quantum Riddler
+4 Solitude
+2 Starfield Shepherd
+2 Subtlety
+3 White Orchid Phantom
+3 Witch Enchanter
+Instant (8)
+2 Consign to Memory
+3 Ephemerate
+2 March of Otherworldly Light
+1 Sink into Stupor
+Land (19)
+2 Flagstones of Trokair
+4 Flooded Strand
+4 Hallowed Fountain
+1 Island
+2 Meticulous Archive
+3 Plains
+3 Windswept Heath
+Planeswalker (3)
+3 Teferi, Time Raveler
+
+60 Cards
+
+Sideboard (15)
+2 Clarion Conqueror
+1 Consign to Memory
+2 High Noon
+2 Mystical Dispute
+2 Rest in Peace
+3 Spell Snare
+3 Wrath of the Skies
+#
+
+POTTINKX (18TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (16)
+4 Abhorrent Oculus
+4 Archon of Cruelty
+4 Emperor of Bones
+4 Psychic Frog
+Instant (10)
+4 Fatal Push
+2 Spell Pierce
+4 Thought Scour
+Land (18)
+1 Blood Crypt
+4 Bloodstained Mire
+1 Island
+4 Polluted Delta
+1 Raucous Theater
+1 Scalding Tarn
+1 Steam Vents
+2 Swamp
+1 Thundering Falls
+1 Undercity Sewers
+1 Watery Grave
+Sorcery (16)
+4 Faithless Looting
+4 Persist
+4 Thoughtseize
+4 Unearth
+
+60 Cards
+
+Sideboard (15)
+4 Consign to Memory
+2 Damping Sphere
+2 Meltdown
+3 Mystical Dispute
+1 Pyroclasm
+1 Surgical Extraction
+2 Vexing Bauble
+#
+
+JUMBA (19TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (13)
+3 Chalice of the Void
+4 Expedition Map
+4 Mind Stone
+1 Relic of Progenitus
+1 Vexing Bauble
+Creature (12)
+3 Devourer of Destiny
+3 Glaring Fleshraker
+1 Sire of Seven Deaths
+4 Thought-Knot Seer
+1 Ulamog, the Ceaseless Hunger
+Instant (6)
+2 Dismember
+4 Kozilek's Command
+Land (22)
+4 Eldrazi Temple
+1 Snow-Covered Wastes
+1 Swamp
+4 Ugin's Labyrinth
+4 Urza's Mine
+4 Urza's Power Plant
+4 Urza's Tower
+Planeswalker (8)
+4 Karn, the Great Creator
+4 Ugin, Eye of the Storms
+
+61 Cards
+
+Sideboard (15)
+1 Cityscape Leveler
+3 Disruptor Flute
+1 Ensnaring Bridge
+1 Extinguisher Battleship
+1 Liquimetal Coating
+1 Skysovereign, Consul Flagship
+1 The Filigree Sylex
+1 The Stone Brain
+1 Tormod's Crypt
+1 Torpor Orb
+2 Trinisphere
+1 Walking Ballista
+#
+
+TINKER_DECK (20TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (9)
+4 Blade of the Bloodchief
+1 Soul-Guide Lantern
+1 Springleaf Drum
+3 Vexing Bauble
+Creature (15)
+4 Basking Broodscale
+2 Emrakul, the Promised End
+4 Glaring Fleshraker
+1 Haywire Mite
+2 Walking Ballista
+2 Writhing Chrysalis
+Instant (6)
+4 Kozilek's Command
+2 Unholy Heat
+Land (23)
+2 Boseiju, Who Endures
+2 Cavern of Souls
+1 Commercial District
+4 Eldrazi Temple
+2 Forest
+4 Grove of the Burnwillows
+1 Stomping Ground
+4 Urza's Saga
+1 Verdant Catacombs
+1 Windswept Heath
+1 Wooded Foothills
+Sorcery (7)
+3 Ancient Stirrings
+4 Malevolent Rumble
+
+60 Cards
+
+Sideboard (15)
+1 Emrakul, the Promised End
+1 Grafdigger's Cage
+3 Nature's Claim
+1 Pithing Needle
+2 Pyroclasm
+1 Sire of Seven Deaths
+1 Soulless Jailer
+2 Unholy Heat
+1 Vexing Bauble
+2 Writhing Chrysalis
+#
+
+GALATHEHUTT (21ST PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (31)
+2 Colossal Skyturtle
+4 Curator of Mysteries
+4 Endurance
+4 Generous Ent
+1 Oliphaunt
+4 Shardless Agent
+4 Street Wraith
+4 Subtlety
+4 Wistfulness
+Instant (10)
+4 Force of Negation
+2 Sink into Stupor
+4 Violent Outburst
+Land (16)
+1 Breeding Pool
+1 Commercial District
+1 Forest
+1 Hallowed Fountain
+1 Hedge Maze
+1 Island
+1 Meticulous Archive
+4 Misty Rainforest
+1 Scalding Tarn
+1 Steam Vents
+1 Stomping Ground
+1 Temple Garden
+1 Thundering Falls
+Sorcery (3)
+3 Living End
+
+60 Cards
+
+Sideboard (15)
+3 Clarion Conqueror
+1 Commandeer
+1 Deafening Silence
+3 Force of Vigor
+2 Inevitable Betrayal
+3 Mystical Dispute
+2 Teferi, Time Raveler
+#
+
+MARTIN_DOMINGUEZ (22ND PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (7)
+4 Blade of the Bloodchief
+1 Springleaf Drum
+2 Vexing Bauble
+Creature (16)
+4 Basking Broodscale
+2 Emrakul, the Promised End
+4 Glaring Fleshraker
+1 Haywire Mite
+2 Walking Ballista
+3 Writhing Chrysalis
+Instant (6)
+4 Kozilek's Command
+2 Unholy Heat
+Land (23)
+2 Boseiju, Who Endures
+2 Cavern of Souls
+1 Commercial District
+4 Eldrazi Temple
+2 Forest
+4 Grove of the Burnwillows
+1 Misty Rainforest
+2 Stomping Ground
+4 Urza's Saga
+1 Wooded Foothills
+Sorcery (8)
+4 Ancient Stirrings
+4 Malevolent Rumble
+
+60 Cards
+
+Sideboard (15)
+3 Nature's Claim
+1 Pithing Needle
+2 Pyroclasm
+1 Soul-Guide Lantern
+2 Soulless Jailer
+2 Thief of Existence
+1 Unholy Heat
+2 Veil of Summer
+1 Vexing Bauble
+#
+
+TYERUBE1618 (23RD PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (4)
+4 Ruby Medallion
+Creature (4)
+4 Ral, Monsoon Mage
+Enchantment (1)
+1 Artist's Talent
+Instant (16)
+4 Desperate Ritual
+2 Flashback
+4 Manamorphose
+4 Pyretic Ritual
+2 Valakut Awakening
+Land (18)
+3 Arid Mesa
+2 Bloodstained Mire
+1 Commercial District
+1 Elegant Parlor
+1 Gemstone Caverns
+4 Mountain
+1 Sacred Foundry
+2 Scalding Tarn
+1 Sunbaked Canyon
+2 Wooded Foothills
+Sorcery (17)
+1 Fire-Brained Scheme
+2 Glimpse the Impossible
+1 Grapeshot
+3 Past in Flames
+4 Reckless Impulse
+2 Wish
+4 Wrenn's Resolve
+
+60 Cards
+
+Sideboard (15)
+1 Empty the Warrens
+2 Fire Magic
+1 Goblin Lore
+1 Grapeshot
+1 Meltdown
+3 Orim's Chant
+1 Past in Flames
+4 Prismatic Ending
+1 Wear/Tear
+#
+
+AARRGH (24TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (24)
+4 Ajani, Nacatl Pariah
+4 Guide of Souls
+4 Ocelot Pride
+4 Ragavan, Nimble Pilferer
+3 Ranger-Captain of Eos
+1 Solitude
+4 Voice of Victory
+Enchantment (6)
+1 Blood Moon
+3 Goblin Bombardment
+2 The Legend of Roku
+Instant (7)
+4 Galvanic Discharge
+1 Lightning Bolt
+2 Thraben Charm
+Land (23)
+2 Arena of Glory
+4 Arid Mesa
+2 Dalkovan Encampment
+2 Elegant Parlor
+4 Flooded Strand
+3 Marsh Flats
+1 Mountain
+2 Plains
+3 Sacred Foundry
+
+60 Cards
+
+Sideboard (15)
+1 Blood Moon
+1 Burrenton Forge-Tender
+2 High Noon
+2 Obsidian Charmaw
+1 Orim's Chant
+1 Rest in Peace
+1 The Legend of Roku
+2 Vexing Bauble
+2 Wear/Tear
+2 Wrath of the Skies
+#
+
+BEARLAND (25TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (11)
+3 Chalice of the Void
+4 Expedition Map
+4 Talisman of Resilience
+Creature (12)
+4 Devourer of Destiny
+1 Sire of Seven Deaths
+4 Sowing Mycospawn
+2 Thought-Knot Seer
+1 Ulamog, the Ceaseless Hunger
+Instant (6)
+2 Dismember
+4 Kozilek's Command
+Land (23)
+1 Abstergo Entertainment
+1 Cavern of Souls
+4 Eldrazi Temple
+1 Forest
+4 Ugin's Labyrinth
+4 Urza's Mine
+4 Urza's Power Plant
+4 Urza's Tower
+Planeswalker (8)
+4 Karn, the Great Creator
+4 Ugin, Eye of the Storms
+Sorcery (1)
+1 All Is Dust
+
+61 Cards
+
+Sideboard (15)
+1 Cityscape Leveler
+1 Disruptor Flute
+1 Engineered Explosives
+1 Ensnaring Bridge
+1 Extinguisher Battleship
+1 Grafdigger's Cage
+1 Haywire Mite
+1 Kozilek, Butcher of Truth
+1 Liquimetal Coating
+1 Palantír of Orthanc
+1 The Stone Brain
+1 Tormod's Crypt
+1 Torpor Orb
+1 Trinisphere
+1 Walking Ballista
+#
+
+ICE_NINE_BIGFAN (26TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (24)
+3 Claws of Gix
+4 Engineered Explosives
+4 Mishra's Bauble
+4 Mox Opal
+1 Pithing Needle
+1 Shadowspear
+1 Skateboard
+4 Tormod's Crypt
+2 Welding Jar
+Creature (11)
+3 Arcbound Ravager
+4 Kappa Cannoneer
+4 Pinnacle Emissary
+Enchantment (4)
+4 Weapons Manufacturing
+Instant (6)
+1 Galvanic Blast
+3 Metallic Rebuke
+2 Sink into Stupor
+Land (15)
+4 Fiery Islet
+2 Island
+4 Spirebluff Canal
+1 Steam Vents
+4 Urza's Saga
+
+60 Cards
+
+Sideboard (15)
+3 Consign to Memory
+2 Emry, Lurker of the Loch
+3 Galvanic Blast
+2 Mystical Dispute
+2 Vandalblast
+1 Vexing Bauble
+2 Whipflare
+#
+
+MCWINSAUCE (27TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (32)
+4 Ajani, Nacatl Pariah
+4 Guide of Souls
+4 Ocelot Pride
+4 Phelia, Exuberant Shepherd
+4 Quantum Riddler
+3 Ragavan, Nimble Pilferer
+4 Solitude
+1 Starfield Shepherd
+4 Witch Enchanter
+Enchantment (2)
+2 Goblin Bombardment
+Instant (4)
+2 Ephemerate
+2 Galvanic Discharge
+Land (19)
+4 Arid Mesa
+1 Elegant Parlor
+4 Flooded Strand
+3 Hallowed Fountain
+2 Meticulous Archive
+3 Plains
+2 Sacred Foundry
+Planeswalker (1)
+1 Teferi, Time Raveler
+Sorcery (2)
+2 Prismatic Ending
+
+60 Cards
+
+Sideboard (15)
+3 Consign to Memory
+1 Drannith Magistrate
+2 High Noon
+1 Meltdown
+1 Mystical Dispute
+2 Obsidian Charmaw
+1 Orim's Chant
+1 Surgical Extraction
+1 Wear/Tear
+2 Wrath of the Skies
+#
+
+SELFEISEK (28TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (7)
+4 Mishra's Bauble
+1 Nihil Spellbomb
+1 Pithing Needle
+1 Shadowspear
+Creature (15)
+4 Emperor of Bones
+4 Nethergoyf
+3 Orcish Bowmasters
+4 Thought-Knot Seer
+Instant (8)
+4 Fatal Push
+4 Kozilek's Command
+Land (24)
+4 Eldrazi Temple
+4 Ifnir Deadlands
+1 Marsh Flats
+4 Prismatic Vista
+4 Swamp
+2 Urborg, Tomb of Yawgmoth
+4 Urza's Saga
+1 Wastes
+Sorcery (6)
+2 Inquisition of Kozilek
+4 Thoughtseize
+
+60 Cards
+
+Sideboard (15)
+1 Ashiok, Dream Render
+2 Break the Ice
+2 Damping Sphere
+1 Dismember
+1 Dreams of Steel and Oil
+1 Force of Despair
+2 Pithing Needle
+1 Shoot the Sheriff
+1 Surgical Extraction
+2 Toxic Deluge
+1 Wasteland Strangler
+#
+
+ECHECETMAT35 (29TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (2)
+2 Isochron Scepter
+Creature (4)
+4 Solitude
+Instant (10)
+2 Consult the Star Charts
+2 Counterspell
+4 Orim's Chant
+2 Spell Snare
+Land (24)
+2 Arid Mesa
+4 Flooded Strand
+1 Geier Reach Sanitarium
+3 Hallowed Fountain
+2 Island
+2 Marsh Flats
+2 Meticulous Archive
+1 Monumental Henge
+1 Mystic Gate
+1 Otawara, Soaring City
+2 Plains
+1 Scalding Tarn
+1 Steam Vents
+1 Undercity Sewers
+Planeswalker (8)
+4 Narset, Parter of Veils
+1 Teferi, Hero of Dominaria
+3 Teferi, Time Raveler
+Sorcery (12)
+2 Day's Undoing
+2 Flow State
+1 Lórien Revealed
+3 Prismatic Ending
+2 Supreme Verdict
+2 Wrath of the Skies
+
+60 Cards
+
+Sideboard (15)
+2 Chalice of the Void
+4 Consign to Memory
+2 High Noon
+1 Kaheera, the Orphanguard
+3 Mystical Dispute
+1 Rest in Peace
+1 Surgical Extraction
+1 Wrath of the Skies
+#
+
+NJ5030 (30TH PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (24)
+3 Claws of Gix
+4 Engineered Explosives
+4 Mishra's Bauble
+4 Mox Opal
+1 Pithing Needle
+1 Shadowspear
+1 Skateboard
+3 Tormod's Crypt
+1 Vexing Bauble
+2 Welding Jar
+Creature (12)
+2 Arcbound Ravager
+2 Emry, Lurker of the Loch
+4 Kappa Cannoneer
+4 Pinnacle Emissary
+Enchantment (4)
+4 Weapons Manufacturing
+Instant (4)
+2 Metallic Rebuke
+2 Sink into Stupor
+Land (16)
+4 Fiery Islet
+2 Island
+1 Shivan Reef
+4 Spirebluff Canal
+1 Steam Vents
+4 Urza's Saga
+
+60 Cards
+
+Sideboard (15)
+4 Consign to Memory
+3 Galvanic Blast
+1 Grafdigger's Cage
+1 Hurkyl's Recall
+1 Metallic Rebuke
+2 Mystical Dispute
+1 Vexing Bauble
+2 Whipflare
+#
+
+KVOTHE_DE_ARRASCAETA (31ST PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (15)
+4 Abhorrent Oculus
+4 Archon of Cruelty
+3 Emperor of Bones
+4 Psychic Frog
+Instant (11)
+1 Bitter Triumph
+4 Fatal Push
+1 Sink into Stupor
+2 Spell Pierce
+3 Thought Scour
+Land (18)
+1 Blood Crypt
+4 Bloodstained Mire
+1 Island
+4 Polluted Delta
+1 Raucous Theater
+1 Scalding Tarn
+1 Steam Vents
+2 Swamp
+1 Undercity Sewers
+2 Watery Grave
+Sorcery (16)
+4 Faithless Looting
+4 Persist
+4 Thoughtseize
+4 Unearth
+
+60 Cards
+
+Sideboard (15)
+3 Consign to Memory
+2 Damping Sphere
+1 Harvester of Misery
+2 Meltdown
+2 Mystical Dispute
+2 Pyroclasm
+1 Surgical Extraction
+2 Vexing Bauble
+#
+
+RASTAF (32ND PLACE)
+
+MODERN CHALLENGE 64
+
+5/27/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (24)
+3 Claws of Gix
+4 Engineered Explosives
+4 Mishra's Bauble
+4 Mox Opal
+1 Pithing Needle
+1 Shadowspear
+1 Skateboard
+4 Tormod's Crypt
+2 Welding Jar
+Creature (12)
+2 Arcbound Ravager
+1 Emry, Lurker of the Loch
+4 Kappa Cannoneer
+1 Krang, Master Mind
+4 Pinnacle Emissary
+Enchantment (4)
+4 Weapons Manufacturing
+Instant (5)
+1 Galvanic Blast
+2 Metallic Rebuke
+2 Sink into Stupor
+Land (15)
+4 Fiery Islet
+2 Island
+4 Spirebluff Canal
+1 Steam Vents
+4 Urza's Saga
+
+60 Cards
+
+Sideboard (15)
+3 Consign to Memory
+1 Emry, Lurker of the Loch
+3 Galvanic Blast
+1 Metallic Rebuke
+2 Mystical Dispute
+2 Shattering Spree
+1 Swan Song
+1 Vexing Bauble
+1 Whipflare
+STANDINGS
+Rank	Name	Points	OMWP	GWP	OGWP
+1	NuBlkAu	18	0.6429	0.75	0.5672
+2	Pleyboy	18	0.6082	0.7647	0.5579
+3	SanPop	18	0.6054	0.7059	0.5498
+4	VampireDiaries	18	0.585	0.7222	0.5317
+5	hugofreitas1	18	0.5782	0.75	0.5153
+6	KelMasterP	18	0.5442	0.7059	0.5383
+7	Souze6	15	0.6599	0.6471	0.6027
+8	magicgatheringbigfan	15	0.6286	0.6667	0.5813
+9	Bawer	15	0.6143	0.6667	0.565
+10	Kritik	15	0.6122	0.5882	0.5603
+11	MacIsaac	15	0.6054	0.6471	0.542
+12	Takayama	15	0.5986	0.6875	0.5448
+13	DrPP	15	0.5782	0.5882	0.5522
+14	Xenowan	15	0.5646	0.6111	0.5313
+15	ls149950	15	0.5374	0.5789	0.5218
+16	Nicopanico	15	0.5272	0.6316	0.5111
+17	none_mtg	15	0.5238	0.6	0.5027
+18	pottinkx	15	0.5129	0.6471	0.4959
+19	Jumba	12	0.6395	0.5	0.5673
+20	Tinker_deck	12	0.6088	0.5263	0.5714
+21	Galathehutt	12	0.6041	0.4706	0.5785
+22	Martin_Dominguez	12	0.5918	0.5	0.5543
+23	Tyerube1618	12	0.5878	0.4737	0.5516
+24	aarrgh	12	0.5782	0.5789	0.5261
+25	bearland	12	0.5782	0.5263	0.5689
+26	ice_nine_BIGFAN	12	0.5741	0.5	0.5542
+27	McWinSauce	12	0.5476	0.4737	0.5203
+28	Selfeisek	12	0.5435	0.5789	0.5026
+29	echecetmat35	12	0.5129	0.5882	0.5131
+30	NJ5030	12	0.4966	0.5	0.5238
+31	Kvothe_De_Arrascaeta	12	0.483	0.5	0.4889
+32	rastaf	12	0.4694	0.5556	0.4898
+
+Stay connected with MTGO and follow us on:
+
+
+
+©2026 Daybreak Game Company LLC. Daybreak and the Daybreak Logo are trademarks or registered trademarks of Daybreak Game Company LLC.
+
+Magic: The Gathering Online and Wizards of the Coast and their respective logos are trademarks of Wizards of the Coast LLC and are used with permission.
+
+The ratings icon is a registered trademark of the Entertainment Software Association. All Rights Reserved.
+
+Legal Notices Privacy Policy Terms of Service Photosensitive Warning Cookies Cookie Preferences Conduct Policy Contact
+X
+
+Welcome to Magic: The Gathering Online!
+
+Collect cards, build decks, and duel other players on YOUR schedule. Magic Online lets you play what you want, when you want.
+
+Start your MTGO adventure today!
+
+Your download should now appear in your specified folder or in your DOWNLOADS location.
+
+If there was an error with the download, try again.
+
+Click below to learn how to play MTGO.
+
+No thanks, return to website.
+
+mtgo.com Cookie Preferences
+By clicking "Accept All Cookies" you agree to storing cookies from us on mtgo.com or its third party tools to enhance functionality, personalize content, analyze use of the site, and provide social media features. We may also share information about your use of our site with our social media, advertising, and analytics partners.
+Accept All mtgo.com Cookies Reject All mtgo.com Cookies Personalize mtgo.com Cookies Cookie Policy Privacy Policy

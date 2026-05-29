@@ -1,2 +1,3 @@
 magic-skill-ref/
 .DS_Store
+mtg_modern_data/sources/*/raw/*.html

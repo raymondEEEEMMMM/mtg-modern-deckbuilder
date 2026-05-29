@@ -1,0 +1,1363 @@
+Server Status:
+
+GAME RESOURCES
+COMMUNITY
+DECKLISTS
+SUPPORT
+MODERN LEAGUE
+
+Posted on May 29, 2026
+
+Decklists
+DECKLISTS
+#
+
+CHACHIBUOH (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (22)
+4 Ajani, Nacatl Pariah
+1 Boromir, Warden of the Tower
+4 Guide of Souls
+4 Ocelot Pride
+4 Ragavan, Nimble Pilferer
+1 Ranger-Captain of Eos
+2 Seasoned Pyromancer
+2 Voice of Victory
+Enchantment (8)
+1 Blood Moon
+2 Fable of the Mirror-Breaker
+3 Goblin Bombardment
+1 Static Prison
+1 The Legend of Roku
+Instant (8)
+4 Galvanic Discharge
+2 Mana Tithe
+2 Thraben Charm
+Land (22)
+1 Arena of Glory
+4 Arid Mesa
+1 Dalkovan Encampment
+2 Elegant Parlor
+3 Flooded Strand
+3 Marsh Flats
+1 Mountain
+2 Plains
+3 Sacred Foundry
+2 Windswept Heath
+
+60 Cards
+
+Sideboard (15)
+1 Blood Moon
+1 Celestial Purge
+1 Drannith Magistrate
+2 High Noon
+3 Obsidian Charmaw
+1 Orim's Chant
+1 Surgical Extraction
+2 Vexing Bauble
+1 Wear/Tear
+2 Wrath of the Skies
+#
+
+RICETACKLER (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (4)
+4 Phoenix Fleet Airship
+Creature (21)
+4 Gravecrawler
+4 Marionette Apprentice
+4 Orcish Bowmasters
+1 Sephiroth, Fabled SOLDIER
+4 Shambling Ghast
+4 Warren Soultrader
+Enchantment (2)
+2 Chthonian Nightmare
+Instant (3)
+3 Flare of Malice
+Land (22)
+1 Bloodstained Mire
+4 Marsh Flats
+1 Nurturing Peatland
+2 Overgrown Tomb
+4 Phyrexian Tower
+1 Spymaster's Vault
+4 Swamp
+1 Underground Mortuary
+4 Verdant Catacombs
+Sorcery (8)
+4 Malevolent Rumble
+4 Thoughtseize
+
+60 Cards
+
+Sideboard (15)
+1 Ashiok, Dream Render
+2 Break the Ice
+3 Culling Ritual
+3 Fatal Push
+2 Nihil Spellbomb
+1 Shatter Assumptions
+3 Vexing Bauble
+#
+
+QUARTERDRAGON (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (2)
+2 Nihil Spellbomb
+Creature (24)
+4 Abhorrent Oculus
+4 Fallaji Archaeologist
+4 Gran-Gran
+4 Moonshadow
+4 Psychic Frog
+4 Subtlety
+Instant (10)
+4 Fatal Push
+4 Flare of Denial
+2 Sink into Stupor
+Land (18)
+2 Bloodstained Mire
+1 Flooded Strand
+2 Island
+2 Misty Rainforest
+1 Otawara, Soaring City
+4 Polluted Delta
+1 Swamp
+2 Undercity Sewers
+3 Watery Grave
+Sorcery (6)
+2 Thoughtseize
+4 Unearth
+
+60 Cards
+
+Sideboard (15)
+2 Ashiok, Dream Render
+3 Consign to Memory
+1 Force of Negation
+1 Graveyard Trespasser
+2 Harbinger of the Seas
+4 Mystical Dispute
+1 Requiting Hex
+1 Toxic Deluge
+#
+
+IRONBOLT (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (15)
+4 Abhorrent Oculus
+4 Archon of Cruelty
+3 Emperor of Bones
+4 Psychic Frog
+Instant (10)
+4 Fatal Push
+4 Otherworldly Gaze
+2 Spell Pierce
+Land (19)
+1 Blood Crypt
+4 Bloodstained Mire
+1 Island
+4 Polluted Delta
+1 Raucous Theater
+1 Scalding Tarn
+1 Steam Vents
+2 Swamp
+1 Thundering Falls
+1 Undercity Sewers
+2 Watery Grave
+Sorcery (16)
+4 Faithless Looting
+4 Persist
+4 Thoughtseize
+4 Unearth
+
+60 Cards
+
+Sideboard (15)
+4 Consign to Memory
+2 Damping Sphere
+2 Meltdown
+2 Mystical Dispute
+2 Pyroclasm
+1 Surgical Extraction
+2 Vexing Bauble
+#
+
+UOSHUA (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (25)
+1 Aether Spellbomb
+3 Claws of Gix
+4 Engineered Explosives
+4 Mishra's Bauble
+4 Mox Opal
+1 Pithing Needle
+1 Shadowspear
+1 Skateboard
+4 Tormod's Crypt
+2 Welding Jar
+Creature (12)
+1 Arcbound Ravager
+1 Emry, Lurker of the Loch
+4 Kappa Cannoneer
+2 Krang, Master Mind
+4 Pinnacle Emissary
+Enchantment (4)
+4 Weapons Manufacturing
+Instant (2)
+2 Sink into Stupor
+Land (17)
+4 Fiery Islet
+1 Island
+2 Shivan Reef
+4 Spirebluff Canal
+2 Steam Vents
+4 Urza's Saga
+
+60 Cards
+
+Sideboard (15)
+1 Blood Moon
+2 Consign to Memory
+2 Damping Sphere
+2 Galvanic Blast
+1 Grafdigger's Cage
+2 Metallic Rebuke
+2 Mystical Dispute
+1 Vexing Bauble
+2 Whipflare
+#
+
+DARBSOMA (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (12)
+4 Eidolon of the Great Revel
+4 Goblin Guide
+4 Monastery Swiftspear
+Instant (16)
+4 Boros Charm
+4 Lightning Bolt
+4 Searing Blaze
+4 Skullcrack
+Land (20)
+1 Arid Mesa
+4 Barbarian Ring
+1 Bloodstained Mire
+3 Inspiring Vantage
+3 Mountain
+2 Sacred Foundry
+1 Scalding Tarn
+4 Sunbaked Canyon
+1 Wooded Foothills
+Sorcery (12)
+4 Boltwave
+4 Lava Spike
+4 Skewer the Critics
+
+60 Cards
+
+Sideboard (15)
+2 Deflecting Palm
+2 Exquisite Firecraft
+2 Rest in Peace
+4 Roiling Vortex
+3 Searing Blood
+2 Wear/Tear
+#
+
+JMAR834 (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (30)
+4 Archon of Cruelty
+2 Boggart Trawler
+1 Deceit
+3 Emperor of Bones
+4 Eyetwitch
+2 Orcish Bowmasters
+4 Overlord of the Balemurk
+4 Stitcher's Supplier
+4 Street Wraith
+2 Troll of Khazad-dûm
+Instant (3)
+3 Flare of Malice
+Land (19)
+4 Crypt of Agadeem
+1 Overgrown Tomb
+4 Phyrexian Tower
+4 Polluted Delta
+1 Spymaster's Vault
+4 Swamp
+1 Underground Mortuary
+Sorcery (8)
+1 Bone Shards
+1 Inquisition of Kozilek
+4 Persist
+2 Thoughtseize
+
+60 Cards
+
+Sideboard (15)
+1 Break the Ice
+1 Dai Li Indoctrination
+2 Dauthi Voidwalker
+1 Decorum Dissertation
+3 Engineered Explosives
+1 Force of Despair
+1 Origin of Metalbending
+1 Ozai's Cruelty
+1 Ruinous Waterbending
+1 Thoughtseize
+1 True Ancestry
+1 Void Mirror
+#
+
+DJAC (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (16)
+4 Abhorrent Oculus
+4 Archon of Cruelty
+4 Emperor of Bones
+4 Psychic Frog
+Instant (10)
+4 Fatal Push
+2 Spell Pierce
+4 Thought Scour
+Land (18)
+1 Blood Crypt
+4 Bloodstained Mire
+1 Island
+4 Polluted Delta
+1 Raucous Theater
+1 Scalding Tarn
+1 Steam Vents
+2 Swamp
+1 Thundering Falls
+1 Undercity Sewers
+1 Watery Grave
+Sorcery (16)
+4 Faithless Looting
+4 Persist
+4 Thoughtseize
+4 Unearth
+
+60 Cards
+
+Sideboard (15)
+3 Consign to Memory
+2 Damping Sphere
+2 Meltdown
+3 Mystical Dispute
+2 Pyroclasm
+1 Surgical Extraction
+2 Vexing Bauble
+#
+
+OZ_SENPAI (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (31)
+4 Guide of Souls
+1 Mockingbird
+4 Ocelot Pride
+4 Phelia, Exuberant Shepherd
+3 Quantum Riddler
+1 Recruiter of the Guard
+4 Solitude
+2 Starfield Shepherd
+4 White Orchid Phantom
+4 Witch Enchanter
+Instant (8)
+2 Consign to Memory
+3 Ephemerate
+2 March of Otherworldly Light
+1 Thraben Charm
+Land (19)
+3 Flagstones of Trokair
+1 Flooded Strand
+4 Hallowed Fountain
+3 Marsh Flats
+2 Meticulous Archive
+4 Plains
+2 Windswept Heath
+Planeswalker (2)
+2 Teferi, Time Raveler
+
+60 Cards
+
+Sideboard (15)
+1 Celestial Purge
+1 Consign to Memory
+2 Deafening Silence
+1 Drannith Magistrate
+1 Lavinia, Azorius Renegade
+3 Mystical Dispute
+1 Rest in Peace
+1 Teferi, Time Raveler
+1 Thraben Charm
+3 Wrath of the Skies
+#
+
+SIGHTWINNER (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (4)
+4 Mishra's Bauble
+Creature (9)
+4 Dragon's Rage Channeler
+4 Monastery Swiftspear
+1 Murktide Regent
+Enchantment (4)
+4 Stormchaser's Talent
+Instant (6)
+2 Flashback
+4 Lightning Bolt
+Land (20)
+3 Arid Mesa
+2 Bloodstained Mire
+3 Mountain
+4 Scalding Tarn
+1 Snow-Covered Island
+4 Steam Vents
+3 Wooded Foothills
+Sorcery (17)
+4 Boltwave
+4 Boomerang Basics
+2 Expressive Iteration
+4 Flow State
+3 Preordain
+
+60 Cards
+
+Sideboard (15)
+3 Eidolon of the Great Revel
+1 Expressive Iteration
+1 Force of Negation
+1 Meltdown
+3 Murktide Regent
+1 Searing Blaze
+2 Soul-Guide Lantern
+3 Unholy Heat
+#
+
+HYBRID7 (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (25)
+4 Ajani, Nacatl Pariah
+4 Guide of Souls
+4 Ocelot Pride
+4 Ragavan, Nimble Pilferer
+4 Seasoned Pyromancer
+1 Tersa Lightshatter
+4 Voice of Victory
+Enchantment (4)
+4 Goblin Bombardment
+Instant (10)
+4 Lightning Bolt
+2 Mana Tithe
+4 Thraben Charm
+Land (21)
+4 Arid Mesa
+1 Dalkovan Encampment
+2 Elegant Parlor
+2 Flooded Strand
+2 Marsh Flats
+1 Mountain
+2 Plains
+4 Sacred Foundry
+1 Sokenzan, Crucible of Defiance
+2 Windswept Heath
+
+60 Cards
+
+Sideboard (15)
+3 Blood Moon
+4 Damping Sphere
+4 Vexing Bauble
+4 Wrath of the Skies
+#
+
+STORMCOMING (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (17)
+2 Nishoba Brawler
+4 Ragavan, Nimble Pilferer
+4 Scion of Draco
+4 Territorial Kavu
+3 Wild Nacatl
+Enchantment (8)
+4 Leyline Binding
+4 Leyline of the Guildpact
+Instant (8)
+4 Lightning Bolt
+4 Stubborn Denial
+Land (21)
+1 Arena of Glory
+4 Arid Mesa
+1 Blood Crypt
+1 Breeding Pool
+1 Forest
+1 Lush Portico
+1 Mountain
+1 Sacred Foundry
+1 Steam Vents
+1 Temple Garden
+3 Windswept Heath
+4 Wooded Foothills
+1 Xander's Lounge
+Planeswalker (2)
+2 Teferi, Time Raveler
+Sorcery (4)
+4 Tribal Flames
+
+60 Cards
+
+Sideboard (15)
+4 Consign to Memory
+2 High Noon
+2 Mystical Dispute
+1 Nihil Spellbomb
+2 Obsidian Charmaw
+1 The Legend of Roku
+1 Wear/Tear
+2 Wrath of the Skies
+#
+
+SYSTEMATICSLUG (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (20)
+4 Nishoba Brawler
+4 Ragavan, Nimble Pilferer
+4 Scion of Draco
+4 Territorial Kavu
+4 Wild Nacatl
+Enchantment (8)
+4 Leyline Binding
+4 Leyline of the Guildpact
+Instant (8)
+4 Lightning Bolt
+4 Stubborn Denial
+Land (20)
+4 Arid Mesa
+1 Blood Crypt
+4 Flooded Strand
+1 Indatha Triome
+1 Plains
+2 Steam Vents
+2 Temple Garden
+4 Wooded Foothills
+1 Xander's Lounge
+Sorcery (4)
+4 Tribal Flames
+
+60 Cards
+
+Sideboard (15)
+4 Doorkeeper Thrull
+4 Pyroclasm
+4 Rest in Peace
+3 Wear/Tear
+#
+
+DOOM580 (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (8)
+4 Solitude
+4 White Orchid Phantom
+Enchantment (3)
+1 Kinbinding
+2 The Legend of Roku
+Instant (12)
+4 Erode
+4 Galvanic Discharge
+4 Path to Exile
+Land (24)
+3 Cori Mountain Monastery
+4 Demolition Field
+4 Field of Ruin
+1 Mountain
+5 Plains
+4 Sacred Foundry
+1 Sunbillow Verge
+2 Sunken Citadel
+Sorcery (13)
+4 Cleansing Wildfire
+4 Price of Freedom
+1 Wrath of God
+4 Wrath of the Skies
+
+60 Cards
+
+Sideboard (15)
+2 Crucible of Worlds
+2 Drannith Magistrate
+2 High Noon
+2 Kataki, War's Wage
+2 Orim's Chant
+2 Rest in Peace
+2 Vexing Bauble
+1 Wear/Tear
+#
+
+ETHANB (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (4)
+4 Chalice of the Void
+Creature (30)
+4 Devourer of Destiny
+4 Eldrazi Linebreaker
+4 Glaring Fleshraker
+3 It That Heralds the End
+4 Sire of Seven Deaths
+4 Sowing Mycospawn
+4 Thought-Knot Seer
+3 Wastescape Battlemage
+Instant (4)
+4 Kozilek's Command
+Land (22)
+1 Bojuka Bog
+4 Cavern of Souls
+4 Eldrazi Temple
+2 Forest
+1 Gemstone Caverns
+2 Mountain
+2 Prismatic Vista
+4 Ugin's Labyrinth
+2 Wastes
+
+60 Cards
+
+Sideboard (15)
+1 All Is Dust
+2 Damping Sphere
+2 Dismember
+2 Disruptor Flute
+1 Soulless Jailer
+2 Trinisphere
+2 Vexing Bauble
+2 Warping Wail
+1 Wastescape Battlemage
+#
+
+THE_TANK (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (14)
+4 Boggart Trawler
+3 Graveyard Trespasser
+4 Orcish Bowmasters
+3 Sheoldred, the Apocalypse
+Enchantment (4)
+4 Necrodominance
+Instant (23)
+4 Fatal Push
+4 Fell the Profane
+4 Force of Despair
+3 March of Wretched Sorrow
+4 Shadow of Doubt
+4 Soul Spike
+Land (15)
+1 Bloodstained Mire
+3 Castle Locthwain
+1 Marsh Flats
+1 Polluted Delta
+7 Swamp
+1 Undercity Sewers
+1 Verdant Catacombs
+Sorcery (4)
+4 Thoughtseize
+
+60 Cards
+
+Sideboard (15)
+4 Break the Ice
+4 Dauthi Voidwalker
+1 Decorum Dissertation
+2 Necromentia
+2 The Meathook Massacre
+2 Wrench Mind
+#
+
+CASPER_X (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (8)
+4 Blade of the Bloodchief
+1 Soul-Guide Lantern
+1 Springleaf Drum
+2 Vexing Bauble
+Creature (16)
+4 Basking Broodscale
+2 Emrakul, the Promised End
+4 Glaring Fleshraker
+1 Haywire Mite
+2 Walking Ballista
+3 Writhing Chrysalis
+Instant (6)
+4 Kozilek's Command
+2 Unholy Heat
+Land (23)
+2 Boseiju, Who Endures
+2 Cavern of Souls
+1 Commercial District
+4 Eldrazi Temple
+2 Forest
+4 Grove of the Burnwillows
+1 Stomping Ground
+4 Urza's Saga
+3 Windswept Heath
+Sorcery (7)
+3 Ancient Stirrings
+4 Malevolent Rumble
+
+60 Cards
+
+Sideboard (15)
+1 Grafdigger's Cage
+2 Nature's Claim
+1 Pick Your Poison
+1 Pithing Needle
+2 Pyroclasm
+1 Sire of Seven Deaths
+1 Soulless Jailer
+1 Thief of Existence
+1 Unholy Heat
+2 Veil of Summer
+1 Vexing Bauble
+1 Writhing Chrysalis
+#
+
+AARRGH (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (8)
+3 Blade of the Bloodchief
+1 Soul-Guide Lantern
+1 Springleaf Drum
+3 Vexing Bauble
+Creature (15)
+4 Basking Broodscale
+2 Emrakul, the Promised End
+4 Glaring Fleshraker
+1 Haywire Mite
+2 Walking Ballista
+2 Writhing Chrysalis
+Instant (6)
+4 Kozilek's Command
+2 Unholy Heat
+Land (23)
+2 Boseiju, Who Endures
+2 Cavern of Souls
+1 Commercial District
+4 Eldrazi Temple
+2 Forest
+4 Grove of the Burnwillows
+1 Stomping Ground
+4 Urza's Saga
+1 Verdant Catacombs
+1 Windswept Heath
+1 Wooded Foothills
+Sorcery (8)
+4 Ancient Stirrings
+4 Malevolent Rumble
+
+60 Cards
+
+Sideboard (15)
+1 Emrakul, the Promised End
+1 Grafdigger's Cage
+3 Nature's Claim
+1 Pithing Needle
+2 Pyroclasm
+1 Sire of Seven Deaths
+1 Soulless Jailer
+2 Unholy Heat
+1 Vexing Bauble
+2 Writhing Chrysalis
+#
+
+THESANDWICHKING (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (16)
+4 Abhorrent Oculus
+4 Archon of Cruelty
+4 Emperor of Bones
+4 Psychic Frog
+Instant (10)
+4 Fatal Push
+2 Spell Pierce
+4 Thought Scour
+Land (18)
+1 Blood Crypt
+4 Bloodstained Mire
+1 Island
+4 Polluted Delta
+1 Raucous Theater
+1 Scalding Tarn
+1 Steam Vents
+2 Swamp
+1 Thundering Falls
+1 Undercity Sewers
+1 Watery Grave
+Sorcery (16)
+4 Faithless Looting
+4 Persist
+4 Thoughtseize
+4 Unearth
+
+60 Cards
+
+Sideboard (15)
+3 Consign to Memory
+2 Damping Sphere
+2 Meltdown
+3 Mystical Dispute
+2 Pyroclasm
+1 Surgical Extraction
+2 Vexing Bauble
+#
+
+HOUSEOFMANAMTG (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (5)
+4 Amulet of Vigor
+1 Zuran Orb
+Creature (8)
+1 Aftermath Analyst
+4 Arboreal Grazer
+1 Cultivator Colossus
+2 Primeval Titan
+Enchantment (4)
+4 Spelunking
+Instant (2)
+2 Summoner's Pact
+Land (30)
+2 Boseiju, Who Endures
+4 Crumbling Vestige
+1 Dryad Arbor
+1 Echoing Deeps
+3 Forest
+3 Gruul Turf
+1 Hanweir Battlements
+1 Mirrorpool
+1 Otawara, Soaring City
+1 Shifting Woodland
+4 Simic Growth Chamber
+1 The Mycosynth Gardens
+1 Tolaria West
+1 Urza's Cave
+4 Urza's Saga
+1 Vesuva
+Sorcery (12)
+4 Explore
+4 Green Sun's Zenith
+4 Scapeshift
+
+61 Cards
+
+Sideboard (15)
+1 Bojuka Bog
+1 Boseiju, Who Endures
+1 Cavern of Souls
+1 Collector Ouphe
+2 Dismember
+2 Force of Vigor
+1 Six
+1 Stock Up
+1 Tireless Tracker
+2 Vampires' Vengeance
+2 Vexing Bauble
+#
+
+DINGO34 (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Creature (16)
+1 Harbinger of the Seas
+3 Quantum Riddler
+4 Shardless Agent
+4 Subtlety
+4 Wistfulness
+Instant (11)
+4 Force of Negation
+3 Sink into Stupor
+4 Violent Outburst
+Land (22)
+1 Boseiju, Who Endures
+1 Breeding Pool
+2 Flooded Grove
+1 Forest
+2 Gemstone Caverns
+1 Hedge Maze
+1 Island
+3 Misty Rainforest
+1 Mountain
+2 Scalding Tarn
+1 Steam Vents
+1 Stomping Ground
+1 Thundering Falls
+4 Wooded Foothills
+Sorcery (4)
+4 Crashing Footfalls
+Other (7)
+4 Dead/Gone
+3 Fire/Ice
+
+60 Cards
+
+Sideboard (15)
+1 Boseiju, Who Endures
+3 Endurance
+3 Force of Vigor
+2 Harbinger of the Seas
+3 Mystical Dispute
+3 Rough/Tumble
+#
+
+DJSTILLIO (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (4)
+4 Agatha's Soul Cauldron
+Creature (20)
+4 Abhorrent Oculus
+1 Fatestitcher
+3 Gran-Gran
+1 Griselbrand
+3 Pensive Professor
+4 Psychic Frog
+3 Tamiyo, Inquisitive Student
+1 Thassa's Oracle
+Instant (7)
+4 Fatal Push
+1 Sink into Stupor
+2 Tainted Indulgence
+Land (21)
+1 Bloodstained Mire
+2 Darkslick Shores
+2 Island
+4 Marsh Flats
+4 Polluted Delta
+2 Swamp
+3 Undercity Sewers
+3 Watery Grave
+Sorcery (8)
+4 Thoughtseize
+4 Unearth
+
+60 Cards
+
+Sideboard (15)
+3 Consign to Memory
+2 Damping Sphere
+2 Force of Negation
+2 Harbinger of the Seas
+1 Hurkyl's Recall
+2 Mystical Dispute
+2 Orcish Bowmasters
+1 Toxic Deluge
+#
+
+TUXEDOROSE (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (23)
+3 Claws of Gix
+4 Engineered Explosives
+4 Mishra's Bauble
+4 Mox Opal
+1 Pithing Needle
+1 Skateboard
+3 Tormod's Crypt
+1 Vexing Bauble
+2 Welding Jar
+Creature (13)
+2 Arcbound Ravager
+3 Emry, Lurker of the Loch
+4 Kappa Cannoneer
+4 Pinnacle Emissary
+Enchantment (4)
+4 Weapons Manufacturing
+Instant (5)
+3 Metallic Rebuke
+2 Sink into Stupor
+Land (15)
+4 Fiery Islet
+2 Island
+4 Spirebluff Canal
+1 Steam Vents
+4 Urza's Saga
+
+60 Cards
+
+Sideboard (15)
+1 Blood Moon
+3 Consign to Memory
+2 Damping Sphere
+2 Galvanic Blast
+2 Mystical Dispute
+1 Shadowspear
+2 Shattering Spree
+1 Vexing Bauble
+1 Whipflare
+#
+
+ASCHOP (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (23)
+3 Claws of Gix
+4 Engineered Explosives
+4 Mishra's Bauble
+4 Mox Opal
+1 Pithing Needle
+1 Shadowspear
+1 Skateboard
+4 Tormod's Crypt
+1 Welding Jar
+Creature (10)
+2 Arcbound Ravager
+4 Kappa Cannoneer
+4 Pinnacle Emissary
+Enchantment (4)
+4 Weapons Manufacturing
+Instant (5)
+3 Metallic Rebuke
+2 Sink into Stupor
+Land (15)
+4 Fiery Islet
+2 Island
+4 Spirebluff Canal
+1 Steam Vents
+4 Urza's Saga
+Sorcery (3)
+3 Preordain
+
+60 Cards
+
+Sideboard (15)
+3 Consign to Memory
+2 Damping Sphere
+2 Emry, Lurker of the Loch
+2 Galvanic Blast
+2 Mystical Dispute
+2 Vexing Bauble
+2 Whipflare
+#
+
+BATIKANG (5-0)
+
+MODERN LEAGUE
+
+5/28/2026
+
+DECKLIST STATS
+SORT BY:
+Overview
+Color
+Cost
+Rarity
+Artifact (22)
+3 Claws of Gix
+4 Engineered Explosives
+4 Mishra's Bauble
+4 Mox Opal
+1 Pithing Needle
+1 Shadowspear
+1 Skateboard
+3 Tormod's Crypt
+1 Welding Jar
+Creature (12)
+1 Arcbound Ravager
+3 Emry, Lurker of the Loch
+4 Kappa Cannoneer
+4 Pinnacle Emissary
+Enchantment (4)
+4 Weapons Manufacturing
+Instant (4)
+3 Metallic Rebuke
+1 Sink into Stupor
+Land (16)
+4 Fiery Islet
+2 Island
+1 Shivan Reef
+4 Spirebluff Canal
+1 Steam Vents
+4 Urza's Saga
+Sorcery (2)
+2 Preordain
+
+60 Cards
+
+Sideboard (15)
+3 Consign to Memory
+2 Damping Sphere
+1 Flusterstorm
+3 Galvanic Blast
+1 Harbinger of the Seas
+1 Mystical Dispute
+2 Swan Song
+1 Vexing Bauble
+1 Whipflare
+
+Stay connected with MTGO and follow us on:
+
+
+
+©2026 Daybreak Game Company LLC. Daybreak and the Daybreak Logo are trademarks or registered trademarks of Daybreak Game Company LLC.
+
+Magic: The Gathering Online and Wizards of the Coast and their respective logos are trademarks of Wizards of the Coast LLC and are used with permission.
+
+The ratings icon is a registered trademark of the Entertainment Software Association. All Rights Reserved.
+
+Legal Notices Privacy Policy Terms of Service Photosensitive Warning Cookies Cookie Preferences Conduct Policy Contact
+X
+
+Welcome to Magic: The Gathering Online!
+
+Collect cards, build decks, and duel other players on YOUR schedule. Magic Online lets you play what you want, when you want.
+
+Start your MTGO adventure today!
+
+Your download should now appear in your specified folder or in your DOWNLOADS location.
+
+If there was an error with the download, try again.
+
+Click below to learn how to play MTGO.
+
+No thanks, return to website.
+
+mtgo.com Cookie Preferences
+By clicking "Accept All Cookies" you agree to storing cookies from us on mtgo.com or its third party tools to enhance functionality, personalize content, analyze use of the site, and provide social media features. We may also share information about your use of our site with our social media, advertising, and analytics partners.
+Accept All mtgo.com Cookies Reject All mtgo.com Cookies Personalize mtgo.com Cookies Cookie Policy Privacy Policy

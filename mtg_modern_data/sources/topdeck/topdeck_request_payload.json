@@ -1,0 +1,26 @@
+{
+  "game": "Magic: The Gathering",
+  "format": "Modern",
+  "participantMin": 8,
+  "columns": [
+    "name",
+    "id",
+    "decklist",
+    "wins",
+    "draws",
+    "losses"
+  ],
+  "rounds": true,
+  "tables": [
+    "table",
+    "players",
+    "winner",
+    "status"
+  ],
+  "players": [
+    "name",
+    "id",
+    "decklist"
+  ],
+  "last": 30
+}
