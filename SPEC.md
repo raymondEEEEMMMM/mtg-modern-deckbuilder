@@ -20,9 +20,12 @@ metadata:
 ### 阶段2：套牌数据收集与分析
 - **数据来源与采集方式**：
   - **MTGTop8**：爬虫抓取赛事Decklists和archetype统计 ✅ 已实现 (`scrape_decks_mtgtop8.py`)
-  - **MTGGoldfish**：浏览器抓取Metagame页面 ✅ 已实现 (`scrape_decks_goldfish.py`，含key_cards/名次/分平台)
+  - **MTGGoldfish**：`scrape_goldfish_two_phase.py` 抓取完整decklists；`scrape_decks_goldfish.py` 生成aggregate/performance快照 ✅ 已实现
   - **Scryfall API**：按需查询卡牌规则、费用、合法性格式（不维护全量本地库）
-  - **MTGO/Magic Arena**：线上赛结果（通过第三方聚合获取）
+  - **MTGO官方Decklists**：候选补充源，适合高质量牌表和名次结果，待接入
+  - **TopDeck.gg API**：候选round-level结构化数据源，待PoC验证
+- **已弃用的数据源**：
+  - **Melee.gg**：已从项目移除。原因是网络/VPN依赖强、登录/反爬不稳定、deck name为手填且噪声高、decklist和round覆盖不足，维护成本高于收益。
 - **赛事级别权重系统**（详见 `decks/tier_config.json`、`decks/fusion_config.json`）：
 
   | 级别 | 权重 | 置信度 | 典型赛事 |
@@ -51,7 +54,7 @@ metadata:
   - 套牌胜率 (win_rate)
   - 出场率/环境占比 (metagame_share)
   - 不同赛事表现（地区赛、线上赛、大型公开赛）
-  - 对阵表现（与主要对手的胜负情况）
+  - 对阵表现（当前仅启发式估计；真实round-level数据源待验证）
   - 套牌卡牌组成比例（威胁、干扰、地牌比例等）
 - **多源数据对比**：
 
@@ -96,10 +99,11 @@ metadata:
   - 利用Phase 3的fused_archetypes数据，构建当前环境Meta结构
   - 统计Meta中各类套牌类型比例（快攻37.8%、控制19.8%、中速10.0%、Combo32.4%）
   - 计算Meta覆盖率（Top 10覆盖42.8%，Top 15覆盖53.5%）
-  - 构建Top N对阵矩阵（基于category heuristics + strength_score差值）
+  - 构建Top N对阵矩阵（基于category heuristics + strength_score差值；显式标记为heuristic）
   - 识别Meta角色：dominant / established / niche / meta_call
   - 禁牌影响评估：追踪当前周期禁牌变动对archetype的冲击
 - **输出**：`meta/current.json` — 完整Meta快照
+- **限制**：真实round-level matchup matrix当前未接入。后续优先验证TopDeck.gg API，其次评估MTGO官方Decklists、MTGDecks.net和Magic: The Metagame作为补充/校验源。
 
 ### 阶段5：组牌结构建议
 
@@ -257,7 +261,8 @@ python3 scrape_decklists_top8.py [--max-events N] [--skip-existing]
 | `build_banlist_snapshots.py` | 项目根目录 | 从TIMELINE常量生成全部历史快照文件和current.json |
 | `scrape_timeline.py` | 项目根目录 | 辅助脚本：从网络抓取B&R时间线数据 |
 | `scrape_decks_mtgtop8.py` | 项目根目录 | 从MTGTop8采集Modern环境数据（archetype分布+赛事列表） |
-| `scrape_decks_goldfish.py` | 项目根目录 | 从MTGGoldfish采集Modern环境数据（含key_cards/名次/分平台） |
+| `scrape_goldfish_two_phase.py` | 项目根目录 | 从MTGGoldfish抓取周期内完整75卡decklists |
+| `scrape_decks_goldfish.py` | 项目根目录 | 从MTGGoldfish生成aggregate/performance快照（含key_cards/名次/分平台） |
 | `evaluate_deck_strength.py` | 项目根目录 | 阶段3：基于真实decklist数据融合多源，计算强度评分和Tier分级 |
 | `compose_meta.py` | 项目根目录 | 阶段4：构建Meta结构（composition/matchup/banlist impact） |
 | `scrape_decklists_top8.py` | 项目根目录 | 从MTGTop8爬取全量75卡decklist，含禁牌合法性校验 |
@@ -266,7 +271,8 @@ python3 scrape_decklists_top8.py [--max-events N] [--skip-existing]
 ## 技术栈
 - Agent: mtg-modern-deckbuilder (专用)
 - Tools: WebSearch, WebFetch, Bash
-- 数据源: Scryfall, MtgGoldfish, MTGTop8, MTG官方赛事数据, Magic Arena, MTGO
+- 当前主数据源: Scryfall, MTGGoldfish, MTGTop8
+- 候选数据源: TopDeck.gg API, MTGO官方Decklists, MTGDecks.net, Magic: The Metagame
 
 ## 数据存储结构
 
@@ -292,6 +298,8 @@ mtg_modern_data/                    # ✅ 已创建目录结构
 ├── meta/                           # Meta分析结果
 │   ├── current.json                # 当前环境Meta ✅ 已创建
 │   └── history/                    # 历史Meta快照
+├── sources/                        # 候选数据源PoC输出（待创建）
+│   └── topdeck/                    # TopDeck.gg API原始响应/质量报告（待创建）
 ├── cards/                          # 卡牌数据（Scryfall API缓存） ✅ 已创建模板
 │   └── cache/                      # 按需缓存的卡牌数据
 │       └── {card_name_slug}.json

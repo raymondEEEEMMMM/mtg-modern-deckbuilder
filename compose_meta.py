@@ -7,9 +7,12 @@ the current environment Meta structure:
 
   1. Meta composition by archetype category (aggro/control/midrange/combo)
   2. Coverage rate — fraction of meta represented by top decks
-  3. Key matchup landscape — cross-category interaction table
+  3. Key matchup landscape — category heuristic + strength adjustment
   4. Dominant archetypes and meta calls
   5. Banlist impact assessment for current period
+
+Round-level matchup data is not currently integrated. The matrix is explicitly
+heuristic until a reliable structured event source is added.
 
 Output:
   meta/current.json — comprehensive Meta snapshot
@@ -27,11 +30,11 @@ BASE = Path(__file__).resolve().parent
 DATA_DIR = BASE / "mtg_modern_data"
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
-FUSED_PATH   = DATA_DIR / "decks" / "processed" / "fused_archetypes.json"
-TOP_N_PATH   = DATA_DIR / "decks" / "top_n" / "top_decks.json"
-META_PATH    = DATA_DIR / "meta" / "current.json"
-BANLIST_PATH = DATA_DIR / "ban_list" / "current.json"
-BAN_META_PATH = DATA_DIR / "ban_list" / "meta.json"
+FUSED_PATH       = DATA_DIR / "decks" / "processed" / "fused_archetypes.json"
+TOP_N_PATH       = DATA_DIR / "decks" / "top_n" / "top_decks.json"
+META_PATH        = DATA_DIR / "meta" / "current.json"
+BANLIST_PATH     = DATA_DIR / "ban_list" / "current.json"
+BAN_META_PATH    = DATA_DIR / "ban_list" / "meta.json"
 
 # ─── Category Interaction Matrix ──────────────────────────────────────────────
 # General Modern format heuristics: [attacker_row, defender_col]
@@ -88,13 +91,14 @@ def build_matchup_landscape(top_decks: list, archetypes: list) -> dict:
     Build a matchup interaction matrix for top decks using:
     1. Category-level heuristics as base
     2. Adjusted by strength_score differential
-    3. Cross-referenced with key_cards overlap (shared cards → more even)
+
+    Cells include source="heuristic" so downstream consumers do not mistake the
+    matrix for observed match results.
     """
     # Build lookup
     arch_map = {a["name"]: a for a in archetypes}
-    deck_names = [d["name"] for d in top_decks]
-
     matchup_matrix = {}
+    heuristic_used = 0
 
     for d1 in top_decks:
         name1 = d1["name"]
@@ -121,25 +125,28 @@ def build_matchup_landscape(top_decks: list, archetypes: list) -> dict:
             advantage = round(base + diff, 2)
             advantage = max(-2.0, min(2.0, advantage))
 
-            # Confidence: higher when both decks have more data
+            # Confidence describes heuristic stability, not observed match data.
             a1 = arch_map.get(name1, {})
             a2 = arch_map.get(name2, {})
             sample1 = a1.get("decklist_count", 0)
             sample2 = a2.get("decklist_count", 0)
             conf_score = min(sample1, sample2)
             if conf_score >= 30:
-                confidence = "high"
-            elif conf_score >= 10:
                 confidence = "medium"
             else:
                 confidence = "low"
 
             matchup_row[name2] = {
                 "advantage": advantage,
-                "confidence": confidence
+                "confidence": confidence,
+                "source": "heuristic",
             }
+            heuristic_used += 1
 
         matchup_matrix[name1] = matchup_row
+
+    if heuristic_used > 0:
+        print(f"    Heuristic cells: {heuristic_used}")
 
     return matchup_matrix
 
@@ -386,6 +393,11 @@ def main():
         },
         "category_insights": cat_insights,
         "meta_roles": meta_roles,
+        "matchup_data_status": {
+            "source": "heuristic",
+            "real_round_level_source": None,
+            "notes": "Melee integration removed; reliable structured sources are pending evaluation.",
+        },
         "matchup_matrix": matchup_matrix,
         "banlist_impact": ban_impact,
     }

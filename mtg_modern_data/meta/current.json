@@ -1,9 +1,9 @@
 {
-  "generated_date": "2026-05-28T03:21:08Z",
+  "generated_date": "2026-05-29T07:24:50Z",
   "based_on_ban_list_date": "2026-05-18",
   "data_period": {
     "start": "2026-05-18",
-    "end": "2026-05-28"
+    "end": "2026-05-29"
   },
   "total_decks_analyzed": 980,
   "total_archetypes": 156,
@@ -475,6 +475,11 @@
     ],
     "dominant_category": "aggro"
   },
+  "matchup_data_status": {
+    "source": "heuristic",
+    "real_round_level_source": null,
+    "notes": "Melee integration removed; reliable structured sources are pending evaluation."
+  },
   "matchup_matrix": {
     "Boros Energy": {
       "Boros Energy": {
@@ -483,65 +488,80 @@
       },
       "Affinity": {
         "advantage": 0.37,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": 1.72,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": 1.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": 2.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": 0.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": 2.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": 0.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": 2.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": 1.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": 0.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": 2.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": 2.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 0.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": 2.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Affinity": {
       "Boros Energy": {
         "advantage": -0.37,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": 0,
@@ -549,65 +569,80 @@
       },
       "Grixis Reanimator": {
         "advantage": 1.35,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": 0.73,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": 1.73,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": -0.25,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": 1.79,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": -0.14,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": 1.88,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": 0.93,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": -0.07,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": 1.98,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": 1.99,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 0.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": 2.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Grixis Reanimator": {
       "Boros Energy": {
         "advantage": -1.72,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": -1.35,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": 0,
@@ -615,65 +650,80 @@
       },
       "UR Prowess": {
         "advantage": -0.62,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": 0.38,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": 1.4,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": 0.44,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": 1.51,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": 0.53,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": -0.43,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": 1.58,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": 0.63,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": 0.64,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 1.68,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": 0.68,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "UR Prowess": {
       "Boros Energy": {
         "advantage": -1.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": -0.73,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": 0.62,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": 0,
@@ -681,65 +731,80 @@
       },
       "Blink": {
         "advantage": 1.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": -0.98,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": 1.07,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": -0.87,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": 1.15,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": 0.2,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": -0.79,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": 1.25,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": 1.27,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": -0.7,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": 1.31,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Blink": {
       "Boros Energy": {
         "advantage": -2.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": -1.73,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": -0.38,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": -1.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": 0,
@@ -747,65 +812,80 @@
       },
       "Sultai Midrange": {
         "advantage": 1.02,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": 0.07,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": 1.13,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": 0.15,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": -0.8,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": 1.21,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": 0.25,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": 0.26,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 1.3,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": 0.31,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Sultai Midrange": {
       "Boros Energy": {
         "advantage": 0.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": 0.25,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": -1.4,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": 0.98,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": -1.02,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": 0,
@@ -813,65 +893,80 @@
       },
       "Goryo's Vengeance": {
         "advantage": -0.95,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": 0.11,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": -0.87,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": 1.18,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": 0.19,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": -0.77,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": -0.75,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 0.29,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": -0.71,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Goryo's Vengeance": {
       "Boros Energy": {
         "advantage": -2.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": -1.79,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": -0.44,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": -1.07,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": -0.07,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": 0.95,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": 0,
@@ -879,65 +974,80 @@
       },
       "Eldrazi Tron": {
         "advantage": 1.06,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": 0.08,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": -0.87,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": 1.14,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": 0.18,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": 0.2,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 1.24,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": 0.24,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Eldrazi Tron": {
       "Boros Energy": {
         "advantage": 0.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": 0.14,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": -1.51,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": 0.87,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": -1.13,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": -0.11,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": -1.06,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": 0,
@@ -945,65 +1055,80 @@
       },
       "Living End": {
         "advantage": -0.98,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": 1.07,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": 0.08,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": -0.88,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": -0.86,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 0.17,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": -0.82,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Living End": {
       "Boros Energy": {
         "advantage": -2.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": -1.88,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": -0.53,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": -1.15,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": -0.15,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": 0.87,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": -0.08,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": 0.98,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": 0,
@@ -1011,65 +1136,80 @@
       },
       "Red Deck Wins": {
         "advantage": -0.95,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": 1.05,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": 0.1,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": 0.11,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 1.15,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": 0.16,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Red Deck Wins": {
       "Boros Energy": {
         "advantage": -1.0,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": -0.93,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": 0.43,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": -0.2,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": 0.8,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": -1.18,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": 0.87,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": -1.07,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": 0.95,
-        "confidence": "high"
+        "confidence": "medium",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": 0,
@@ -1077,65 +1217,80 @@
       },
       "Dimir Midrange": {
         "advantage": -0.99,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": 1.05,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": 1.07,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": -0.9,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": 1.11,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Dimir Midrange": {
       "Boros Energy": {
         "advantage": 0.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": 0.07,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": -1.58,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": 0.79,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": -1.21,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": -0.19,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": -1.14,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": -0.08,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": -1.05,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": 0.99,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": 0,
@@ -1143,65 +1298,80 @@
       },
       "Yawgmoth": {
         "advantage": -0.95,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": -0.94,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 0.1,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": -0.9,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Yawgmoth": {
       "Boros Energy": {
         "advantage": -2.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": -1.98,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": -0.63,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": -1.25,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": -0.25,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": 0.77,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": -0.18,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": 0.88,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": -0.1,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": -1.05,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": 0.95,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": 0,
@@ -1209,65 +1379,80 @@
       },
       "Landless": {
         "advantage": 0.01,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 1.05,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": 0.06,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Landless": {
       "Boros Energy": {
         "advantage": -2.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": -1.99,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": -0.64,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": -1.27,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": -0.26,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": 0.75,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": -0.2,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": 0.86,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": -0.11,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": -1.07,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": 0.94,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": -0.01,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": 0,
@@ -1275,65 +1460,80 @@
       },
       "UW Control": {
         "advantage": 1.04,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": 0.04,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "UW Control": {
       "Boros Energy": {
         "advantage": 0.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": 0.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": -1.68,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": 0.7,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": -1.3,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": -0.29,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": -1.24,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": -0.17,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": -1.15,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": 0.9,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": -0.1,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": -1.05,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": -1.04,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 0,
@@ -1341,65 +1541,80 @@
       },
       "Crashing Footfalls": {
         "advantage": -0.99,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       }
     },
     "Crashing Footfalls": {
       "Boros Energy": {
         "advantage": -2.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Affinity": {
         "advantage": -2.0,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Grixis Reanimator": {
         "advantage": -0.68,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UR Prowess": {
         "advantage": -1.31,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Blink": {
         "advantage": -0.31,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Sultai Midrange": {
         "advantage": 0.71,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Goryo's Vengeance": {
         "advantage": -0.24,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Eldrazi Tron": {
         "advantage": 0.82,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Living End": {
         "advantage": -0.16,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Red Deck Wins": {
         "advantage": -1.11,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Dimir Midrange": {
         "advantage": 0.9,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Yawgmoth": {
         "advantage": -0.06,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Landless": {
         "advantage": -0.04,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "UW Control": {
         "advantage": 0.99,
-        "confidence": "medium"
+        "confidence": "low",
+        "source": "heuristic"
       },
       "Crashing Footfalls": {
         "advantage": 0,

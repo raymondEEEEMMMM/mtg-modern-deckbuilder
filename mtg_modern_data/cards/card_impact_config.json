@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "format": "Modern",
+  "description": "Weights for current-period card impact analysis.",
+  "format_impact_weights": {
+    "weighted_presence": 0.35,
+    "archetype_breadth": 0.2,
+    "top_tier_presence": 0.2,
+    "avg_copies": 0.15,
+    "specificity": 0.1
+  },
+  "archetype_core_weights": {
+    "ubiquity": 0.45,
+    "avg_copies": 0.25,
+    "copy_stability": 0.2,
+    "specificity": 0.1
+  },
+  "maindeck_weight": 1.0,
+  "sideboard_weight": 0.35,
+  "top_tiers": [
+    "Tier 1",
+    "Tier 2"
+  ],
+  "minimum_decks_for_core": 3,
+  "impact_labels": {
+    "format_staple": 0.7,
+    "major_role_player": 0.45,
+    "archetype_card": 0.2
+  },
+  "core_labels": {
+    "archetype_core": 0.75,
+    "strong_role_player": 0.55,
+    "flex_card": 0.3
+  }
+}

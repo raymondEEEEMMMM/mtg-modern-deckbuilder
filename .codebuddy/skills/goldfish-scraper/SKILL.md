@@ -9,6 +9,9 @@ description: MTGGoldfish Modern format tournament decklist scraper. This skill s
 
 Scrape complete 75-card decklists from MTGGoldfish Modern tournaments using Playwright. The scraper supplements MTGTop8 data (primary source) with Goldfish-only decklists, using overlap detection to avoid duplicates. Outputs feed into `evaluate_deck_strength.py` for the deck strength evaluation pipeline.
 
+Canonical implementation lives in the project root. Bundled files under this
+skill are mirrors for reference and must be kept in sync after scraper edits.
+
 ## ⚠️ CRITICAL: Period-Aware Scraping
 
 **抓取范围必须限定在当前 Meta 周期内。** 这是最重要的规则。
@@ -84,14 +87,8 @@ After scraping, run evaluation:
 
 ```bash
 python3 evaluate_deck_strength.py --top 15
-```
-
-### Legacy Script (deprecated)
-
-The old `scrape_decklists_goldfish.py` script is still available but lacks period-aware filtering and two-phase design. Prefer `scrape_goldfish_two_phase.py`.
-
-```bash
-python3 scrape_decklists_goldfish.py --max-tournaments 13 --skip-top8-overlap  # legacy
+python3 scripts/build_card_impact.py
+python3 compose_meta.py
 ```
 
 ## CLI Arguments
@@ -134,6 +131,10 @@ scrape_goldfish_two_phase.py
   → (merged with Top8 decklists in evaluate_deck_strength.py)
   → mtg_modern_data/decks/processed/fused_archetypes.json
   → mtg_modern_data/decks/top_n/top_decks.json
+  → scripts/build_card_impact.py
+  → mtg_modern_data/cards/card_impact.json
+  → compose_meta.py
+  → mtg_modern_data/meta/current.json
 ```
 
 ### Key Design Decisions
@@ -255,7 +256,8 @@ When editing `scrape_goldfish_two_phase.py`:
 4. **Preserve incremental save** — progress saved after each tournament
 5. **Keep `GOLDFISH_TO_CANONICAL` in sync** with `evaluate_deck_strength.py` mapping
 6. **When B&R updates** — re-run Phase 1 to refresh index with new period start
-7. **Update `scripts/scrape_goldfish_two_phase.py`** in this skill after changes
+7. **Update this skill's script mirrors** after root-script changes:
+   `cp scrape_goldfish_two_phase.py .codebuddy/skills/goldfish-scraper/scripts/scrape_goldfish_two_phase.py`
 
 ## Tournament Index Status Values
 
@@ -271,8 +273,6 @@ When editing `scrape_goldfish_two_phase.py`:
 
 ### scripts/
 - `scrape_goldfish_two_phase.py` — the current two-phase scraper (recommended)
-- `scrape_decklists_goldfish.py` — legacy scraper (deprecated)
-- `test_e2e.py` — end-to-end test script
 
 ### references/
 - `troubleshooting.md` — detailed debugging guide, page structure reference, data pipeline docs

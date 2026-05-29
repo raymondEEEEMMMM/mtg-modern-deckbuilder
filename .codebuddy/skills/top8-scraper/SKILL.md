@@ -9,6 +9,9 @@ description: MTGTop8 Modern format tournament decklist scraper. This skill shoul
 
 Scrape complete 75-card decklists from MTGTop8 Modern tournaments using Playwright. MTGTop8 is the **primary data source** for the deck evaluation pipeline — Goldfish data supplements it. Each decklist is validated against the current Modern banlist. The scraper is simpler than the Goldfish scraper (no Cloudflare protection, no two-phase design), but must still respect period boundaries.
 
+Canonical implementation lives in the project root. Bundled files under this
+skill are mirrors for reference and must be kept in sync after scraper edits.
+
 ## ⚠️ CRITICAL: Period-Aware Scraping
 
 **抓取范围必须限定在当前 Meta 周期内。** 这是最重要的规则。
@@ -137,6 +140,10 @@ scrape_decks_mtgtop8.py         (Supplementary: archetype aggregation)
 evaluate_deck_strength.py       (merge Top8 + Goldfish)
   → mtg_modern_data/decks/processed/fused_archetypes.json
   → mtg_modern_data/decks/top_n/top_decks.json
+  → scripts/build_card_impact.py
+  → mtg_modern_data/cards/card_impact.json
+  → compose_meta.py
+  → mtg_modern_data/meta/current.json
 ```
 
 ### Key Design Decisions
@@ -257,7 +264,9 @@ When editing `scrape_decklists_top8.py`:
 2. **Keep `CATEGORY_HEADERS` regex up to date** — MTGTop8 may change card category names
 3. **Always test with `--max-events 2`** before full runs
 4. **Consider adding `--resume` support** — currently no incremental save
-5. **Update scripts in skill directory** after changes
+5. **Update this skill's script mirrors** after root-script changes:
+   `cp scrape_decklists_top8.py .codebuddy/skills/top8-scraper/scripts/scrape_decklists_top8.py`
+   and `cp scrape_decks_mtgtop8.py .codebuddy/skills/top8-scraper/scripts/scrape_decks_mtgtop8.py`
 
 ## Relationship with Goldfish Scraper
 

@@ -46,6 +46,39 @@ CATEGORY_HEADERS = re.compile(
     re.IGNORECASE,
 )
 
+# Archetype name normalization (Top8 deck_name → canonical)
+# Full mapping in mtg_modern_data/decks/archetype_name_map.json
+ARCHETYPE_NORMALIZE = {
+    "UrzaTron": "UW Tron", "Urzatron": "UW Tron",
+    "Uw Control": "UW Control", "Ub Mill": "UB Mill",
+    "Izzet Affinity": "Affinity", "Pinnacle Affinity": "Affinity",
+    "Izzet Prowess": "UR Prowess", "UR Cutter Prowess": "UR Prowess",
+    "Ur Cutter Prowess": "UR Prowess", "Russian Prowess": "UR Prowess",
+    "Prowess": "UR Prowess",
+    "Landless Belcher": "Landless", "Goblins Combo": "Landless",
+    "Boros Aggro": "Boros Energy", "Jeskai Energy": "Boros Energy",
+    "Domain Rhinos": "Crashing Footfalls", "Temur Rhinos": "Crashing Footfalls",
+    "Simic Birthing Ritual": "Birthing Ritual",
+    "Selesnya Aggro Birthing Ritual": "Birthing Ritual", "Simic Ritual": "Birthing Ritual",
+    "Mono Green Aggro": "Mono-G Aggro",
+    "Mono": "Mono-Black Midrange",
+    "Mono Black Aggro Necrodominance": "Mono-Black Midrange",
+    "Azorius Blink": "Blink", "Orzhov Blink": "Blink", "Esper Blink": "Blink",
+    "Mardu Blink": "Blink", "Domain Blink": "Blink", "Esper Eugè": "Blink",
+    "Frog Legs": "Frog Combo",
+    "Grixis Death Shadow": "Death's Shadow",
+    "Samwise Combo": "Yawgmoth",
+    "Burn": "Red Deck Wins",
+    "Chord Toolbox": "Creatures Toolbox",
+    "Scepter Chant": "UW Control",
+    "Soultrader": "Sacrifice Combo",
+}
+
+
+def normalize_archetype_name(name: str) -> str:
+    """Map raw deck_name to canonical archetype."""
+    return ARCHETYPE_NORMALIZE.get(name, name)
+
 
 def load_banlist() -> set:
     if not BANLIST_FILE.exists():
@@ -323,17 +356,17 @@ def main():
                 print(f"  Event info: {event_info}")
                 print(f"  Decks found: {len(deck_links)}")
 
-                # Skip events before period start
+                # Skip events before period start, and normalize date to ISO format
+                event_date_iso = ""
                 if event_info.get("date"):
-                    # Parse DD/MM/YY
                     try:
                         parts = event_info["date"].split("/")
-                        event_date = f"20{parts[2]}-{parts[1]}-{parts[0]}"
-                        if event_date < PERIOD_START:
+                        event_date_iso = f"20{parts[2]}-{parts[1]}-{parts[0]}"
+                        if event_date_iso < PERIOD_START:
                             print(f"  Skipping (before {PERIOD_START})")
                             continue
                     except (IndexError, ValueError):
-                        pass
+                        event_date_iso = event_info["date"]
 
                 for j, deck_link in enumerate(deck_links):
                     try:
@@ -346,13 +379,15 @@ def main():
                             continue
 
                         # Build decklist entry
+                        raw_deck_name = deck_data.get("deck_name", deck_link["archetype"])
                         entry = {
                             "source": "mtgtop8",
                             "event_id": event["event_id"],
                             "event_name": event_info.get("name", event["text"]),
-                            "event_date": event_info.get("date", ""),
+                            "event_date": event_date_iso,
                             "deck_id": deck_link["deck_id"],
-                            "deck_name": deck_data.get("deck_name", deck_link["archetype"]),
+                            "deck_name": raw_deck_name,
+                            "deck_name_canonical": normalize_archetype_name(raw_deck_name),
                             "player": deck_data.get("player", ""),
                             "maindeck": deck_data["maindeck"],
                             "sideboard": deck_data["sideboard"],

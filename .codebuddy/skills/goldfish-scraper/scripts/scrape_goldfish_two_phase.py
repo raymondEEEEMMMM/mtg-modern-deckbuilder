@@ -297,11 +297,12 @@ def save_decklists(all_decklists: list, overlap_skipped: int, output_file: Path,
         "legality_report": {
             "legal": len(legal),
             "illegal": len(illegal),
-            "illegal_decks": [
+            "illegal_decks": list({
+                (d["deck_name"], d["player"], tuple(d["legality"]["banned_cards"])):
                 {"deck_name": d["deck_name"], "player": d["player"],
                  "banned_cards": d["legality"]["banned_cards"]}
                 for d in illegal
-            ],
+            }.values()),
         },
         "decklists": all_decklists,
     }

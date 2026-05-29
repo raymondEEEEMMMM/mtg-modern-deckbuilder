@@ -208,8 +208,9 @@ def build_metagame_snapshot(archetypes: dict, events: list, period_start: str) -
 
     for event in events:
         tier_info = classify_event_tier(event["name"])
+        event_copy = {k: v for k, v in event.items() if k != "level"}
         classified_events.append({
-            **event,
+            **event_copy,
             "tier": tier_info["tier"],
             "tier_weight": tier_info["weight"],
             "confidence": tier_info["confidence"],
@@ -233,7 +234,7 @@ def build_metagame_snapshot(archetypes: dict, events: list, period_start: str) -
         "source": "MTGTop8",
         "source_url": "https://www.mtgtop8.com/format?f=MO&meta=221",
         "period_start": period_start,
-        "data_timeframe": "last_2_weeks",
+        "data_timeframe": "14_days",
         "total_decks": 778,
         "tier_summary": tier_summary,
         "category_composition": {
@@ -246,7 +247,7 @@ def build_metagame_snapshot(archetypes: dict, events: list, period_start: str) -
                 "name": name,
                 "category": data["category"],
                 "metagame_share": data["metagame_share"],
-                "estimated_decks": data["deck_count"],
+                "deck_count": data["deck_count"],
             }
             for name, data in sorted_archetypes
         ],
