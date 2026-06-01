@@ -1,0 +1,48 @@
+{
+  "format": "Modern",
+  "source": "mtgo",
+  "period_start": "2026-05-18",
+  "total_decks": 2,
+  "decklists": [
+    {
+      "source": "mtgo",
+      "event_id": "modern-challenge-64-2026-05-2812843376",
+      "event_name": "MODERN CHALLENGE 64",
+      "event_date": "2026-05-28",
+      "deck_id": "modern-challenge-64-2026-05-2812843376-1",
+      "deck_name": "",
+      "deck_name_canonical": "",
+      "player": "TESTPLAYER1",
+      "placement": "1st",
+      "maindeck": [
+        {"qty": 4, "name": "Galvanic Discharge"},
+        {"qty": 4, "name": "Guide of Souls"},
+        {"qty": 3, "name": "Ajani, Nacatl Pariah"}
+      ],
+      "sideboard": [],
+      "maindeck_count": 60,
+      "sideboard_count": 15,
+      "legality": {"legal": true, "banned_cards": []}
+    },
+    {
+      "source": "mtgo",
+      "event_id": "modern-league-2026-05-2910628",
+      "event_name": "MODERN LEAGUE",
+      "event_date": "2026-05-28",
+      "deck_id": "modern-league-2026-05-2910628-2",
+      "deck_name": "",
+      "deck_name_canonical": "",
+      "player": "TESTPLAYER2",
+      "placement": "5-0",
+      "maindeck": [
+        {"qty": 4, "name": "Dragon's Rage Channeler"},
+        {"qty": 4, "name": "Stormwild Creeper"},
+        {"qty": 4, "name": "Expressive Iteration"}
+      ],
+      "sideboard": [],
+      "maindeck_count": 60,
+      "sideboard_count": 15,
+      "legality": {"legal": true, "banned_cards": []}
+    }
+  ]
+}
