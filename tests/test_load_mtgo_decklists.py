@@ -33,11 +33,8 @@ def test_deck_weight_other():
     assert deck_weight("other") == 0.6
 
 
-def test_load_and_classify_uses_fixture(tmp_path: Path, monkeypatch):
-    # Re-point loader at the fixture file by setting env var (added in impl)
+def test_load_and_classify_uses_fixture(tmp_path: Path):
     fixture = Path(__file__).parent / "fixtures" / "mtgo_sample.json"
-    monkeypatch.setenv("MTGO_INPUT_PATH", str(fixture))
-    monkeypatch.setenv("MTGO_OUTPUT_PATH", str(tmp_path / "out.json"))
     profiles = {
         "Boros Energy": ["Galvanic Discharge", "Guide of Souls", "Ajani, Nacatl Pariah"],
         "UR Prowess": ["Dragon's Rage Channeler", "Stormwild Creeper", "Expressive Iteration"],

@@ -7,7 +7,6 @@ mtg_modern_data/sources/mtgo/mtgo_decklists_classified.json.
 """
 
 import json
-import os
 import re
 import sys
 from pathlib import Path
@@ -58,10 +57,6 @@ def load_and_classify_mtgo_decklists(
       - event_type: "challenge" | "league" | "other"
       - weight: float
     """
-    # Allow env-var override for tests / ad-hoc runs
-    input_path = Path(os.environ.get("MTGO_INPUT_PATH", input_path))
-    output_path = Path(os.environ.get("MTGO_OUTPUT_PATH", output_path))
-
     with open(input_path) as f:
         raw = json.load(f)
 
