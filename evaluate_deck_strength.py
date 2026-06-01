@@ -32,6 +32,7 @@ import sys
 from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
+from typing import Optional
 
 # ─── Archetype Name Normalization ────────────────────────────────────────────
 # Maps raw deck_name from MTGTop8 to canonical archetype names
@@ -486,6 +487,39 @@ def assign_tier(score: float, share: float) -> str:
 
 # ─── Data Loading ────────────────────────────────────────────────────────────
 
+DEFAULT_MTGO_CLASSIFIED_PATH = Path("mtg_modern_data/sources/mtgo/mtgo_decklists_classified.json")
+
+
+def _load_mtgo_decks_for_fusion(
+    classified_path: Optional[Path] = None,
+) -> list[dict]:
+    """Read the classified MTGO file, return decks shaped for fusion.
+
+    Each returned deck is a shallow copy with:
+      - deck_name rewritten from archetype_canonical (if present)
+      - _fusion_weight copied from weight (default 1.0 if missing)
+    Decks that fail legality are dropped.
+    """
+    if classified_path is None:
+        classified_path = DEFAULT_MTGO_CLASSIFIED_PATH
+    if not classified_path.exists():
+        return []
+    with open(classified_path) as f:
+        data = json.load(f)
+    out = []
+    for deck in data.get("decklists", []):
+        if not deck.get("legality", {}).get("legal", True):
+            continue
+        new_deck = dict(deck)
+        if not new_deck.get("deck_name") and new_deck.get("archetype_canonical"):
+            new_deck["deck_name"] = new_deck["archetype_canonical"]
+        if not new_deck.get("deck_name"):
+            continue
+        new_deck["_fusion_weight"] = float(new_deck.get("weight", 1.0))
+        out.append(new_deck)
+    return out
+
+
 def load_banlist() -> set:
     """Load current Modern banlist."""
     ban_file = Path("mtg_modern_data/ban_list/current.json")
@@ -496,11 +530,14 @@ def load_banlist() -> set:
     return set(data.get("banned", []))
 
 
-def load_decklist_data():
+def load_decklist_data(include_mtgo: bool = False):
     """Load and merge decklist data from Top8 and Goldfish sources.
-    
+
     Top8 is primary; Goldfish supplements archetypes/decklists not in Top8.
     Deduplication: skip Goldfish decks whose (event_name, player) already exists in Top8.
+
+    If include_mtgo is True, also load classified MTGO decks and append any
+    that are not already represented by (event_name, player) signature.
     """
     decklist_dir = Path("mtg_modern_data/decks/raw/decklists")
 
@@ -585,6 +622,26 @@ def load_decklist_data():
     total_decks = len(merged_decklists)
     illegal_decks = top8_illegal + gf_decks_illegal
 
+    # Optionally fold in MTGO decks (Challenge > League weighted)
+    mtgo_added = 0
+    if include_mtgo:
+        mtgo_decks = _load_mtgo_decks_for_fusion()
+        # Skip MTGO decks whose (event_name, player) already exist in the merge
+        existing_sigs = {
+            (d.get("event_name", "").lower(), d.get("player", "").lower())
+            for d in merged_decklists
+        }
+        for d in mtgo_decks:
+            sig = (d.get("event_name", "").lower(), d.get("player", "").lower())
+            if sig in existing_sigs:
+                continue
+            merged_decklists.append(d)
+            existing_sigs.add(sig)
+            mtgo_added += 1
+
+    total_decks = len(merged_decklists)
+    illegal_decks = top8_illegal + gf_decks_illegal
+
     merged = {
         "format": "Modern",
         "collected_date": top8_data.get("collected_date", ""),
@@ -597,6 +654,7 @@ def load_decklist_data():
         "goldfish_added": gf_decks_added,
         "goldfish_skipped_overlap": gf_decks_skipped,
         "goldfish_illegal": gf_decks_illegal,
+        "mtgo_decks": mtgo_added,
         "decklists": merged_decklists,
     }
 
@@ -604,7 +662,8 @@ def load_decklist_data():
           f"({top8_illegal} illegal), "
           f"Goldfish={gf_deck_data.get('total_decks', 0)}"
           f"({gf_decks_illegal} illegal), "
-          f"GF added={gf_decks_added}, GF skipped={gf_decks_skipped}")
+          f"GF added={gf_decks_added}, GF skipped={gf_decks_skipped}"
+          f"{f', MTGO added={mtgo_added}' if include_mtgo else ''}")
     print(f"  Total legal decks: {total_decks}")
 
     return merged
@@ -697,9 +756,14 @@ def build_archetype_from_decklists(decklist_data: dict, gf_data: dict,
 
     # Step 1: Group decklists by canonical archetype name
     arch_decks = defaultdict(list)
+    deck_weight_by_id = {}
+    weighted_count_per_arch: dict[str, float] = defaultdict(float)
     for deck in decklists:
         canon = normalize_archetype_name(deck["deck_name"])
         arch_decks[canon].append(deck)
+        w = float(deck.get("_fusion_weight", 1.0))
+        deck_weight_by_id[deck.get("deck_id", id(deck))] = w
+        weighted_count_per_arch[canon] += w
 
     print(f"Decklist archetypes after normalization: {len(arch_decks)}")
     for name, decks in sorted(arch_decks.items(), key=lambda x: -len(x[1])):
@@ -860,6 +924,7 @@ def build_archetype_from_decklists(decklist_data: dict, gf_data: dict,
             "name": name,
             "category": category,
             "decklist_count": len(decks),
+            "weighted_decklist_count": round(weighted_count_per_arch.get(name, float(len(decks))), 3),
             "fused_metagame_share": fused_share,
             "key_cards": key_cards,
             "key_cards_detail": extract_key_cards(decks, n=5) if decks else None,
@@ -902,7 +967,8 @@ def main():
     if banlist:
         print(f"Banlist loaded: {len(banlist)} banned cards")
 
-    decklist_data = load_decklist_data()
+    include_mtgo = "--include-mtgo" in sys.argv
+    decklist_data = load_decklist_data(include_mtgo=include_mtgo)
     gf_data = load_goldfish_data()
     t8_agg_data = load_top8_aggregate_data()
 
@@ -950,7 +1016,7 @@ def main():
                 "power_density": 0.10,
                 "tournament_wins": 0.10,
             },
-            "data_sources": ["decklists", "goldfish", "mtgtop8_aggregate"],
+            "data_sources": ["decklists", "goldfish", "mtgtop8_aggregate"] + (["mtgo"] if include_mtgo else []),
         },
         "total_archetypes": len(fused),
         "decklist_sample_size": decklist_data.get("total_decks", 0) if decklist_data else 0,
