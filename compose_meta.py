@@ -325,13 +325,14 @@ def main():
     archetypes = fused["archetypes"]
     top_decks = top_n_data.get("decks", []) if top_n_data else []
     period_start = fused.get("period_start", "")
+    period_end = fused.get("period_end", "")
     total_decklists = fused.get("decklist_sample_size", 0)
     total_archetypes = fused.get("total_archetypes", len(archetypes))
     tier_dist = fused.get("tier_distribution", {})
 
     print(f"  Archetypes: {total_archetypes}")
     print(f"  Decklists:  {total_decklists}")
-    print(f"  Period:     {period_start}")
+    print(f"  Period:     {period_start} ~ {period_end}")
 
     # ─── 1. Meta composition ──────────────────────────────────────────────
     composition, cat_counts = build_meta_composition(archetypes)
@@ -363,13 +364,14 @@ def main():
     # ─── Assemble output ──────────────────────────────────────────────────
     now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     today = datetime.utcnow().strftime("%Y-%m-%d")
+    data_period_end = period_end or today
 
     output = {
         "generated_date": now,
         "based_on_ban_list_date": banlist.get("effective_date", period_start),
         "data_period": {
             "start": period_start,
-            "end": today,
+            "end": data_period_end,
         },
         "total_decks_analyzed": total_decklists,
         "total_archetypes": total_archetypes,

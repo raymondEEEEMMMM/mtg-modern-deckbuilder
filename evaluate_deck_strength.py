@@ -647,6 +647,7 @@ def load_decklist_data(include_mtgo: bool = False):
         "collected_date": top8_data.get("collected_date", ""),
         "source": "MTGTop8+Goldfish",
         "period_start": top8_data.get("period_start", gf_deck_data.get("period_start", "")),
+        "period_end": top8_data.get("period_end", gf_deck_data.get("period_end", "")),
         "total_decks": total_decks,
         "illegal_decks_filtered": illegal_decks,
         "top8_decks": top8_data.get("total_decks", 0),
@@ -1008,6 +1009,9 @@ def main():
         "period_start": decklist_data.get("period_start",
                          gf_data.get("period_start",
                          t8_agg_data.get("period_start", "unknown"))),
+        "period_end": decklist_data.get("period_end",
+                       gf_data.get("period_end",
+                       t8_agg_data.get("period_end", ""))),
         "fusion_config": {
             "score_weights": {
                 "metagame_share": 0.35,
@@ -1049,6 +1053,7 @@ def main():
         "version": "2.0",
         "generated_date": datetime.now().strftime("%Y-%m-%d"),
         "period_start": fused_output["period_start"],
+        "period_end": fused_output["period_end"],
         "top_n": top_n,
         "ranking_criteria": (
             "strength_score = 0.35*fused_share + 0.30*performance "
