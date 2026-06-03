@@ -27,6 +27,9 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from scripts.period_utils import resolve_period_args
+
 # ─── MTGGoldfish Event Tier Mapping ─────────────────────────────────────────
 # Goldfish uses different naming conventions than MTGTop8
 
@@ -428,7 +431,7 @@ def compute_placement_score(placement: str) -> float:
         return 0.1
 
 
-def build_goldfish_snapshot(archetypes: list, events: list, period_start: str) -> dict:
+def build_goldfish_snapshot(archetypes: list, events: list, period_start: str, period_end: str = "") -> dict:
     """Build a structured metagame snapshot from Goldfish data."""
 
     # Classify events by tier
@@ -519,6 +522,7 @@ def build_goldfish_snapshot(archetypes: list, events: list, period_start: str) -
         "source": "MTGGoldfish",
         "source_url": "https://www.mtggoldfish.com/metagame/modern#paper",
         "period_start": period_start,
+        "period_end": period_end,
         "data_timeframe": "14_days",
         "total_decks": sum(a["deck_count"] for a in archetypes),
         "platforms": ["paper", "mtgo"],
@@ -557,21 +561,22 @@ def build_goldfish_snapshot(archetypes: list, events: list, period_start: str) -
 
 
 def main():
-    # Read period start from meta.json
     meta_path = Path("mtg_modern_data/ban_list/meta.json")
-    period_start = "2026-05-18"
+    start_arg = sys.argv[sys.argv.index("--start") + 1] if "--start" in sys.argv else None
+    end_arg = sys.argv[sys.argv.index("--end") + 1] if "--end" in sys.argv else None
 
-    if meta_path.exists():
-        with open(meta_path) as f:
-            meta = json.load(f)
-            if "changes_history" in meta and meta["changes_history"]:
-                last = meta["changes_history"][-1]
-                period_start = last.get("effective_date", period_start)
+    period = resolve_period_args(
+        start=start_arg,
+        end=end_arg,
+        meta_path=meta_path,
+        fallback="2026-05-18",
+    )
+    period_start, period_end = period.start, period.end
 
     output_dir = Path("mtg_modern_data/decks/raw")
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    snapshot = build_goldfish_snapshot(GOLDFISH_ARCHETYPES, GOLDFISH_EVENTS, period_start)
+    snapshot = build_goldfish_snapshot(GOLDFISH_ARCHETYPES, GOLDFISH_EVENTS, period_start, period_end)
 
     output_file = output_dir / f"{datetime.now().strftime('%Y-%m-%d')}_goldfish.json"
 
@@ -587,7 +592,7 @@ def main():
     print(f"  Total archetypes: {len(snapshot['archetypes'])}")
     print(f"  Total events: {len(snapshot['events'])}")
     print(f"  Tier summary: {snapshot['tier_summary']}")
-    print(f"  Period start: {period_start}")
+    print(f"  Period: {period_start} ~ {period_end}")
 
     # Print comparison summary
     print(f"\n--- MTGGoldfish vs MTGTop8 Dimension Comparison ---")

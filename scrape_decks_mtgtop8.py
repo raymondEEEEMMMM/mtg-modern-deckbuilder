@@ -27,6 +27,9 @@ import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from scripts.period_utils import resolve_period_args
+
 # ─── Tournament Tier Definitions ─────────────────────────────────────────────
 
 TOURNAMENT_TIERS = {
@@ -199,7 +202,7 @@ MAJOR_EVENTS = [
 ]
 
 
-def build_metagame_snapshot(archetypes: dict, events: list, period_start: str) -> dict:
+def build_metagame_snapshot(archetypes: dict, events: list, period_start: str, period_end: str = "") -> dict:
     """Build a structured metagame snapshot from scraped data."""
 
     # Classify events by tier
@@ -234,6 +237,7 @@ def build_metagame_snapshot(archetypes: dict, events: list, period_start: str) -
         "source": "MTGTop8",
         "source_url": "https://www.mtgtop8.com/format?f=MO&meta=221",
         "period_start": period_start,
+        "period_end": period_end,
         "data_timeframe": "14_days",
         "total_decks": 778,
         "tier_summary": tier_summary,
@@ -257,22 +261,22 @@ def build_metagame_snapshot(archetypes: dict, events: list, period_start: str) -
 
 
 def main():
-    # Read period start from meta.json
     meta_path = Path("mtg_modern_data/ban_list/meta.json")
-    period_start = "2026-05-18"
+    start_arg = sys.argv[sys.argv.index("--start") + 1] if "--start" in sys.argv else None
+    end_arg = sys.argv[sys.argv.index("--end") + 1] if "--end" in sys.argv else None
 
-    if meta_path.exists():
-        with open(meta_path) as f:
-            meta = json.load(f)
-            # Get the latest snapshot date as period start
-            if "changes_history" in meta and meta["changes_history"]:
-                last = meta["changes_history"][-1]
-                period_start = last.get("effective_date", period_start)
+    period = resolve_period_args(
+        start=start_arg,
+        end=end_arg,
+        meta_path=meta_path,
+        fallback="2026-05-18",
+    )
+    period_start, period_end = period.start, period.end
 
     output_dir = Path("mtg_modern_data/decks/raw")
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    snapshot = build_metagame_snapshot(MTGTOP8_ARCHETYPES, RECENT_EVENTS + MAJOR_EVENTS, period_start)
+    snapshot = build_metagame_snapshot(MTGTOP8_ARCHETYPES, RECENT_EVENTS + MAJOR_EVENTS, period_start, period_end)
 
     output_file = output_dir / f"{datetime.now().strftime('%Y-%m-%d')}_mtgtop8.json"
 
@@ -288,7 +292,7 @@ def main():
     print(f"  Total archetypes: {len(snapshot['archetypes'])}")
     print(f"  Total events: {len(snapshot['events'])}")
     print(f"  Tier summary: {snapshot['tier_summary']}")
-    print(f"  Period start: {period_start}")
+    print(f"  Period: {period_start} ~ {period_end}")
 
     # Also update the tier config as a standalone file for reference
     tier_file = Path("mtg_modern_data/decks/tier_config.json")
