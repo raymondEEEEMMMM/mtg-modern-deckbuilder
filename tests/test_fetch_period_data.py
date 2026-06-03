@@ -39,11 +39,10 @@ def test_resolve_args_rejects_inverted():
         )
 
 
-def test_build_commands_top8_then_goldfish(tmp_path: Path):
+def test_build_commands_top8_then_goldfish():
     """The Top8 scraper must be invoked first; Goldfish second with --skip-top8-overlap."""
-    meta = tmp_path / "meta.json"
     cmds = fetch_period_data.build_commands(
-        start="2026-05-18", end="2026-06-03", meta_path=meta
+        start="2026-05-18", end="2026-06-03"
     )
     assert len(cmds) == 2
     top8, goldfish = cmds
@@ -75,7 +74,7 @@ def test_main_runs_both_scrapers(mock_run, tmp_path, capsys):
 
 
 @patch("scripts.fetch_period_data.subprocess.run")
-def test_main_aborts_if_top8_fails(mock_run, tmp_path):
+def test_main_aborts_if_top8_fails(mock_run, tmp_path, capsys):
     (tmp_path / "meta.json").write_text('{"changes_history": [{"effective_date": "2026-05-18"}]}')
     mock_run.side_effect = [
         __import__("subprocess").CompletedProcess(args=[], returncode=1, stdout="", stderr="boom"),
@@ -89,3 +88,6 @@ def test_main_aborts_if_top8_fails(mock_run, tmp_path):
     assert rc == 1
     # Goldfish must not run if Top8 failed
     assert mock_run.call_count == 1
+    # The user must see an error message, not just a silent non-zero exit code.
+    out = capsys.readouterr().out
+    assert "failed" in out or "aborting" in out

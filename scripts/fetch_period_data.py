@@ -49,7 +49,7 @@ def parse_args(argv: Sequence[str], fallback: str = DEFAULT_FALLBACK_START) -> a
     return args
 
 
-def build_commands(start: str, end: str, meta_path: Path,
+def build_commands(start: str, end: str,
                    max_events: int = 999, max_tournaments: int = 999,
                    skip_top8_overlap: bool = True) -> list[list[str]]:
     top8 = [
@@ -74,7 +74,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     print(f"Meta:   {args.meta}")
 
     commands = build_commands(
-        start=args.start, end=args.end, meta_path=Path(args.meta),
+        start=args.start, end=args.end,
         max_events=args.max_events, max_tournaments=args.max_tournaments,
         skip_top8_overlap=not args.no_skip_top8_overlap,
     )
