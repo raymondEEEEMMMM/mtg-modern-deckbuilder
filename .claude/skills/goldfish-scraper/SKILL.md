@@ -30,6 +30,8 @@ python3 scrape_goldfish_two_phase.py --max-tournaments 3
 | `--resume` | off | Phase 1 reuses `goldfish_tournament_index.json`; phase 2 skips tournaments already marked complete. Use on every refresh after the first run. |
 | `--max-tournaments N` | all | Cap tournaments processed in phase 2. |
 | `--skip-top8-overlap` | off | Drop decks whose card signature matches an entry in `*_top8_decklists.json`. Run after Top8. |
+| `--start YYYY-MM-DD` | `meta.json` latest B&R | Only include tournaments on/after this date. |
+| `--end YYYY-MM-DD`   | today                  | Only include tournaments on/before this date. |
 
 There is no `--help`. The script uses positional `sys.argv` parsing.
 
@@ -69,13 +71,25 @@ processes only tournaments that were not yet complete in the on-disk index.
 
 ## Pipeline Position
 
+For a single-shot period refresh (recommended):
+
 ```bash
-python3 scrape_decklists_top8.py --max-events 999     # 1. Top8 first
-python3 scrape_goldfish_two_phase.py --resume --skip-top8-overlap  # 2. this
-python3 evaluate_deck_strength.py --top 15             # 3. Fuse + strength
-python3 scripts/build_card_impact.py                   # 4. Card impact
-python3 compose_meta.py                                # 5. Meta + matchup
+python3 scripts/fetch_period_data.py                  # current period, both sources
+python3 scripts/fetch_period_data.py --start 2026-05-18 --end 2026-06-03  # explicit
 ```
+
+To run sources individually:
+
+```bash
+python3 scrape_decklists_top8.py --max-events 999                     # 1. Top8
+python3 scrape_goldfish_two_phase.py --resume --skip-top8-overlap     # 2. Goldfish
+python3 evaluate_deck_strength.py --top 15                            # 3. Fuse + strength
+python3 scripts/build_card_impact.py                                  # 4. Card impact
+python3 compose_meta.py                                               # 5. Meta + matchup
+```
+
+Both scrapers stamp `period_start` and `period_end` into the output JSON so downstream
+consumers can identify the data window without inferring from `collected_date`.
 
 Always run Top8 first so `--skip-top8-overlap` has a fingerprint file to
 match against.

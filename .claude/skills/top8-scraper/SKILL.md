@@ -28,6 +28,8 @@ python3 scrape_decklists_top8.py --skip-existing
 |---|---|---|
 | `--max-events N` | `999` | Stop after N events. Useful for smoke tests. |
 | `--skip-existing` | off | Skip events whose output JSON already exists in `decks/raw/decklists/`. |
+| `--start YYYY-MM-DD` | `meta.json` latest B&R | Only include events on/after this date. |
+| `--end YYYY-MM-DD`   | today                  | Only include events on/before this date. |
 
 There is no `--help`. The script uses positional `sys.argv` parsing.
 
@@ -56,13 +58,25 @@ latest entry). When the B&R changes, **re-run this scraper before running
 
 ## Pipeline Position
 
+For a single-shot period refresh (recommended):
+
 ```bash
-python3 scrape_decklists_top8.py --max-events 999     # 1. Top8 decklists
-python3 scrape_goldfish_two_phase.py --resume --skip-top8-overlap  # 2. Goldfish
-python3 evaluate_deck_strength.py --top 15             # 3. Fuse + strength
-python3 scripts/build_card_impact.py                   # 4. Card impact
-python3 compose_meta.py                                # 5. Meta + matchup
+python3 scripts/fetch_period_data.py                  # current period, both sources
+python3 scripts/fetch_period_data.py --start 2026-05-18 --end 2026-06-03  # explicit
 ```
+
+To run sources individually:
+
+```bash
+python3 scrape_decklists_top8.py --max-events 999                     # 1. Top8
+python3 scrape_goldfish_two_phase.py --resume --skip-top8-overlap     # 2. Goldfish
+python3 evaluate_deck_strength.py --top 15                            # 3. Fuse + strength
+python3 scripts/build_card_impact.py                                  # 4. Card impact
+python3 compose_meta.py                                               # 5. Meta + matchup
+```
+
+Both scrapers stamp `period_start` and `period_end` into the output JSON so downstream
+consumers can identify the data window without inferring from `collected_date`.
 
 Top8 and Goldfish are run sequentially because Goldfish uses
 `--skip-top8-overlap` to avoid double-counting decks already captured here.
