@@ -400,6 +400,8 @@ def main():
             ps = datetime.strptime(period_start, "%Y-%m-%d")
             period_start_fmt = ps.strftime("%m/%d/%Y")
 
+            # TODO(period): use period_end_fmt instead of today; --end is currently
+            # honored in the output JSON stamp but not in the phase-1 search request.
             search_url = GOLDFISH_TOURNAMENT_SEARCH_URL.format(
                 start=period_start_fmt, end=today
             )
@@ -484,6 +486,7 @@ def main():
             index["format"] = "Modern"
             index["collected_date"] = today_str
             index["source"] = "MTGGoldfish"
+            # TODO(period): should reflect period_end_fmt, not today. See TODO above.
             index["search_period"] = f"{period_start_fmt} - {today}"
             save_index(index)
             print(f"  Index saved: {len(index_tournaments)} tournaments")
