@@ -16,6 +16,9 @@ import time
 from datetime import datetime
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from scripts.period_utils import resolve_period_args
+
 # ─── Config ───────────────────────────────────────────────────────────────────
 
 OUTPUT_DIR = Path("mtg_modern_data/decks/raw/decklists")
@@ -23,16 +26,10 @@ BANLIST_FILE = Path("mtg_modern_data/ban_list/current.json")
 META_FILE = Path("mtg_modern_data/ban_list/meta.json")
 EVENTS_FILE = Path("mtg_modern_data/decks/raw/2026-05-27_mtgtop8.json")
 
-# Auto-detect period start from meta.json (latest B&R update effective_date)
-PERIOD_START = "2026-05-18"  # fallback
-if META_FILE.exists():
-    try:
-        with open(META_FILE) as _f:
-            _meta = json.load(_f)
-        if "changes_history" in _meta and _meta["changes_history"]:
-            PERIOD_START = _meta["changes_history"][-1].get("effective_date", PERIOD_START)
-    except Exception:
-        pass
+# Period bounds are resolved in main() from --start / --end flags,
+# defaulting start to ban_list/meta.json (latest B&R effective_date)
+# and end to today. See scripts/period_utils.resolve_period_args.
+DEFAULT_PERIOD_START = "2026-05-18"  # fallback when meta.json is missing
 
 # MTGTop8 event page URLs
 MODERN_FORMAT_URL = "https://www.mtgtop8.com/format?f=MO&meta=221"
@@ -313,11 +310,21 @@ def main():
 
     max_events = int(sys.argv[sys.argv.index("--max-events") + 1]) if "--max-events" in sys.argv else 999
     skip_existing = "--skip-existing" in sys.argv
+    start_arg = sys.argv[sys.argv.index("--start") + 1] if "--start" in sys.argv else None
+    end_arg = sys.argv[sys.argv.index("--end") + 1] if "--end" in sys.argv else None
+
+    period = resolve_period_args(
+        start=start_arg,
+        end=end_arg,
+        meta_path=META_FILE,
+        fallback=DEFAULT_PERIOD_START,
+    )
+    period_start, period_end = period.start, period.end
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     banlist = load_banlist()
     print(f"Banlist: {len(banlist)} cards")
-    print(f"Period start: {PERIOD_START}")
+    print(f"Period: {period_start} ~ {period_end}")
 
     all_decklists = []
     legality_report = {"legal": 0, "illegal": 0, "illegal_decks": []}
@@ -356,14 +363,18 @@ def main():
                 print(f"  Event info: {event_info}")
                 print(f"  Decks found: {len(deck_links)}")
 
-                # Skip events before period start, and normalize date to ISO format
+                # Skip events outside the resolved [period_start, period_end] window,
+                # and normalize date to ISO format
                 event_date_iso = ""
                 if event_info.get("date"):
                     try:
                         parts = event_info["date"].split("/")
                         event_date_iso = f"20{parts[2]}-{parts[1]}-{parts[0]}"
-                        if event_date_iso < PERIOD_START:
-                            print(f"  Skipping (before {PERIOD_START})")
+                        if event_date_iso < period_start:
+                            print(f"  Skip (before period start {period_start})")
+                            continue
+                        if event_date_iso > period_end:
+                            print(f"  Skip (after period end {period_end})")
                             continue
                     except (IndexError, ValueError):
                         event_date_iso = event_info["date"]
@@ -449,7 +460,8 @@ def main():
         "format": "Modern",
         "collected_date": datetime.now().strftime("%Y-%m-%d"),
         "source": "MTGTop8",
-        "period_start": PERIOD_START,
+        "period_start": period_start,
+        "period_end": period_end,
         "total_decks": len(all_decklists),
         "legal_decks": legality_report["legal"],
         "illegal_decks": legality_report["illegal"],
