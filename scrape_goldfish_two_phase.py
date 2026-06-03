@@ -41,6 +41,16 @@ GOLDFISH_TOURNAMENT_SEARCH_URL = (
     "&tournament_search%5Bdate_range%5D={start}+-+{end}&commit=Search"
 )
 
+
+def build_search_url(period_start: str, period_end: str) -> str:
+    """Build Goldfish tournament search URL using MM/DD/YYYY for both bounds."""
+    ps = datetime.strptime(period_start, "%Y-%m-%d")
+    pe = datetime.strptime(period_end, "%Y-%m-%d")
+    return GOLDFISH_TOURNAMENT_SEARCH_URL.format(
+        start=ps.strftime("%m/%d/%Y"),
+        end=pe.strftime("%m/%d/%Y"),
+    )
+
 # Delays between requests (seconds) - be polite!
 DELAY_BETWEEN_TOURNAMENTS = 3.0
 DELAY_BETWEEN_PAGES = 2.0
@@ -396,15 +406,12 @@ def main():
 
         if not pending_tournaments and not resume:
             print("\nPhase 1: Building tournament index...")
-            today = datetime.now().strftime("%m/%d/%Y")
+            pe = datetime.strptime(period_end, "%Y-%m-%d")
+            period_end_fmt = pe.strftime("%m/%d/%Y")
             ps = datetime.strptime(period_start, "%Y-%m-%d")
             period_start_fmt = ps.strftime("%m/%d/%Y")
 
-            # TODO(period): use period_end_fmt instead of today; --end is currently
-            # honored in the output JSON stamp but not in the phase-1 search request.
-            search_url = GOLDFISH_TOURNAMENT_SEARCH_URL.format(
-                start=period_start_fmt, end=today
-            )
+            search_url = build_search_url(period_start, period_end)
 
             if not navigate_with_retry(page, search_url, max_retries=3, base_timeout=60000):
                 print("FATAL: Could not reach Goldfish search page. Aborting.")
@@ -486,8 +493,7 @@ def main():
             index["format"] = "Modern"
             index["collected_date"] = today_str
             index["source"] = "MTGGoldfish"
-            # TODO(period): should reflect period_end_fmt, not today. See TODO above.
-            index["search_period"] = f"{period_start_fmt} - {today}"
+            index["search_period"] = f"{period_start_fmt} - {period_end_fmt}"
             save_index(index)
             print(f"  Index saved: {len(index_tournaments)} tournaments")
             print(f"  League (skipped): {sum(1 for t in index_tournaments if t.get('is_league'))}")
