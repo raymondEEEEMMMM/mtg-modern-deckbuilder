@@ -23,6 +23,9 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from scripts.period_utils import resolve_period_args
+
 # ─── Config ───────────────────────────────────────────────────────────────────
 
 OUTPUT_DIR = Path("mtg_modern_data/decks/raw/decklists")
@@ -30,15 +33,7 @@ BANLIST_FILE = Path("mtg_modern_data/ban_list/current.json")
 INDEX_FILE = OUTPUT_DIR / "goldfish_tournament_index.json"
 
 META_FILE = Path("mtg_modern_data/ban_list/meta.json")
-PERIOD_START = "2026-05-18"
-if META_FILE.exists():
-    try:
-        with open(META_FILE) as _f:
-            _meta = json.load(_f)
-        if "changes_history" in _meta and _meta["changes_history"]:
-            PERIOD_START = _meta["changes_history"][-1].get("effective_date", PERIOD_START)
-    except Exception:
-        pass
+DEFAULT_PERIOD_START = "2026-05-18"  # fallback when meta.json is missing
 
 GOLDFISH_TOURNAMENT_SEARCH_URL = (
     "https://www.mtggoldfish.com/tournament_searches/create?"
@@ -280,7 +275,7 @@ def load_decklists(output_file: Path) -> list:
     return []
 
 
-def save_decklists(all_decklists: list, overlap_skipped: int, output_file: Path, banlist: set):
+def save_decklists(all_decklists: list, overlap_skipped: int, output_file: Path, banlist: set, period_start: str, period_end: str):
     legal = [d for d in all_decklists if d["legality"]["legal"]]
     illegal = [d for d in all_decklists if not d["legality"]["legal"]]
 
@@ -288,7 +283,8 @@ def save_decklists(all_decklists: list, overlap_skipped: int, output_file: Path,
         "format": "Modern",
         "collected_date": datetime.now().strftime("%Y-%m-%d"),
         "source": "MTGGoldfish",
-        "period_start": PERIOD_START,
+        "period_start": period_start,
+        "period_end": period_end,
         "total_decks": len(all_decklists),
         "legal_decks": len(legal),
         "illegal_decks": len(illegal),
@@ -327,9 +323,19 @@ def main():
 
     resume = "--resume" in sys.argv
     skip_top8_overlap = "--skip-top8-overlap" in sys.argv
+    start_arg = sys.argv[sys.argv.index("--start") + 1] if "--start" in sys.argv else None
+    end_arg = sys.argv[sys.argv.index("--end") + 1] if "--end" in sys.argv else None
+
+    period = resolve_period_args(
+        start=start_arg,
+        end=end_arg,
+        meta_path=META_FILE,
+        fallback=DEFAULT_PERIOD_START,
+    )
+    period_start, period_end = period.start, period.end
 
     print(f"=== MTGGoldfish Two-Phase Decklist Scraper ===")
-    print(f"Period: {PERIOD_START} ~ today")
+    print(f"Period: {period_start} ~ {period_end}")
     print(f"Max tournaments: {max_tournaments}")
     print(f"Skip Top8 overlap: {skip_top8_overlap}")
     print(f"Resume: {resume}")
@@ -391,7 +397,7 @@ def main():
         if not pending_tournaments and not resume:
             print("\nPhase 1: Building tournament index...")
             today = datetime.now().strftime("%m/%d/%Y")
-            ps = datetime.strptime(PERIOD_START, "%Y-%m-%d")
+            ps = datetime.strptime(period_start, "%Y-%m-%d")
             period_start_fmt = ps.strftime("%m/%d/%Y")
 
             search_url = GOLDFISH_TOURNAMENT_SEARCH_URL.format(
@@ -749,7 +755,7 @@ def main():
 
                 # Save decklists incrementally
                 if tournament_decks:
-                    save_decklists(all_decklists, overlap_skipped, output_file, banlist)
+                    save_decklists(all_decklists, overlap_skipped, output_file, banlist, period_start=period_start, period_end=period_end)
                     print(f"  Saved progress: {len(all_decklists)} total decks")
 
                 scraped_count += 1
@@ -764,14 +770,14 @@ def main():
                 tournament["status"] = "failed"
                 save_index(index)
                 if all_decklists:
-                    save_decklists(all_decklists, overlap_skipped, output_file, banlist)
+                    save_decklists(all_decklists, overlap_skipped, output_file, banlist, period_start=period_start, period_end=period_end)
                     print(f"  Saved progress on error: {len(all_decklists)} total decks")
                 continue
 
         ctx.close()
 
     # Final save
-    output = save_decklists(all_decklists, overlap_skipped, output_file, banlist)
+    output = save_decklists(all_decklists, overlap_skipped, output_file, banlist, period_start=period_start, period_end=period_end)
 
     print(f"\n{'='*80}")
     print(f"Output: {output_file}")
