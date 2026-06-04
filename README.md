@@ -112,6 +112,7 @@ python3 -m pytest
 - **goldfish-scraper** — MTGGoldfish 数据爬取 / 调试 / 校验
 - **card-impact** — 单卡影响度、archetype 核心卡、禁/解禁冲击
 - **mtg-banlist** — 当前禁牌、禁牌历史、B&R 生效日、当前周期
+- **agent-init** — 会话开始时加载 MTG Modern Meta Agent 身份、报告当前 ban period 与 4 个关键产物的新鲜度（脚本：`scripts/agent_health_check.py`；清单：`docs/agent-init.md`）
 
 ## 设计原则
 
