@@ -51,6 +51,23 @@ PRODUCTS: list[tuple[str, str, list[str]]] = [
 STALE_AGE_DAYS = 7
 
 
+def build_period_info(meta_path: Path, today: Optional[date] = None) -> dict:
+    """Derive current banlist period info from meta.json.
+
+    Raises ValueError if meta.json is unreadable or has no changes_history.
+    """
+    start = load_period_start_from_meta(meta_path, fallback="")
+    if not start:
+        raise ValueError(f"could not determine period start from {meta_path}")
+    today = today or date.today()
+    start_date = date.fromisoformat(start)
+    return {
+        "start": start,
+        "today": today.isoformat(),
+        "days_since_start": (today - start_date).days,
+    }
+
+
 def main() -> int:
     return 0
 
