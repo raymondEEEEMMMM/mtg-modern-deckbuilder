@@ -154,7 +154,65 @@ def run_health_check(
     }
 
 
-def main() -> int:
+def _parse_args(argv: Optional[list[str]] = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="MTG Modern Meta Agent health check (period + data freshness).",
+    )
+    parser.add_argument(
+        "--meta",
+        type=Path,
+        default=META_PATH,
+        help="Path to ban_list/meta.json (default: project meta.json).",
+    )
+    parser.add_argument(
+        "--data-root",
+        type=Path,
+        default=REPO_ROOT / "mtg_modern_data",
+        help="Root of the data lake (default: ./mtg_modern_data).",
+    )
+    parser.add_argument(
+        "--format",
+        choices=["json", "text"],
+        default="json",
+        help="Output format. JSON for agent consumption (default), text for humans.",
+    )
+    return parser.parse_args(argv)
+
+
+def _format_text(report: dict) -> str:
+    lines = [
+        f"Period start:        {report['period']['start']}",
+        f"Today:               {report['period']['today']}",
+        f"Days since start:    {report['period']['days_since_start']}",
+        "",
+        "Products:",
+    ]
+    for p in report["products"]:
+        status = "fresh" if not p["stale"] else f"STALE ({p['reason']})"
+        mtime = p["mtime"] or "—"
+        lines.append(f"  - {p['name']:<20} mtime={mtime}  {status}")
+    if report["recommended_next_steps"]:
+        lines.append("")
+        lines.append("Recommended next steps:")
+        for cmd in report["recommended_next_steps"]:
+            lines.append(f"  $ {cmd}")
+    return "\n".join(lines)
+
+
+def main(argv: Optional[list[str]] = None) -> int:
+    args = _parse_args(argv)
+    try:
+        report = run_health_check(meta_path=args.meta, data_root=args.data_root)
+    except ValueError as e:
+        print(str(e), file=sys.stderr)
+        return 2
+    except Exception as e:  # noqa: BLE001
+        print(f"unexpected error: {e}", file=sys.stderr)
+        return 3
+    if args.format == "json":
+        print(json.dumps(report, indent=2))
+    else:
+        print(_format_text(report))
     return 0
 
 

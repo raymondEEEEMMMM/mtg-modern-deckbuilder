@@ -178,3 +178,36 @@ def test_run_health_check_assembles_full_report(tmp_path: Path):
     assert report["stale_products"] == ["card_impact"]
     assert report["recommended_next_steps"] == ["python3 scripts/build_card_impact.py"]
     assert "generated_at" in report
+
+
+def test_main_writes_json_to_stdout_when_meta_valid(tmp_path: Path, capsys):
+    from scripts.agent_health_check import main as cli_main
+
+    meta_path = _write_meta(tmp_path, ["2026-05-18"])
+    data_root = tmp_path / "mtg_modern_data"
+    (data_root / "decks" / "processed").mkdir(parents=True)
+    (data_root / "decks" / "top_n").mkdir(parents=True)
+    (data_root / "cards").mkdir(parents=True)
+    (data_root / "meta").mkdir(parents=True)
+
+    rc = cli_main([
+        "--meta", str(meta_path),
+        "--data-root", str(data_root),
+    ])
+    assert rc == 0
+    captured = capsys.readouterr()
+    payload = json.loads(captured.out)
+    assert "period" in payload
+    assert payload["period"]["start"] == "2026-05-18"
+
+
+def test_main_exits_2_when_meta_missing(tmp_path: Path, capsys):
+    from scripts.agent_health_check import main as cli_main
+
+    rc = cli_main([
+        "--meta", str(tmp_path / "absent.json"),
+        "--data-root", str(tmp_path / "data"),
+    ])
+    assert rc == 2
+    captured = capsys.readouterr()
+    assert "could not determine period start" in captured.err
