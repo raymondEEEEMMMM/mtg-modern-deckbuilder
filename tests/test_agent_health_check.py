@@ -117,3 +117,29 @@ def test_build_recommendations_single_stale_product():
     assert build_recommendations(products) == [
         "python3 scripts/build_card_impact.py",
     ]
+
+
+def test_build_recommendations_dedups_and_orders_by_pipeline():
+    products = [
+        {"name": "fused_archetypes", "stale": True},
+        {"name": "top_decks", "stale": True},
+        {"name": "card_impact", "stale": True},
+        {"name": "meta_current", "stale": True},
+    ]
+    assert build_recommendations(products) == [
+        "python3 scrape_decklists_top8.py --max-events 999",
+        "python3 scrape_goldfish_two_phase.py --resume --skip-top8-overlap",
+        "python3 evaluate_deck_strength.py --top 15",
+        "python3 scripts/build_card_impact.py",
+        "python3 compose_meta.py",
+    ]
+
+
+def test_build_recommendations_empty_when_nothing_stale():
+    products = [
+        {"name": "fused_archetypes", "stale": False},
+        {"name": "top_decks", "stale": False},
+        {"name": "card_impact", "stale": False},
+        {"name": "meta_current", "stale": False},
+    ]
+    assert build_recommendations(products) == []
