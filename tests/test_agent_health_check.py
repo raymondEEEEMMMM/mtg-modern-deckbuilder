@@ -1,5 +1,5 @@
 import json
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 import pytest
@@ -54,3 +54,26 @@ def test_check_product_marks_missing_file_as_stale(tmp_path: Path):
     assert result["days_old"] is None
     assert result["stale"] is True
     assert result["reason"] == "missing"
+
+
+import os
+
+
+def _touch(path: Path, when: date) -> None:
+    path.write_text("{}")
+    ts = datetime.combine(when, datetime.min.time()).timestamp()
+    os.utime(path, (ts, ts))
+
+
+def test_check_product_marks_old_file_as_predates_period(tmp_path: Path):
+    p = tmp_path / "card_impact.json"
+    _touch(p, date(2026, 5, 10))  # before period_start
+    result = check_product(
+        name="card_impact",
+        path=p,
+        period_start=date(2026, 5, 18),
+        today=date(2026, 6, 4),
+    )
+    assert result["exists"] is True
+    assert result["stale"] is True
+    assert result["reason"] == "predates_current_period"
