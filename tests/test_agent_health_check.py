@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from scripts.agent_health_check import build_period_info
+from scripts.agent_health_check import build_period_info, check_product
 
 
 def _write_meta(tmp_path: Path, effective_dates: list[str]) -> Path:
@@ -39,3 +39,18 @@ def test_build_period_info_raises_when_history_empty(tmp_path: Path):
     path.write_text(json.dumps({"changes_history": []}))
     with pytest.raises(ValueError, match="could not determine period start"):
         build_period_info(path, today=date(2026, 6, 4))
+
+
+def test_check_product_marks_missing_file_as_stale(tmp_path: Path):
+    result = check_product(
+        name="card_impact",
+        path=tmp_path / "absent.json",
+        period_start=date(2026, 5, 18),
+        today=date(2026, 6, 4),
+    )
+    assert result["name"] == "card_impact"
+    assert result["exists"] is False
+    assert result["mtime"] is None
+    assert result["days_old"] is None
+    assert result["stale"] is True
+    assert result["reason"] == "missing"

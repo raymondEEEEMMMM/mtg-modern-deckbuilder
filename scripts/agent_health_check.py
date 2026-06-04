@@ -68,6 +68,46 @@ def build_period_info(meta_path: Path, today: Optional[date] = None) -> dict:
     }
 
 
+def check_product(
+    name: str,
+    path: Path,
+    period_start: date,
+    today: Optional[date] = None,
+    stale_age_days: int = STALE_AGE_DAYS,
+) -> dict:
+    """Inspect a single data product and return its freshness record."""
+    today = today or date.today()
+    if not path.exists():
+        return {
+            "name": name,
+            "path": str(path),
+            "exists": False,
+            "mtime": None,
+            "days_old": None,
+            "stale": True,
+            "reason": "missing",
+        }
+    mtime_ts = path.stat().st_mtime
+    mtime_dt = datetime.fromtimestamp(mtime_ts)
+    mtime_date = mtime_dt.date()
+    days_old = (today - mtime_date).days
+    if mtime_date < period_start:
+        stale, reason = True, "predates_current_period"
+    elif days_old > stale_age_days:
+        stale, reason = True, "older_than_7d"
+    else:
+        stale, reason = False, None
+    return {
+        "name": name,
+        "path": str(path),
+        "exists": True,
+        "mtime": mtime_dt.isoformat(timespec="seconds"),
+        "days_old": days_old,
+        "stale": stale,
+        "reason": reason,
+    }
+
+
 def main() -> int:
     return 0
 
