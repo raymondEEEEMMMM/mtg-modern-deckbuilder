@@ -77,3 +77,31 @@ def test_check_product_marks_old_file_as_predates_period(tmp_path: Path):
     assert result["exists"] is True
     assert result["stale"] is True
     assert result["reason"] == "predates_current_period"
+
+
+def test_check_product_marks_in_period_but_old_as_older_than_7d(tmp_path: Path):
+    p = tmp_path / "top_decks.json"
+    _touch(p, date(2026, 5, 25))  # within period but 10 days before today
+    result = check_product(
+        name="top_decks",
+        path=p,
+        period_start=date(2026, 5, 18),
+        today=date(2026, 6, 4),
+    )
+    assert result["stale"] is True
+    assert result["reason"] == "older_than_7d"
+    assert result["days_old"] == 10
+
+
+def test_check_product_marks_fresh_file_as_not_stale(tmp_path: Path):
+    p = tmp_path / "fused.json"
+    _touch(p, date(2026, 6, 3))
+    result = check_product(
+        name="fused_archetypes",
+        path=p,
+        period_start=date(2026, 5, 18),
+        today=date(2026, 6, 4),
+    )
+    assert result["stale"] is False
+    assert result["reason"] is None
+    assert result["days_old"] == 1
