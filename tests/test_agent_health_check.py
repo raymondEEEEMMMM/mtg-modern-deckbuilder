@@ -26,3 +26,16 @@ def test_build_period_info_returns_latest_effective_date_and_days(tmp_path: Path
         "today": "2026-06-04",
         "days_since_start": 17,
     }
+
+
+def test_build_period_info_raises_when_meta_missing(tmp_path: Path):
+    missing = tmp_path / "nope.json"
+    with pytest.raises(ValueError, match="could not determine period start"):
+        build_period_info(missing, today=date(2026, 6, 4))
+
+
+def test_build_period_info_raises_when_history_empty(tmp_path: Path):
+    path = tmp_path / "meta.json"
+    path.write_text(json.dumps({"changes_history": []}))
+    with pytest.raises(ValueError, match="could not determine period start"):
+        build_period_info(path, today=date(2026, 6, 4))
