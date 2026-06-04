@@ -1,3 +1,12 @@
-magic-skill-ref/
+# macOS
 .DS_Store
+
+# Local agent / IDE caches (machine-specific, not part of the project)
+.claude/
+.codebuddy/
+
+# External reference project (not part of this repo)
+magic-skill-ref/
+
+# Raw HTML pages cached by scrapers
 mtg_modern_data/sources/*/raw/*.html
