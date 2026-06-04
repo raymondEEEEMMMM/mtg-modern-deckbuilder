@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from scripts.agent_health_check import build_period_info, check_product
+from scripts.agent_health_check import build_period_info, build_recommendations, check_product
 
 
 def _write_meta(tmp_path: Path, effective_dates: list[str]) -> Path:
@@ -105,3 +105,15 @@ def test_check_product_marks_fresh_file_as_not_stale(tmp_path: Path):
     assert result["stale"] is False
     assert result["reason"] is None
     assert result["days_old"] == 1
+
+
+def test_build_recommendations_single_stale_product():
+    products = [
+        {"name": "fused_archetypes", "stale": False},
+        {"name": "top_decks", "stale": False},
+        {"name": "card_impact", "stale": True},
+        {"name": "meta_current", "stale": False},
+    ]
+    assert build_recommendations(products) == [
+        "python3 scripts/build_card_impact.py",
+    ]

@@ -108,6 +108,23 @@ def check_product(
     }
 
 
+def build_recommendations(products: list[dict]) -> list[str]:
+    """Map stale products to deduplicated, pipeline-ordered commands."""
+    commands_by_product = {name: cmds for name, _, cmds in PRODUCTS}
+    seen: set[str] = set()
+    out: list[str] = []
+    # Iterate in PRODUCTS order so output respects pipeline order
+    for name, _, _ in PRODUCTS:
+        product = next((p for p in products if p["name"] == name), None)
+        if product is None or not product["stale"]:
+            continue
+        for cmd in commands_by_product[name]:
+            if cmd not in seen:
+                seen.add(cmd)
+                out.append(cmd)
+    return out
+
+
 def main() -> int:
     return 0
 
