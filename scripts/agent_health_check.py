@@ -125,6 +125,35 @@ def build_recommendations(products: list[dict]) -> list[str]:
     return out
 
 
+def run_health_check(
+    meta_path: Path = META_PATH,
+    data_root: Path = REPO_ROOT / "mtg_modern_data",
+    today: Optional[date] = None,
+) -> dict:
+    """Produce the full health-check report dictionary."""
+    today = today or date.today()
+    period = build_period_info(meta_path, today=today)
+    period_start = date.fromisoformat(period["start"])
+    products = []
+    for name, rel_path, _ in PRODUCTS:
+        # Reconstruct path relative to data_root, stripping leading
+        # "mtg_modern_data/" so tests can supply an isolated data_root.
+        relative = rel_path.removeprefix("mtg_modern_data/")
+        products.append(check_product(
+            name=name,
+            path=data_root / relative,
+            period_start=period_start,
+            today=today,
+        ))
+    return {
+        "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+        "period": period,
+        "products": products,
+        "stale_products": [p["name"] for p in products if p["stale"]],
+        "recommended_next_steps": build_recommendations(products),
+    }
+
+
 def main() -> int:
     return 0
 

@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from scripts.agent_health_check import build_period_info, build_recommendations, check_product
+from scripts.agent_health_check import build_period_info, build_recommendations, check_product, run_health_check
 
 
 def _write_meta(tmp_path: Path, effective_dates: list[str]) -> Path:
@@ -143,3 +143,38 @@ def test_build_recommendations_empty_when_nothing_stale():
         {"name": "meta_current", "stale": False},
     ]
     assert build_recommendations(products) == []
+
+
+def test_run_health_check_assembles_full_report(tmp_path: Path):
+    # meta.json
+    meta_path = _write_meta(tmp_path, ["2026-05-18"])
+    # data products
+    data_root = tmp_path / "mtg_modern_data"
+    fused = data_root / "decks" / "processed" / "fused_archetypes.json"
+    top = data_root / "decks" / "top_n" / "top_decks.json"
+    card = data_root / "cards" / "card_impact.json"
+    meta_current = data_root / "meta" / "current.json"
+    for p in [fused, top, card, meta_current]:
+        p.parent.mkdir(parents=True, exist_ok=True)
+    _touch(fused, date(2026, 6, 3))         # fresh
+    _touch(top, date(2026, 6, 3))           # fresh
+    _touch(card, date(2026, 5, 10))         # predates period
+    _touch(meta_current, date(2026, 6, 3))  # fresh
+
+    report = run_health_check(
+        meta_path=meta_path,
+        data_root=data_root,
+        today=date(2026, 6, 4),
+    )
+
+    assert report["period"] == {
+        "start": "2026-05-18",
+        "today": "2026-06-04",
+        "days_since_start": 17,
+    }
+    assert {p["name"] for p in report["products"]} == {
+        "fused_archetypes", "top_decks", "card_impact", "meta_current",
+    }
+    assert report["stale_products"] == ["card_impact"]
+    assert report["recommended_next_steps"] == ["python3 scripts/build_card_impact.py"]
+    assert "generated_at" in report
