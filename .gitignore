@@ -10,3 +10,14 @@ magic-skill-ref/
 
 # Raw HTML pages cached by scrapers
 mtg_modern_data/sources/*/raw/*.html
+
+# Per-period scraped decklists (regenerable, several MB each)
+mtg_modern_data/decks/raw/decklists/*_decklists.json
+
+# HTML snapshot reports (regenerable)
+mtg_modern_data/decks/reports/
+
+# Derived analytics output (regenerable)
+mtg_modern_data/sources/goldfish/
+mtg_modern_data/sources/topdeck/matchup_matrix_*.json
+mtg_modern_data/sources/topdeck/fixtures/

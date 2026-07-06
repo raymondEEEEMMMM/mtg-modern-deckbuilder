@@ -87,8 +87,60 @@ def build_archetype_profiles() -> dict:
     return profiles
 
 
+MOXFIELD_SECTION_RE = re.compile(r"~~(\w+)~~")
+# Lines like "4 Blood Crypt" or "1x Sol Ring" or " 2 Thoughtseize ". Optional x separator.
+MOXFIELD_LINE_RE = re.compile(r"^\s*(\d+)\s*x?\s+(.+?)\s*$", re.IGNORECASE)
+
+
+def _parse_moxfield_string(text: str) -> Counter:
+    """Parse a Moxfield-style decklist string into a Counter of cards.
+
+    Format:
+        ~~Mainboard~~
+        4 Blood Crypt
+        4 Archon of Cruelty
+        ...
+        ~~Sideboard~~
+        2 Consign to Memory
+        ...
+
+    Sections can be in any order; unrecognized sections are treated as mainboard.
+    """
+    cards: Counter = Counter()
+    if not text:
+        return cards
+    # Normalize escaped newlines (Moxfield sometimes ships \\n literals)
+    text = text.replace("\\n", "\n").replace("\r\n", "\n")
+    # Split into sections by ~~Name~~
+    section_positions = [(m.start(), m.group(1)) for m in MOXFIELD_SECTION_RE.finditer(text)]
+    if not section_positions:
+        return cards
+    # Walk each section's text and parse card lines
+    for i, (start, name) in enumerate(section_positions):
+        end = section_positions[i + 1][0] if i + 1 < len(section_positions) else len(text)
+        body = text[start:end]
+        weight = 0.35 if "side" in name.lower() else 1.0
+        for line in body.split("\n"):
+            line = line.strip()
+            if not line or line.startswith("~~"):
+                continue
+            m = MOXFIELD_LINE_RE.match(line)
+            if not m:
+                continue
+            qty = int(m.group(1))
+            card_name = normalize_card_name(m.group(2))
+            if not card_name:
+                continue
+            cards[card_name] += qty * weight
+    return cards
+
+
 def extract_cards_from_deck_obj(deck_obj) -> Counter:
     """Extract flexible card quantities from TopDeck deckObj/decklist structures."""
+    # Moxfield-style string format: "~~Mainboard~~\n4 Card\n... ~~Sideboard~~\n2 Card\n..."
+    if isinstance(deck_obj, str):
+        return _parse_moxfield_string(deck_obj)
+
     cards = Counter()
 
     def add_card(item, weight=1.0):

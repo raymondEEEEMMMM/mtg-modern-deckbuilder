@@ -1,19 +1,12 @@
 {
-  "generated_at": "2026-05-29T08:44:34.537594+00:00",
+  "generated_at": "2026-07-06T03:34:30.312430+00:00",
   "source": "TopDeck.gg API",
   "attribution_required": "Data provided by TopDeck.gg: https://topdeck.gg",
   "request_payload": {
     "game": "Magic: The Gathering",
     "format": "Modern",
-    "participantMin": 8,
-    "columns": [
-      "name",
-      "id",
-      "decklist",
-      "wins",
-      "draws",
-      "losses"
-    ],
+    "participantMin": 4,
+    "last": 60,
     "rounds": true,
     "tables": [
       "table",
@@ -26,7 +19,14 @@
       "id",
       "decklist"
     ],
-    "last": 30
+    "columns": [
+      "name",
+      "id",
+      "decklist",
+      "wins",
+      "draws",
+      "losses"
+    ]
   },
   "quality_gate": {
     "min_completed_events": 5,
@@ -36,19 +36,19 @@
   },
   "quality_gate_results": {
     "completed_events": true,
-    "classified_match_count": false,
+    "classified_match_count": true,
     "classification_coverage": false,
     "top_pair_sample_count": true
   },
   "passed": false,
   "summary": {
-    "completed_events": 8,
-    "player_count": 98,
-    "players_with_decklist": 29,
-    "decklist_coverage": 0.2959,
-    "classification_coverage": 0.2959,
-    "classified_match_count": 70,
-    "archetype_pair_count": 46,
+    "completed_events": 23,
+    "player_count": 212,
+    "players_with_decklist": 47,
+    "decklist_coverage": 0.2217,
+    "classification_coverage": 0.2217,
+    "classified_match_count": 113,
+    "archetype_pair_count": 80,
     "top_pair_sample_count": 5
   },
   "top_pairs": [
@@ -65,8 +65,16 @@
       "games": 4
     },
     {
+      "pair": "Affinity|Boros Energy",
+      "games": 3
+    },
+    {
       "pair": "Blink|Eldrazi Tron",
       "games": 3
+    },
+    {
+      "pair": "4/5c Aggro|Affinity",
+      "games": 2
     },
     {
       "pair": "4/5c Aggro|Blink",
@@ -74,6 +82,10 @@
     },
     {
       "pair": "4/5c Aggro|Boros Energy",
+      "games": 2
+    },
+    {
+      "pair": "4/5c Aggro|Dimir Mill",
       "games": 2
     },
     {
@@ -101,6 +113,10 @@
       "games": 2
     },
     {
+      "pair": "Boros Energy|Goryo's Vengeance",
+      "games": 2
+    },
+    {
       "pair": "Boros Energy|Grixis Reanimator",
       "games": 2
     },
@@ -109,31 +125,45 @@
       "games": 2
     },
     {
-      "pair": "Grixis Reanimator|Grixis Reanimator",
+      "pair": "Broodscale Bloodchief|Esper Midrange",
       "games": 2
     },
     {
-      "pair": "4/5c Aggro|4/5c Aggro",
-      "games": 1
-    },
-    {
-      "pair": "4/5c Aggro|Affinity",
-      "games": 1
-    },
-    {
-      "pair": "4/5c Aggro|Dimir Mill",
-      "games": 1
-    },
-    {
-      "pair": "4/5c Aggro|UR Prowess",
-      "games": 1
-    },
-    {
-      "pair": "Affinity|Amulet Titan",
-      "games": 1
+      "pair": "Broodscale Bloodchief|Goryo's Vengeance",
+      "games": 2
     }
   ],
   "events": [
+    {
+      "event_id": "modern-no-oficial-11-abril",
+      "name": "",
+      "status": "",
+      "standings_count": 8,
+      "round_count": 3,
+      "players_seen": 8,
+      "players_with_decklist": 0,
+      "players_classified": 0
+    },
+    {
+      "event_id": "gog-friday-night-modern-35",
+      "name": "",
+      "status": "",
+      "standings_count": 4,
+      "round_count": 3,
+      "players_seen": 4,
+      "players_with_decklist": 0,
+      "players_classified": 0
+    },
+    {
+      "event_id": "friday-mondern",
+      "name": "",
+      "status": "",
+      "standings_count": 13,
+      "round_count": 4,
+      "players_seen": 13,
+      "players_with_decklist": 0,
+      "players_classified": 0
+    },
     {
       "event_id": "bay-area-modern-league-night-may-1st",
       "name": "",
@@ -141,6 +171,16 @@
       "standings_count": 10,
       "round_count": 3,
       "players_seen": 10,
+      "players_with_decklist": 0,
+      "players_classified": 0
+    },
+    {
+      "event_id": "gog-friday-night-modern-copy",
+      "name": "",
+      "status": "",
+      "standings_count": 6,
+      "round_count": 3,
+      "players_seen": 6,
       "players_with_decklist": 0,
       "players_classified": 0
     },
@@ -165,6 +205,26 @@
       "players_classified": 0
     },
     {
+      "event_id": "bay-area-modern-league-night-apr-24th",
+      "name": "",
+      "status": "",
+      "standings_count": 9,
+      "round_count": 3,
+      "players_seen": 9,
+      "players_with_decklist": 1,
+      "players_classified": 1
+    },
+    {
+      "event_id": "gog-friday-night-modern-35-130",
+      "name": "",
+      "status": "",
+      "standings_count": 6,
+      "round_count": 3,
+      "players_seen": 6,
+      "players_with_decklist": 0,
+      "players_classified": 0
+    },
+    {
       "event_id": "fri-monday",
       "name": "",
       "status": "",
@@ -181,6 +241,16 @@
       "standings_count": 18,
       "round_count": 5,
       "players_seen": 18,
+      "players_with_decklist": 0,
+      "players_classified": 0
+    },
+    {
+      "event_id": "bay-area-modern-league-night-may-15",
+      "name": "",
+      "status": "",
+      "standings_count": 6,
+      "round_count": 3,
+      "players_seen": 6,
       "players_with_decklist": 0,
       "players_classified": 0
     },
@@ -205,12 +275,92 @@
       "players_classified": 29
     },
     {
+      "event_id": "fri-modern-real",
+      "name": "",
+      "status": "",
+      "standings_count": 7,
+      "round_count": 3,
+      "players_seen": 7,
+      "players_with_decklist": 0,
+      "players_classified": 0
+    },
+    {
       "event_id": "bay-area-modern-league-night-may-22",
       "name": "",
       "status": "",
       "standings_count": 8,
       "round_count": 3,
       "players_seen": 8,
+      "players_with_decklist": 0,
+      "players_classified": 0
+    },
+    {
+      "event_id": "gog-friday-night-modern-38",
+      "name": "",
+      "status": "",
+      "standings_count": 8,
+      "round_count": 3,
+      "players_seen": 8,
+      "players_with_decklist": 0,
+      "players_classified": 0
+    },
+    {
+      "event_id": "modern-1000-sparkys-gaming",
+      "name": "",
+      "status": "",
+      "standings_count": 19,
+      "round_count": 8,
+      "players_seen": 19,
+      "players_with_decklist": 17,
+      "players_classified": 17
+    },
+    {
+      "event_id": "fri-modern-1",
+      "name": "",
+      "status": "",
+      "standings_count": 15,
+      "round_count": 4,
+      "players_seen": 15,
+      "players_with_decklist": 0,
+      "players_classified": 0
+    },
+    {
+      "event_id": "1a-jornada-de-liga-modern",
+      "name": "",
+      "status": "",
+      "standings_count": 8,
+      "round_count": 4,
+      "players_seen": 8,
+      "players_with_decklist": 0,
+      "players_classified": 0
+    },
+    {
+      "event_id": "bay-area-modern-league-night-may-29",
+      "name": "",
+      "status": "",
+      "standings_count": 7,
+      "round_count": 3,
+      "players_seen": 7,
+      "players_with_decklist": 1,
+      "players_classified": 1
+    },
+    {
+      "event_id": "bay-area-modern-league-night-june-5",
+      "name": "",
+      "status": "",
+      "standings_count": 13,
+      "round_count": 3,
+      "players_seen": 13,
+      "players_with_decklist": 1,
+      "players_classified": 1
+    },
+    {
+      "event_id": "gog-friday-night-modern-36",
+      "name": "",
+      "status": "",
+      "standings_count": 6,
+      "round_count": 3,
+      "players_seen": 6,
       "players_with_decklist": 0,
       "players_classified": 0
     }

@@ -1,20 +1,598 @@
 {
-  "format": "Modern",
-  "collected_date": "2026-05-28",
-  "source": "MTGGoldfish",
-  "search_period": "05/14/2026 - 05/28/2026",
-  "total_tournaments": 59,
-  "scrape_strategy": "incremental - mark completed, skip on resume",
   "tournaments": [
+    {
+      "tournament_id": "64442",
+      "name": "Modern League 2026-06-10",
+      "url": "https://www.mtggoldfish.com/tournament/64442",
+      "date": "2026-06-10",
+      "deck_count": 6,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64425",
+      "name": "Modern League 2026-06-09",
+      "url": "https://www.mtggoldfish.com/tournament/64425",
+      "date": "2026-06-09",
+      "deck_count": 64,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64418",
+      "name": "Modern Challenge 64 2026-06-08",
+      "url": "https://www.mtggoldfish.com/tournament/64418",
+      "date": "2026-06-08",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "completed",
+      "decklists_scraped": 32
+    },
+    {
+      "tournament_id": "64403",
+      "name": "Modern League 2026-06-08",
+      "url": "https://www.mtggoldfish.com/tournament/64403",
+      "date": "2026-06-08",
+      "deck_count": 73,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64409",
+      "name": "Modern Challenge 32 2026-06-08",
+      "url": "https://www.mtggoldfish.com/tournament/64409",
+      "date": "2026-06-08",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "completed",
+      "decklists_scraped": 32
+    },
+    {
+      "tournament_id": "64412",
+      "name": "Modern RCQ Kristiansand 2026",
+      "url": "https://www.mtggoldfish.com/tournament/64412",
+      "date": "2026-06-07",
+      "deck_count": 17,
+      "format": "Modern",
+      "is_league": false,
+      "status": "completed",
+      "decklists_scraped": 17
+    },
+    {
+      "tournament_id": "64385",
+      "name": "HobbyGameMall Season5 Round1 Modern 6/7 12 PM",
+      "url": "https://www.mtggoldfish.com/tournament/64385",
+      "date": "2026-06-07",
+      "deck_count": 9,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64394",
+      "name": "Modern Challenge 32 2026-06-07 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/64394",
+      "date": "2026-06-07",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64383",
+      "name": "Modern Challenge 32 2026-06-07",
+      "url": "https://www.mtggoldfish.com/tournament/64383",
+      "date": "2026-06-07",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64372",
+      "name": "Modern League 2026-06-07",
+      "url": "https://www.mtggoldfish.com/tournament/64372",
+      "date": "2026-06-07",
+      "deck_count": 62,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64408",
+      "name": "Modern RC Super Qualifier 2026-06-07",
+      "url": "https://www.mtggoldfish.com/tournament/64408",
+      "date": "2026-06-07",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64413",
+      "name": "Store Qualifier Modern - Temporada 13 3.0 - The Raccoon House",
+      "url": "https://www.mtggoldfish.com/tournament/64413",
+      "date": "2026-06-06",
+      "deck_count": 8,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64365",
+      "name": "Srlandsmesterskap 2026 + RCQ",
+      "url": "https://www.mtggoldfish.com/tournament/64365",
+      "date": "2026-06-06",
+      "deck_count": 22,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64357",
+      "name": "Modern Challenge 32 2026-06-06 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/64357",
+      "date": "2026-06-06",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64356",
+      "name": "Modern Challenge 32 2026-06-06",
+      "url": "https://www.mtggoldfish.com/tournament/64356",
+      "date": "2026-06-06",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64358",
+      "name": "Modern Challenge 32 2026-06-06 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/64358",
+      "date": "2026-06-06",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64371",
+      "name": "Modern Challenge 64 2026-06-06",
+      "url": "https://www.mtggoldfish.com/tournament/64371",
+      "date": "2026-06-06",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64347",
+      "name": "Modern League 2026-06-06",
+      "url": "https://www.mtggoldfish.com/tournament/64347",
+      "date": "2026-06-06",
+      "deck_count": 66,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64340",
+      "name": "Modern Challenge 64 2026-06-05",
+      "url": "https://www.mtggoldfish.com/tournament/64340",
+      "date": "2026-06-05",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64324",
+      "name": "Modern League 2026-06-05",
+      "url": "https://www.mtggoldfish.com/tournament/64324",
+      "date": "2026-06-05",
+      "deck_count": 80,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64321",
+      "name": "Modern Challenge 64 2026-06-04",
+      "url": "https://www.mtggoldfish.com/tournament/64321",
+      "date": "2026-06-04",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64303",
+      "name": "Modern League 2026-06-04",
+      "url": "https://www.mtggoldfish.com/tournament/64303",
+      "date": "2026-06-04",
+      "deck_count": 80,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64313",
+      "name": "Mont Weekly Modern",
+      "url": "https://www.mtggoldfish.com/tournament/64313",
+      "date": "2026-06-03",
+      "deck_count": 14,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64301",
+      "name": "Modern Challenge 64 2026-06-03",
+      "url": "https://www.mtggoldfish.com/tournament/64301",
+      "date": "2026-06-03",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64294",
+      "name": "Modern League 2026-06-03",
+      "url": "https://www.mtggoldfish.com/tournament/64294",
+      "date": "2026-06-03",
+      "deck_count": 74,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64260",
+      "name": "Modern League 2026-06-02",
+      "url": "https://www.mtggoldfish.com/tournament/64260",
+      "date": "2026-06-02",
+      "deck_count": 79,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64295",
+      "name": "Modern Challenge 64 2026-06-02",
+      "url": "https://www.mtggoldfish.com/tournament/64295",
+      "date": "2026-06-02",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64246",
+      "name": "Modern Challenge 32 2026-06-01",
+      "url": "https://www.mtggoldfish.com/tournament/64246",
+      "date": "2026-06-01",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64238",
+      "name": "Modern League 2026-06-01",
+      "url": "https://www.mtggoldfish.com/tournament/64238",
+      "date": "2026-06-01",
+      "deck_count": 70,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64259",
+      "name": "Modern Challenge 64 2026-06-01",
+      "url": "https://www.mtggoldfish.com/tournament/64259",
+      "date": "2026-06-01",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64247",
+      "name": "US RCQ | 2026-27 Round 1 Modern",
+      "url": "https://www.mtggoldfish.com/tournament/64247",
+      "date": "2026-05-31",
+      "deck_count": 18,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64248",
+      "name": "ReCQ - Modern - SCG CON Washington DC - Sunday - 1:00 pm",
+      "url": "https://www.mtggoldfish.com/tournament/64248",
+      "date": "2026-05-31",
+      "deck_count": 64,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64250",
+      "name": "$uper $unday RCQ - Modern - SCG CON Washington DC - Sunday - 10:00 am",
+      "url": "https://www.mtggoldfish.com/tournament/64250",
+      "date": "2026-05-31",
+      "deck_count": 199,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64251",
+      "name": "5 Torneio Super Modern",
+      "url": "https://www.mtggoldfish.com/tournament/64251",
+      "date": "2026-05-31",
+      "deck_count": 14,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64207",
+      "name": "Modern Challenge 32 2026-05-31",
+      "url": "https://www.mtggoldfish.com/tournament/64207",
+      "date": "2026-05-31",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64204",
+      "name": "Modern League 2026-05-31",
+      "url": "https://www.mtggoldfish.com/tournament/64204",
+      "date": "2026-05-31",
+      "deck_count": 72,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64209",
+      "name": "Modern Challenge 32 2026-05-31 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/64209",
+      "date": "2026-05-31",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64228",
+      "name": "Modern Challenge 32 2026-05-31 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/64228",
+      "date": "2026-05-31",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64214",
+      "name": "ReCQ - Modern - SCG CON Washington DC - Saturday - 4:00 pm",
+      "url": "https://www.mtggoldfish.com/tournament/64214",
+      "date": "2026-05-30",
+      "deck_count": 91,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64216",
+      "name": "ReCQ - Modern - SCG CON Washington DC - Saturday - 2:00 pm",
+      "url": "https://www.mtggoldfish.com/tournament/64216",
+      "date": "2026-05-30",
+      "deck_count": 94,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64220",
+      "name": "ReCQ - Modern - SCG CON Washington DC - Saturday - 12:00 pm",
+      "url": "https://www.mtggoldfish.com/tournament/64220",
+      "date": "2026-05-30",
+      "deck_count": 87,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64219",
+      "name": "Paragon Gaming Modern RCQ",
+      "url": "https://www.mtggoldfish.com/tournament/64219",
+      "date": "2026-05-30",
+      "deck_count": 30,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64195",
+      "name": "Modern Challenge 64 2026-05-30",
+      "url": "https://www.mtggoldfish.com/tournament/64195",
+      "date": "2026-05-30",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64160",
+      "name": "Modern Challenge 32 2026-05-30 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/64160",
+      "date": "2026-05-30",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64159",
+      "name": "Modern Challenge 32 2026-05-30",
+      "url": "https://www.mtggoldfish.com/tournament/64159",
+      "date": "2026-05-30",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64146",
+      "name": "Modern League 2026-05-30",
+      "url": "https://www.mtggoldfish.com/tournament/64146",
+      "date": "2026-05-30",
+      "deck_count": 46,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64190",
+      "name": "$1K Modern RCQ - SCG CON Washington DC - Friday - 10:00 am",
+      "url": "https://www.mtggoldfish.com/tournament/64190",
+      "date": "2026-05-29",
+      "deck_count": 75,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64144",
+      "name": "Modern Challenge 64 2026-05-29 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/64144",
+      "date": "2026-05-29",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64138",
+      "name": "Modern Challenge 64 2026-05-29",
+      "url": "https://www.mtggoldfish.com/tournament/64138",
+      "date": "2026-05-29",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64119",
+      "name": "Modern League 2026-05-29",
+      "url": "https://www.mtggoldfish.com/tournament/64119",
+      "date": "2026-05-29",
+      "deck_count": 71,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64115",
+      "name": "Modern Challenge 64 2026-05-28",
+      "url": "https://www.mtggoldfish.com/tournament/64115",
+      "date": "2026-05-28",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64101",
+      "name": "Modern League 2026-05-28",
+      "url": "https://www.mtggoldfish.com/tournament/64101",
+      "date": "2026-05-28",
+      "deck_count": 66,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64111",
+      "name": "Mont Weekly Modern",
+      "url": "https://www.mtggoldfish.com/tournament/64111",
+      "date": "2026-05-27",
+      "deck_count": 9,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
     {
       "tournament_id": "64099",
       "name": "Modern Challenge 64 2026-05-27",
       "url": "https://www.mtggoldfish.com/tournament/64099",
       "date": "2026-05-27",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 29
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
       "tournament_id": "64089",
@@ -22,6 +600,7 @@
       "url": "https://www.mtggoldfish.com/tournament/64089",
       "date": "2026-05-27",
       "deck_count": 66,
+      "format": "Modern",
       "is_league": true,
       "status": "skipped",
       "decklists_scraped": 0
@@ -32,6 +611,7 @@
       "url": "https://www.mtggoldfish.com/tournament/64074",
       "date": "2026-05-26",
       "deck_count": 79,
+      "format": "Modern",
       "is_league": true,
       "status": "skipped",
       "decklists_scraped": 0
@@ -42,9 +622,10 @@
       "url": "https://www.mtggoldfish.com/tournament/64094",
       "date": "2026-05-26",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 31
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
       "tournament_id": "64057",
@@ -52,6 +633,7 @@
       "url": "https://www.mtggoldfish.com/tournament/64057",
       "date": "2026-05-25",
       "deck_count": 79,
+      "format": "Modern",
       "is_league": true,
       "status": "skipped",
       "decklists_scraped": 0
@@ -62,9 +644,10 @@
       "url": "https://www.mtggoldfish.com/tournament/64070",
       "date": "2026-05-25",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 29
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
       "tournament_id": "64065",
@@ -72,9 +655,10 @@
       "url": "https://www.mtggoldfish.com/tournament/64065",
       "date": "2026-05-25",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 25
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
       "tournament_id": "64040",
@@ -82,28 +666,9 @@
       "url": "https://www.mtggoldfish.com/tournament/64040",
       "date": "2026-05-24",
       "deck_count": 26,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 25
-    },
-    {
-      "tournament_id": "64035",
-      "name": "Modern Challenge 32 2026-05-24",
-      "url": "https://www.mtggoldfish.com/tournament/64035",
-      "date": "2026-05-24",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 27
-    },
-    {
-      "tournament_id": "64032",
-      "name": "Modern League 2026-05-24",
-      "url": "https://www.mtggoldfish.com/tournament/64032",
-      "date": "2026-05-24",
-      "deck_count": 69,
-      "is_league": true,
-      "status": "skipped",
+      "status": "pending",
       "decklists_scraped": 0
     },
     {
@@ -112,9 +677,32 @@
       "url": "https://www.mtggoldfish.com/tournament/64051",
       "date": "2026-05-24",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 27
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64035",
+      "name": "Modern Challenge 32 2026-05-24",
+      "url": "https://www.mtggoldfish.com/tournament/64035",
+      "date": "2026-05-24",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64032",
+      "name": "Modern League 2026-05-24",
+      "url": "https://www.mtggoldfish.com/tournament/64032",
+      "date": "2026-05-24",
+      "deck_count": 69,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
     },
     {
       "tournament_id": "64041",
@@ -122,28 +710,20 @@
       "url": "https://www.mtggoldfish.com/tournament/64041",
       "date": "2026-05-23",
       "deck_count": 7,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 7
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
-      "tournament_id": "64012",
-      "name": "Modern Challenge 32 2026-05-23",
-      "url": "https://www.mtggoldfish.com/tournament/64012",
+      "tournament_id": "64024",
+      "name": "Modern Challenge 64 2026-05-23",
+      "url": "https://www.mtggoldfish.com/tournament/64024",
       "date": "2026-05-23",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 31
-    },
-    {
-      "tournament_id": "64001",
-      "name": "Modern League 2026-05-23",
-      "url": "https://www.mtggoldfish.com/tournament/64001",
-      "date": "2026-05-23",
-      "deck_count": 63,
-      "is_league": true,
-      "status": "skipped",
+      "status": "pending",
       "decklists_scraped": 0
     },
     {
@@ -152,19 +732,32 @@
       "url": "https://www.mtggoldfish.com/tournament/64014",
       "date": "2026-05-23",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 31
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
-      "tournament_id": "64024",
-      "name": "Modern Challenge 64 2026-05-23",
-      "url": "https://www.mtggoldfish.com/tournament/64024",
+      "tournament_id": "64012",
+      "name": "Modern Challenge 32 2026-05-23",
+      "url": "https://www.mtggoldfish.com/tournament/64012",
       "date": "2026-05-23",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 30
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "64001",
+      "name": "Modern League 2026-05-23",
+      "url": "https://www.mtggoldfish.com/tournament/64001",
+      "date": "2026-05-23",
+      "deck_count": 63,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
     },
     {
       "tournament_id": "63998",
@@ -172,9 +765,10 @@
       "url": "https://www.mtggoldfish.com/tournament/63998",
       "date": "2026-05-22",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 31
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
       "tournament_id": "63980",
@@ -182,8 +776,31 @@
       "url": "https://www.mtggoldfish.com/tournament/63980",
       "date": "2026-05-22",
       "deck_count": 66,
+      "format": "Modern",
       "is_league": true,
       "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "63966",
+      "name": "Modern League 2026-05-21",
+      "url": "https://www.mtggoldfish.com/tournament/63966",
+      "date": "2026-05-21",
+      "deck_count": 80,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "63990",
+      "name": "Modern Challenge 64 2026-05-21 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/63990",
+      "date": "2026-05-21",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
       "decklists_scraped": 0
     },
     {
@@ -192,28 +809,9 @@
       "url": "https://www.mtggoldfish.com/tournament/63975",
       "date": "2026-05-21",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 30
-    },
-    {
-      "tournament_id": "63990",
-      "name": "Modern Challenge 64 2026-05-21 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63990",
-      "date": "2026-05-21",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 30
-    },
-    {
-      "tournament_id": "63948",
-      "name": "Modern League 2026-05-20",
-      "url": "https://www.mtggoldfish.com/tournament/63948",
-      "date": "2026-05-20",
-      "deck_count": 80,
-      "is_league": true,
-      "status": "skipped",
+      "status": "pending",
       "decklists_scraped": 0
     },
     {
@@ -222,19 +820,10 @@
       "url": "https://www.mtggoldfish.com/tournament/63974",
       "date": "2026-05-20",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 30
-    },
-    {
-      "tournament_id": "63971",
-      "name": "Modern Challenge 64 2026-05-20 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63971",
-      "date": "2026-05-20",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 30
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
       "tournament_id": "63959",
@@ -242,9 +831,32 @@
       "url": "https://www.mtggoldfish.com/tournament/63959",
       "date": "2026-05-20",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 30
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "63971",
+      "name": "Modern Challenge 64 2026-05-20 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/63971",
+      "date": "2026-05-20",
+      "deck_count": 32,
+      "format": "Modern",
+      "is_league": false,
+      "status": "pending",
+      "decklists_scraped": 0
+    },
+    {
+      "tournament_id": "63948",
+      "name": "Modern League 2026-05-20",
+      "url": "https://www.mtggoldfish.com/tournament/63948",
+      "date": "2026-05-20",
+      "deck_count": 80,
+      "format": "Modern",
+      "is_league": true,
+      "status": "skipped",
+      "decklists_scraped": 0
     },
     {
       "tournament_id": "63919",
@@ -252,6 +864,7 @@
       "url": "https://www.mtggoldfish.com/tournament/63919",
       "date": "2026-05-19",
       "deck_count": 76,
+      "format": "Modern",
       "is_league": true,
       "status": "skipped",
       "decklists_scraped": 0
@@ -262,9 +875,10 @@
       "url": "https://www.mtggoldfish.com/tournament/63970",
       "date": "2026-05-19",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 29
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
       "tournament_id": "63947",
@@ -272,59 +886,10 @@
       "url": "https://www.mtggoldfish.com/tournament/63947",
       "date": "2026-05-19",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 29
-    },
-    {
-      "tournament_id": "63939",
-      "name": "Modern Challenge 64 2026-05-18 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63939",
-      "date": "2026-05-18",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 31
-    },
-    {
-      "tournament_id": "63940",
-      "name": "Modern Challenge 32 2026-05-18 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63940",
-      "date": "2026-05-18",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 32
-    },
-    {
-      "tournament_id": "63916",
-      "name": "Modern Challenge 64 2026-05-18",
-      "url": "https://www.mtggoldfish.com/tournament/63916",
-      "date": "2026-05-18",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 31
-    },
-    {
-      "tournament_id": "63914",
-      "name": "Modern Challenge 32 2026-05-18 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63914",
-      "date": "2026-05-18",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 32
-    },
-    {
-      "tournament_id": "63896",
-      "name": "Modern Challenge 32 2026-05-18",
-      "url": "https://www.mtggoldfish.com/tournament/63896",
-      "date": "2026-05-18",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 32
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
       "tournament_id": "63888",
@@ -332,268 +897,78 @@
       "url": "https://www.mtggoldfish.com/tournament/63888",
       "date": "2026-05-18",
       "deck_count": 48,
+      "format": "Modern",
       "is_league": true,
       "status": "skipped",
       "decklists_scraped": 0
     },
     {
-      "tournament_id": "63900",
-      "name": "CAMS Season 13 - Modern",
-      "url": "https://www.mtggoldfish.com/tournament/63900",
-      "date": "2026-05-17",
-      "deck_count": 17,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 17
-    },
-    {
-      "tournament_id": "63901",
-      "name": "ReCQ - Modern - SCG CON Cincinnati - Sunday - 1:00 pm",
-      "url": "https://www.mtggoldfish.com/tournament/63901",
-      "date": "2026-05-17",
-      "deck_count": 54,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 54
-    },
-    {
-      "tournament_id": "63906",
-      "name": "F2F Tour Weekend Ottawa - Sunday Modern Q+",
-      "url": "https://www.mtggoldfish.com/tournament/63906",
-      "date": "2026-05-17",
-      "deck_count": 1,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 1
-    },
-    {
-      "tournament_id": "63907",
-      "name": "$uper $unday RCQ - Modern - SCG CON Cincinnati - Sunday - 10:00 am",
-      "url": "https://www.mtggoldfish.com/tournament/63907",
-      "date": "2026-05-17",
-      "deck_count": 173,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 100
-    },
-    {
-      "tournament_id": "63880",
-      "name": "Modern Challenge 32 2026-05-17 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63880",
-      "date": "2026-05-17",
+      "tournament_id": "63940",
+      "name": "Modern Challenge 32 2026-05-18 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/63940",
+      "date": "2026-05-18",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 31
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
-      "tournament_id": "63875",
-      "name": "Modern Challenge 32 2026-05-17 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63875",
-      "date": "2026-05-17",
+      "tournament_id": "63939",
+      "name": "Modern Challenge 64 2026-05-18 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/63939",
+      "date": "2026-05-18",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 32
+      "status": "pending",
+      "decklists_scraped": 0
     },
     {
-      "tournament_id": "63849",
-      "name": "Modern Challenge 32 2026-05-17",
-      "url": "https://www.mtggoldfish.com/tournament/63849",
-      "date": "2026-05-17",
+      "tournament_id": "63916",
+      "name": "Modern Challenge 64 2026-05-18",
+      "url": "https://www.mtggoldfish.com/tournament/63916",
+      "date": "2026-05-18",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 31
-    },
-    {
-      "tournament_id": "63841",
-      "name": "Modern League 2026-05-17",
-      "url": "https://www.mtggoldfish.com/tournament/63841",
-      "date": "2026-05-17",
-      "deck_count": 42,
-      "is_league": true,
-      "status": "skipped",
+      "status": "pending",
       "decklists_scraped": 0
     },
     {
-      "tournament_id": "63862",
-      "name": "ReCQ - Modern - SCG CON Cincinnati - Saturday - 4:00 pm",
-      "url": "https://www.mtggoldfish.com/tournament/63862",
-      "date": "2026-05-16",
-      "deck_count": 74,
-      "is_league": false,
-      "status": "completed",
-      "decklists_scraped": 74
-    },
-    {
-      "tournament_id": "63864",
-      "name": "ReCQ - Modern - SCG CON Cincinnati - Saturday - 2:00 pm",
-      "url": "https://www.mtggoldfish.com/tournament/63864",
-      "date": "2026-05-16",
-      "deck_count": 60,
-      "is_league": false,
-      "status": "failed",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63866",
-      "name": "ReCQ - Modern - SCG CON Cincinnati - Saturday - 12:00 pm",
-      "url": "https://www.mtggoldfish.com/tournament/63866",
-      "date": "2026-05-16",
-      "deck_count": 64,
-      "is_league": false,
-      "status": "failed",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63857",
-      "name": "Modern Challenge 32 2026-05-16 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63857",
-      "date": "2026-05-16",
+      "tournament_id": "63914",
+      "name": "Modern Challenge 32 2026-05-18 (1)",
+      "url": "https://www.mtggoldfish.com/tournament/63914",
+      "date": "2026-05-18",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "failed",
+      "status": "pending",
       "decklists_scraped": 0
     },
     {
-      "tournament_id": "63855",
-      "name": "Modern RC Super Qualifier 2026-05-16 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63855",
-      "date": "2026-05-16",
+      "tournament_id": "63896",
+      "name": "Modern Challenge 32 2026-05-18",
+      "url": "https://www.mtggoldfish.com/tournament/63896",
+      "date": "2026-05-18",
       "deck_count": 32,
+      "format": "Modern",
       "is_league": false,
-      "status": "failed",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63848",
-      "name": "Modern Challenge 32 2026-05-16 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63848",
-      "date": "2026-05-16",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "failed",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63837",
-      "name": "Modern Challenge 64 2026-05-16",
-      "url": "https://www.mtggoldfish.com/tournament/63837",
-      "date": "2026-05-16",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "failed",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63831",
-      "name": "Modern RC Super Qualifier 2026-05-16",
-      "url": "https://www.mtggoldfish.com/tournament/63831",
-      "date": "2026-05-16",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "failed",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63809",
-      "name": "Modern Challenge 32 2026-05-16 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63809",
-      "date": "2026-05-16",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "failed",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63807",
-      "name": "Modern Challenge 32 2026-05-16",
-      "url": "https://www.mtggoldfish.com/tournament/63807",
-      "date": "2026-05-16",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "failed",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63799",
-      "name": "Modern League 2026-05-16",
-      "url": "https://www.mtggoldfish.com/tournament/63799",
-      "date": "2026-05-16",
-      "deck_count": 44,
-      "is_league": true,
-      "status": "skipped",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63805",
-      "name": "Modern RC Qualifier 2026-05-15",
-      "url": "https://www.mtggoldfish.com/tournament/63805",
-      "date": "2026-05-15",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "failed",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63792",
-      "name": "Modern Challenge 64 2026-05-15",
-      "url": "https://www.mtggoldfish.com/tournament/63792",
-      "date": "2026-05-15",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "failed",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63776",
-      "name": "Modern League 2026-05-15",
-      "url": "https://www.mtggoldfish.com/tournament/63776",
-      "date": "2026-05-15",
-      "deck_count": 52,
-      "is_league": true,
-      "status": "skipped",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63759",
-      "name": "Modern League 2026-05-14",
-      "url": "https://www.mtggoldfish.com/tournament/63759",
-      "date": "2026-05-14",
-      "deck_count": 50,
-      "is_league": true,
-      "status": "skipped",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63783",
-      "name": "Modern Challenge 64 2026-05-14 (1)",
-      "url": "https://www.mtggoldfish.com/tournament/63783",
-      "date": "2026-05-14",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "failed",
-      "decklists_scraped": 0
-    },
-    {
-      "tournament_id": "63770",
-      "name": "Modern Challenge 64 2026-05-14",
-      "url": "https://www.mtggoldfish.com/tournament/63770",
-      "date": "2026-05-14",
-      "deck_count": 32,
-      "is_league": false,
-      "status": "failed",
+      "status": "pending",
       "decklists_scraped": 0
     }
   ],
   "summary": {
-    "total": 58,
-    "league_skipped": 13,
-    "non_league": 45,
-    "pending": 0,
-    "completed": 32,
-    "failed": 13,
-    "skipped": 13
-  }
+    "total": 87,
+    "league_skipped": 24,
+    "non_league": 63,
+    "pending": 60,
+    "completed": 3,
+    "failed": 0,
+    "skipped": 24
+  },
+  "format": "Modern",
+  "collected_date": "2026-06-10",
+  "source": "MTGGoldfish",
+  "search_period": "05/18/2026 - 06/10/2026"
 }
