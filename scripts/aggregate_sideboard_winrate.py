@@ -195,19 +195,43 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--files", nargs="*", help="Specific decklist JSON files")
     p.add_argument("--all", action="store_true", help="Use all *_decklists.json in raw/decklists/")
+    p.add_argument("--start", help="Only include files dated on/after YYYY-MM-DD")
+    p.add_argument("--end", help="Only include files dated on/before YYYY-MM-DD")
     p.add_argument("--out-dir", default=str(OUTPUT_DIR))
     args = p.parse_args()
 
     if args.files:
         paths = [Path(f) for f in args.files]
-    elif args.all or True:
+    else:
         d = Path("mtg_modern_data/decks/raw/decklists")
         paths = sorted(d.glob("*_decklists.json"))
         # Exclude the goldfish_tournament_index.json (not a decklist file)
         paths = [p for p in paths if "index" not in p.name]
 
+    # Optional period filter (applied to whatever paths the previous step produced)
+    if args.start or args.end:
+        if args.start and not re.match(r"^\d{4}-\d{2}-\d{2}$", args.start):
+            raise SystemExit(f"--start must be YYYY-MM-DD, got {args.start!r}")
+        if args.end and not re.match(r"^\d{4}-\d{2}-\d{2}$", args.end):
+            raise SystemExit(f"--end must be YYYY-MM-DD, got {args.end!r}")
+        if args.start and args.end and args.start > args.end:
+            raise SystemExit(f"--start ({args.start}) must be <= --end ({args.end})")
+        filtered = []
+        for p_ in paths:
+            m = re.search(r"(\d{4}-\d{2}-\d{2})", p_.stem)
+            if m is None:
+                print(f"  Skipping {p_.name} (no date in filename)")
+                continue
+            d_str = m.group(1)
+            if args.start and d_str < args.start:
+                continue
+            if args.end and d_str > args.end:
+                continue
+            filtered.append(p_)
+        paths = filtered
+
     if not paths:
-        raise SystemExit("No input files found.")
+        raise SystemExit("No input files match the given filters.")
 
     print(f"Loading {len(paths)} files:")
     for p_ in paths:
@@ -228,9 +252,10 @@ def main():
     period_start = min(period_starts) if period_starts else "unknown"
     period_end = max(period_starts) if period_starts else "unknown"
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    sb_out = OUTPUT_DIR / f"sideboard_frequency_{period_start}_{period_end}.json"
-    wr_out = OUTPUT_DIR / f"winrate_{period_start}_{period_end}.json"
+    out_dir = Path(args.out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    sb_out = out_dir / f"sideboard_frequency_{period_start}_{period_end}.json"
+    wr_out = out_dir / f"winrate_{period_start}_{period_end}.json"
 
     with open(sb_out, "w", encoding="utf-8") as f:
         json.dump({

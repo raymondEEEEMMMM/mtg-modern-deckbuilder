@@ -18,6 +18,14 @@ Usage:
   TOPDECK_API_KEY=... python3 scripts/extract_matchup_matrix.py --max-events 50
   python3 scripts/extract_matchup_matrix.py --from-fixture \\
       mtg_modern_data/sources/topdeck/raw/topdeck_modern_2026-05-18.json
+
+Note on --from-fixture:
+  --from-fixture skips the API call and analyzes a saved raw payload.
+  In this mode, --start/--end are IGNORED — the script uses the fixture's
+  own time window (typically "last N days" relative to when the payload
+  was captured), and the output filename reflects that fixture window,
+  not the --start/--end you passed. Pass --start/--end only for live API
+  runs; for fixture replays, trust the filename.
 """
 
 import argparse
